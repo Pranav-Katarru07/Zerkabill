@@ -63,7 +63,7 @@ export function outcomeTexts(o: CallOutcome, hospital: string, patient: string |
     case "refused":
       return [
         `called ${hospital} billing — they wouldn't review it with an AI on the line.`,
-        `you can still ask yourself (it's your right to dispute charges). say "script" and i'll send you exactly what to say, line by line.`,
+        `you can still ask them yourself — billing offices review disputed charges all the time. say "script" and i'll send you exactly what to say, line by line.`,
       ];
     case "voicemail":
     case "no_answer":

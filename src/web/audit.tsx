@@ -2,6 +2,7 @@
 import { raw } from "hono/html";
 import { disputePlan, formatPhone } from "../agent/approval.js";
 import { BRAND } from "../config.js";
+import { isEmergencyBill, rightsNotes } from "../audit/rights.js";
 import type { AuditFinding, AuditLine, AuditView } from "./data.js";
 import { auditCss } from "./audit-css.js";
 import { auditScript } from "./audit-script.js";
@@ -267,6 +268,24 @@ export function AuditPage({ audit, baseUrl }: { audit: AuditView; baseUrl: strin
                 ))}
               </section>
             ) : null}
+
+            {(() => {
+              const notes = rightsNotes({ insured: audit.insured, isEmergency: isEmergencyBill(audit.lines), provider: audit.provider });
+              return notes.length ? (
+                <section aria-labelledby="rights-title" class="group rights">
+                  <h2 id="rights-title" class="group-title">Your rights</h2>
+                  <ul class="rights-list" role="list">
+                    {notes.map((n) => (
+                      <li class="right">
+                        <h3>{n.title}</h3>
+                        <p>{n.body}</p>
+                        <a href={n.link} target="_blank" rel="noopener noreferrer">{n.linkLabel} ↗</a>
+                      </li>
+                    ))}
+                  </ul>
+                </section>
+              ) : null;
+            })()}
 
             <section aria-labelledby="fair-title" class="group group-fair">
               <h2 id="fair-title" class="group-title">{fair.length} {fair.length === 1 ? "charge looks" : "charges look"} fair</h2>

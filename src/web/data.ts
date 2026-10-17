@@ -33,6 +33,7 @@ export interface AuditView {
   potentialSavings: number;
   state: string | null;
   patientName: string | null;
+  insured: boolean | null;
   lines: AuditLine[];
   findings: AuditFinding[];
   approval: { createdAt: string; toNumber: string } | null;
@@ -54,7 +55,7 @@ export async function loadAudit(token: string): Promise<AuditView | undefined> {
   const [lines, findings, convo, approval, call] = await Promise.all([
     db().from("line_items").select("*").eq("bill_id", bill.id).order("position"),
     db().from("findings").select("*").eq("bill_id", bill.id),
-    db().from("conversations").select("patient_name").eq("id", bill.conversation_id).maybeSingle(),
+    db().from("conversations").select("patient_name, insured").eq("id", bill.conversation_id).maybeSingle(),
     db().from("approvals").select("created_at, to_number").eq("bill_id", bill.id).eq("purpose", "dispute").order("created_at", { ascending: false }).limit(1).maybeSingle(),
     db().from("calls").select("status, summary, outcome_json").eq("bill_id", bill.id).order("created_at", { ascending: false }).limit(1).maybeSingle(),
   ]);
@@ -70,6 +71,7 @@ export async function loadAudit(token: string): Promise<AuditView | undefined> {
     potentialSavings: Number(bill.potential_savings ?? 0),
     state: bill.state,
     patientName: convo.data?.patient_name ?? null,
+    insured: convo.data?.insured ?? null,
     lines: (lines.data ?? []).map((l) => ({
       id: l.id,
       position: l.position,
