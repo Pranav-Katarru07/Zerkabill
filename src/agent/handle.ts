@@ -1,16 +1,13 @@
-import type { Message, Space } from "spectrum-ts";
-import { logEvent } from "../db.js";
+import { responding, sendText, type Inbound } from "../photon/client.js";
 
 /** M0: ping → pong. Replaced by the conversation state machine in M2. */
-export async function handleMessage(space: Space, message: Message): Promise<void> {
-  if (message.content.type !== "text") return;
-  const text = message.content.text.trim().toLowerCase();
+export async function handleMessage(msg: Inbound): Promise<void> {
+  if (msg.content.type !== "text") return;
+  const text = msg.content.text.trim().toLowerCase();
 
   if (text === "ping") {
-    await message.react("👍");
-    await space.responding(async () => {
-      await message.reply("pong 🏓");
+    await responding(msg.thread, async () => {
+      await sendText(msg.thread, "pong 🏓", { replyTo: msg.id, idempotencyKey: `pong:${msg.id}` });
     });
-    await logEvent("photon.send", { spaceId: space.id, text: "pong" });
   }
 }

@@ -8,9 +8,10 @@ const bool = z
   .transform((v) => v === "true" || v === "1");
 
 const EnvSchema = z.object({
-  PHOTON_PROJECT_ID: z.string().min(1),
-  PHOTON_PROJECT_SECRET: z.string().min(1),
-  SPECTRUM_WEBHOOK_SECRET: z.string().optional(), // required for webhook mode only
+  PHOTON_PROJECT_ID: z.string().startsWith("pho_prj_"),
+  PHOTON_API_KEY: z.string().optional(),
+  PHOTON_WEBHOOK_SECRET: z.string().optional(),
+  PHOTON_VOICE_NUMBER: z.string().optional(), // dedicated voice line = outbound caller ID
 
   LLM_PROVIDER: z.enum(["xai", "anthropic"]).default("xai"),
   XAI_API_KEY: z.string().optional(),
@@ -30,7 +31,6 @@ const EnvSchema = z.object({
   PUBLIC_BASE_URL: z.string().url().optional(),
   DEMO_MODE: bool.default(true),
   DEMO_BILLING_OFFICE_NUMBER: z.string().optional(),
-  MINIAPP_ENABLED: bool.default(false),
 });
 
 export type Env = z.infer<typeof EnvSchema>;
