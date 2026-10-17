@@ -7,6 +7,7 @@ import { logEvent } from "../db.js";
 import { downloadAttachment, responding, sendText, type Inbound } from "../photon/client.js";
 import { getOrCreateConversation, parseCache, priceCache, saveAudit, saveFailedBill, updateConversation, type Conversation } from "../store.js";
 import { auditSummary, copy } from "./copy.js";
+import { disputeScript, handleApprovalText, latestAuditToken, startCallForApproval } from "./call-flow.js";
 import { extractIntake } from "./intake.js";
 
 export async function handleMessage(msg: Inbound): Promise<void> {
@@ -31,8 +32,22 @@ export async function handleMessage(msg: Inbound): Promise<void> {
       return handleIntake(convo, text, say);
     case "auditing":
       return say([copy.stillWorking]);
+    case "review":
+    case "awaiting_approval": {
+      const reply = await handleApprovalText(convo, text);
+      if (reply === "start_call") {
+        const token = await latestAuditToken(convo.id);
+        if (token) await startCallForApproval(token);
+        return;
+      }
+      return say(reply);
+    }
+    case "calling":
+      return say(["i'm on the phone with them right now — i'll text you the second we're done."]);
+    case "done":
+      if (/\bscript\b/i.test(lower)) return say(await disputeScript(convo.id));
+      return say([copy.fallback]);
     default:
-      // review / approval / calls are wired up in M4.
       return say([copy.fallback]);
   }
 }

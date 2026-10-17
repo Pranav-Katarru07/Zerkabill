@@ -10,6 +10,8 @@ import { baseCss, FONTS_HREF } from "./theme.js";
 const usd = (n: number, cents = true) =>
   n.toLocaleString("en-US", { style: "currency", currency: "USD", minimumFractionDigits: cents ? 2 : 0, maximumFractionDigits: cents ? 2 : 0 });
 
+const shortProvider = (p: string) => p.replace(/\b(regional|medical|center|hospital|health|system)\b/gi, "").replace(/\s+/g, " ").trim() || p;
+
 const STATE_NAMES: Record<string, string> = { MA: "Massachusetts", NY: "New York", CA: "California", TX: "Texas", OH: "Ohio" };
 
 type Verdict = "fair" | "suspicious" | "likely_error";
@@ -206,8 +208,31 @@ export function AuditPage({ audit, baseUrl }: { audit: AuditView; baseUrl: strin
               <p class="statement-foot">
                 {audit.lines.length} charges checked against {STATE_NAMES[state] ?? state} Medicare data (2024)
               </p>
+              <p class="statement-after" id="statement-after" hidden></p>
               <div class="statement-status" id="status" role="status" aria-live="polite"></div>
             </section>
+
+            {hasFindings ? (
+              <section class="call" id="call" aria-labelledby="call-title" hidden={phase === "review"} data-phase={audit.call?.status ?? (audit.approval ? "dialing" : "none")}>
+                <div class="call-head">
+                  <span class="call-dot" aria-hidden="true"></span>
+                  <h2 id="call-title" class="call-title">Calling {shortProvider(provider)} billing</h2>
+                  <span class="call-timer num" id="call-timer" aria-label="Call length">0:00</span>
+                </div>
+                <div class="wave" aria-hidden="true">
+                  {Array.from({ length: 28 }, (_, i) => <span style={`--i:${i}`}></span>)}
+                </div>
+                <ol class="call-steps" aria-label="Call progress">
+                  <li data-step="dialing">Dialing</li>
+                  <li data-step="ringing">Ringing</li>
+                  <li data-step="in_call">Talking</li>
+                  <li data-step="wrapping_up">Wrapping up</li>
+                  <li data-step="done">Done</li>
+                </ol>
+                <ol class="transcript" id="transcript" aria-live="polite" aria-label="Live transcript"></ol>
+                <div class="call-result" id="call-result" hidden></div>
+              </section>
+            ) : null}
 
             {hasFindings ? (
               <div class="action" id="action" data-state={phase}>
@@ -313,7 +338,7 @@ export function AuditPage({ audit, baseUrl }: { audit: AuditView; baseUrl: strin
           </dialog>
         ) : null}
 
-        <script>{raw(auditScript(audit.token))}</script>
+        <script>{raw(auditScript(audit.token, { total, savings, provider: shortProvider(provider), patient: audit.patientName ?? "you" }))}</script>
       </body>
     </html>
   );
