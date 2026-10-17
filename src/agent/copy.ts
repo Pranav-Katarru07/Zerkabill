@@ -19,14 +19,14 @@ export const copy = {
   },
   askForBill: [
     "got it. send me a photo of the itemized bill — the one that lists every charge.",
-    "tip: in Notes, tap the camera icon → Scan Documents for the cleanest scan 📄",
+    "tip: lay it flat and shoot straight down, so every line is in the shot 📸",
   ],
   billReceived: "got it — reading every line now 👀",
   stillWorking: "still working on the last one — almost there",
   notABill: "hmm, that doesn't look like a bill i can read. can you send a photo or PDF of it?",
   unreadable: [
     "hmm, i couldn't read that clearly enough to be sure 😕",
-    "can you send a flatter scan? in Notes: camera icon → Scan Documents works best.",
+    "can you send another photo? lay the bill flat on a table and shoot straight down, in good light.",
   ],
   notItemized(hospital: string | null): string[] {
     return [
