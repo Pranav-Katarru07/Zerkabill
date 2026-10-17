@@ -10,16 +10,16 @@ const bool = z
 const EnvSchema = z.object({
   PHOTON_PROJECT_ID: z.string().min(1),
   PHOTON_PROJECT_SECRET: z.string().min(1),
-  SPECTRUM_WEBHOOK_SECRET: z.string().min(1),
+  SPECTRUM_WEBHOOK_SECRET: z.string().optional(), // required for webhook mode only
 
   LLM_PROVIDER: z.enum(["xai", "anthropic"]).default("xai"),
   XAI_API_KEY: z.string().optional(),
   XAI_MODEL: z.string().optional(),
   ANTHROPIC_API_KEY: z.string().optional(),
 
-  SUPABASE_URL: z.string().url(),
-  SUPABASE_ANON_KEY: z.string().min(1),
-  SUPABASE_SERVICE_ROLE_KEY: z.string().min(1),
+  SUPABASE_URL: z.string().url().optional(),
+  SUPABASE_ANON_KEY: z.string().optional(),
+  SUPABASE_SERVICE_ROLE_KEY: z.string().optional(),
 
   ELEVENLABS_API_KEY: z.string().optional(),
   ELEVENLABS_AGENT_ID: z.string().optional(),
@@ -40,7 +40,8 @@ let cached: Env | undefined;
 /** Validated env, parsed on first use so scripts that only need part of it can still run. */
 export function env(): Env {
   if (!cached) {
-    const parsed = EnvSchema.safeParse(process.env);
+    const raw = Object.fromEntries(Object.entries(process.env).filter(([, v]) => v !== ""));
+    const parsed = EnvSchema.safeParse(raw);
     if (!parsed.success) {
       const missing = parsed.error.issues.map((i) => i.path.join(".")).join(", ");
       throw new Error(`bad or missing env vars: ${missing}`);
