@@ -15,7 +15,8 @@
     "eval": "tsx evals/run.ts",
     "seed-prices": "tsx scripts/seed-prices.ts",
     "parse-check": "tsx scripts/parse-check.ts",
-    "build": "node scripts/build.mjs"
+    "build": "node scripts/build.mjs",
+    "eval:generate": "tsx evals/generate.ts"
   },
   "dependencies": {
     "@ai-sdk/anthropic": "^4.0.82",
