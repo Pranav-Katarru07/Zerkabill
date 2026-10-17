@@ -38,6 +38,7 @@ const conversationConfig = {
         visit_date: "September 14, 2026",
         disputes: "1. the ER visit level. 2. a duplicate wrist X-ray. 3. exam gloves billed separately.",
         disputes_total: "about $1,240",
+        disputes_count: "3",
       },
     },
     prompt: {

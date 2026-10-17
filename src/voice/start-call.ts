@@ -25,28 +25,30 @@ export function callVariables(audit: AuditView): Record<string, string> {
     const line = audit.lines.find((l) => l.id === f.lineItemId);
     const name = line ? lineShortName(line) : "the bill total";
     const e = f.evidence as Record<string, unknown>;
+    const amt = spoken(f.estimatedOverchargeUsd);
+    const Name = name.charAt(0).toUpperCase() + name.slice(1);
     switch (f.rule) {
       case "visit_level_mismatch":
         items.push(
-          `The ER physician visit (code ${e.billedCode}) is billed at level ${e.billedLevel}, the most severe level, for a minor injury` +
-            (e.facilityLevel ? `, while the hospital's own facility charge on the same bill is level ${e.facilityLevel}` : "") +
-            ` — about ${spoken(f.estimatedOverchargeUsd)} more than a level ${e.expectedLevel} visit.`,
+          `The ER doctor visit is billed at level ${e.billedLevel} of 5, the most severe, for a minor injury` +
+            (e.facilityLevel ? ` — but the hospital's own facility charge on the same bill is level ${e.facilityLevel}` : "") +
+            `. That's about ${amt} more than a level ${e.expectedLevel} visit.`,
         );
         break;
       case "duplicate":
-        items.push(`The ${name}${line?.code ? ` (code ${line.code})` : ""} appears twice on the same day, ${spoken(Number(e.amount))} each — one looks like a duplicate.`);
+        items.push(`The ${name} is billed twice on the same day, ${spoken(Number(e.amount))} each. One looks like a duplicate.`);
         break;
       case "routine_supply":
-        items.push(`${name.charAt(0).toUpperCase() + name.slice(1)} billed separately for ${spoken(f.estimatedOverchargeUsd)} — usually included in the room charge.`);
+        items.push(`${Name} billed separately for ${amt}. That's usually part of the room charge.`);
         break;
       case "price_outlier":
-        items.push(`The ${name} is ${spoken(Number(e.billedPerUnit))}, about ${e.timesTypical} times the typical charge for that code.`);
+        items.push(`The ${name} is ${spoken(Number(e.billedPerUnit))}, about ${Math.round(Number(e.timesTypical))} times the typical charge for it.`);
         break;
       case "date_outside_stay":
-        items.push(`The ${name} is dated ${e.dateOfService}, outside the visit.`);
+        items.push(`The ${name} is dated ${e.dateOfService}, which is outside the visit.`);
         break;
       case "math_check":
-        items.push(`The bill's total doesn't match the sum of its charges (off by ${spoken(Number(e.difference))}).`);
+        items.push(`The bill's total is about ${spoken(Math.abs(Number(e.difference)))} more than its charges add up to.`);
         break;
     }
   }
@@ -60,6 +62,7 @@ export function callVariables(audit: AuditView): Record<string, string> {
     visit_date: visit,
     disputes: items.map((t, i) => `${i + 1}. ${t}`).join("\n"),
     disputes_total: `about ${spoken(audit.potentialSavings)}`,
+    disputes_count: String(items.length),
   };
 }
 

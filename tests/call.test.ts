@@ -128,7 +128,10 @@ describe("call guards (never dial without them)", () => {
       visit_date: "September 14, 2026",
       disputes_total: "about $1,240",
     });
-    expect(body.conversation_initiation_client_data.dynamic_variables.disputes).toMatch(/wrist X-ray \(code 73110\) appears twice/);
+    const vars = body.conversation_initiation_client_data.dynamic_variables;
+    expect(vars.disputes).toMatch(/^1\. The wrist X-ray is billed twice on the same day, \$268 each/);
+    expect(vars.disputes).not.toMatch(/73110/); // codes aren't read aloud
+    expect(vars.disputes_count).toBe("1");
     // the approval is claimed before dialing
     const claimIdx = writes.findIndex((w) => w.table === "approvals");
     expect(claimIdx).toBeGreaterThanOrEqual(0);
