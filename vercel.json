@@ -3,8 +3,13 @@
   "functions": {
     "api/index.ts": {
       "maxDuration": 300,
-      "includeFiles": "{node_modules/mupdf/dist/**,data/**/*.json}"
+      "includeFiles": "{node_modules/mupdf/dist/**,data/**}"
     }
   },
-  "rewrites": [{ "source": "/(.*)", "destination": "/api" }]
+  "rewrites": [
+    {
+      "source": "/(.*)",
+      "destination": "/api"
+    }
+  ]
 }

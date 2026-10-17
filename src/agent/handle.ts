@@ -2,6 +2,7 @@
 import { auditImage } from "../audit/pipeline.js";
 import { toBillMedia } from "../audit/media.js";
 import { sha256 } from "../audit/parse.js";
+import { env } from "../config.js";
 import { logEvent } from "../db.js";
 import { downloadAttachment, responding, sendText, type Inbound } from "../photon/client.js";
 import { getOrCreateConversation, parseCache, priceCache, saveAudit, saveFailedBill, updateConversation, type Conversation } from "../store.js";
@@ -91,14 +92,15 @@ async function handleBill(convo: Conversation, msg: Inbound, attachmentId: strin
         return say(copy.notItemized(hospital));
       }
 
-      await saveAudit(convo.id, audit.parse.imageHash ?? sha256(media.bytes), audit, audit.parse.confidence);
+      const token = await saveAudit(convo.id, audit.parse.imageHash ?? sha256(media.bytes), audit, audit.parse.confidence);
       await updateConversation(convo.id, {
         state: "review",
         hospital: convo.hospital ?? audit.bill.provider,
         patient_name: convo.patient_name ?? audit.bill.patientFirstName,
         visit_date: convo.visit_date ?? audit.bill.admitDate,
       });
-      await say(auditSummary(audit));
+      const base = env().PUBLIC_BASE_URL;
+      await say(auditSummary(audit, base ? `${base}/audit/${token}` : undefined));
     });
   } catch (err) {
     console.error("[bill] audit failed", err);
