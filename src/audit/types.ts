@@ -35,6 +35,18 @@ export const ParsedBillSchema = z.object({
 });
 export type ParsedBill = z.infer<typeof ParsedBillSchema>;
 
+/**
+ * What the vision model fills in. rowsText comes first on purpose: writing each row out
+ * whole keeps a description bound to its own numbers, which fixes rows getting misaligned
+ * on tilted phone photos. It's dropped after parsing.
+ */
+export const VisionBillSchema = z.object({
+  rowsText: z
+    .array(z.string())
+    .describe("every charge row transcribed as one line of text, left to right, exactly as printed (date … amount)"),
+  ...ParsedBillSchema.shape,
+});
+
 /** A parsed line plus its stable id and classification. */
 export interface Line extends ParsedLine {
   id: string; // "L1", "L2", ... in bill order

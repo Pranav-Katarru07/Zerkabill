@@ -2,6 +2,7 @@ import { describe, expect, it } from "vitest";
 import demo from "../data/demo_bills/maya_er.json" with { type: "json" };
 import { seededRows, toBenchmark } from "../src/audit/benchmark.js";
 import { classifyBill, classifyLine } from "../src/audit/classify.js";
+import { explainFindings, isSafeWording } from "../src/audit/explain.js";
 import { potentialSavings, runRules, type RuleContext } from "../src/audit/rules.js";
 import type { Benchmark, ParsedBill, ParsedLine } from "../src/audit/types.js";
 
@@ -194,5 +195,25 @@ describe("potentialSavings", () => {
       { lineId: null, rule: "math_check", severity: "likely_error", estimatedOverchargeUsd: 10, evidence: { a: 1 } },
     ] as const;
     expect(potentialSavings([...findings])).toBe(210);
+  });
+});
+
+describe("explanations", () => {
+  const bill = classifyBill(demoBill);
+  const findings = explainFindings(bill, runRules(bill, ctxFor(demoBill)));
+  const text = (rule: string) => findings.find((f) => f.rule === rule)!.explanation!;
+
+  it("states the facts behind each finding", () => {
+    expect(text("duplicate")).toContain("line 3");
+    expect(text("duplicate")).toContain("$268.00");
+    expect(text("routine_supply")).toContain("$58.00");
+    expect(text("visit_level_mismatch")).toMatch(/level 5.*level 3/);
+    expect(text("visit_level_mismatch")).toContain("2024 Medicare data");
+  });
+
+  it("never uses accusing language", () => {
+    for (const f of findings) expect(isSafeWording(f.explanation!), f.explanation).toBe(true);
+    expect(isSafeWording("This is fraud")).toBe(false);
+    expect(isSafeWording("an illegal charge")).toBe(false);
   });
 });
