@@ -14,24 +14,28 @@
     "render-bill": "tsx scripts/render-bill.ts",
     "eval": "tsx evals/run.ts",
     "seed-prices": "tsx scripts/seed-prices.ts",
-    "parse-check": "tsx scripts/parse-check.ts"
+    "parse-check": "tsx scripts/parse-check.ts",
+    "build": "node scripts/build.mjs"
   },
   "dependencies": {
     "@ai-sdk/anthropic": "^4.0.82",
     "@ai-sdk/xai": "^5.0.24",
     "@hono/node-server": "^2.1.5",
     "@photon-ai/api": "^0.5.0",
+    "@resvg/resvg-js": "^2.6.2",
     "@supabase/supabase-js": "^2.118.0",
     "@vercel/functions": "^3.10.1",
     "ai": "^7.0.143",
     "heic-convert": "^2.1.0",
     "hono": "^4.13.13",
     "mupdf": "^1.28.1",
+    "satori": "^0.62.0",
     "zod": "^4.6.7"
   },
   "devDependencies": {
     "@types/heic-convert": "^2.1.1",
     "@types/node": "^26.6.5",
+    "esbuild": "^0.28.2",
     "playwright": "^1.64.1",
     "tsx": "^4.23.15",
     "typescript": "^6.0.3",

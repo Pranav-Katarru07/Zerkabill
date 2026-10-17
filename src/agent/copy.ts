@@ -1,7 +1,7 @@
 // Every message the agent sends, in one voice: a warm friend who knows billing.
 // Short texts, lowercase-friendly, never a wall. Summaries are built from the rule
 // results (not written by an LLM) so the numbers always match the audit.
-import type { Decoded } from "../audit/decode.js";
+import { SUPPLY_NAMES, type Decoded } from "../audit/decode.js";
 import type { AuditResult } from "../audit/pipeline.js";
 import type { Finding, Line } from "../audit/types.js";
 import { BRAND } from "../config.js";
@@ -97,21 +97,10 @@ function label(f: Finding, lines: Line[], decoded: Map<string, Decoded>, dx: str
   }
 }
 
-// Friendly names for routine supplies, which bills label in billing-speak ("EXAM GLOVES NONSTERILE (BOX)").
-const SUPPLY_NAMES: [RegExp, string][] = [
-  [/glove/i, "exam gloves"],
-  [/gown/i, "a hospital gown"],
-  [/start kit/i, "an IV start kit"],
-  [/alcohol/i, "alcohol wipes"],
-  [/gauze/i, "gauze"],
-  [/drape/i, "a drape"],
-  [/saline flush/i, "a saline flush"],
-];
-
 function shortName(line: Line, decoded: Map<string, Decoded>): string {
-  if (line.kind === "supply" || !line.code) {
+  if (!line.code) {
     const friendly = SUPPLY_NAMES.find(([re]) => re.test(line.description));
-    if (friendly) return friendly[1];
+    if (friendly) return friendly[1].toLowerCase();
   }
   const text = decoded.get(line.id)?.plainEnglish ?? line.description;
   const head = text.replace(/\s*\(.*?\)\s*/g, " ").split(/[,.—–]/)[0].trim();

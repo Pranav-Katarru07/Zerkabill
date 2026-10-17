@@ -10,6 +10,17 @@ export interface Decoded {
 
 const TABLE = lookup as Record<string, string>;
 
+// Common uncoded supplies, in plain words (bills label them like "EXAM GLOVES NONSTERILE (BOX)").
+export const SUPPLY_NAMES: [RegExp, string][] = [
+  [/glove/i, "Exam gloves"],
+  [/gown/i, "Hospital gown"],
+  [/start kit/i, "IV start kit"],
+  [/alcohol/i, "Alcohol wipes"],
+  [/gauze/i, "Gauze"],
+  [/drape/i, "Surgical drape"],
+  [/saline flush/i, "Saline flush"],
+];
+
 /** Plain-English meaning per line id. Table first; one batched LLM call for the rest (marked unverified). */
 export async function decodeLines(lines: Line[], opts: { useLlm?: boolean } = {}): Promise<Map<string, Decoded>> {
   const out = new Map<string, Decoded>();
@@ -19,7 +30,10 @@ export async function decodeLines(lines: Line[], opts: { useLlm?: boolean } = {}
     const known = l.code ? TABLE[l.code.toUpperCase()] : undefined;
     if (known) out.set(l.id, { plainEnglish: known, verified: true });
     else if (l.code) unknown.push(l);
-    else out.set(l.id, { plainEnglish: sentenceCase(l.description), verified: false });
+    else {
+      const supply = SUPPLY_NAMES.find(([re]) => re.test(l.description));
+      out.set(l.id, supply ? { plainEnglish: `${supply[1]}, a disposable supply.`, verified: true } : { plainEnglish: sentenceCase(l.description), verified: false });
+    }
   }
 
   if (unknown.length && opts.useLlm !== false) {

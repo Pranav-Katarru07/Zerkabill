@@ -13,3 +13,4 @@ data/demo_bills/*.tmp.*
 skills-lock.json
 .vercel
 .env*
+public/
