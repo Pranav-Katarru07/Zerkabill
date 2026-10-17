@@ -61,10 +61,48 @@ export type ImageAudit =
   | { status: "not_itemized"; parse: ParseResult }
   | { status: "unreadable"; parse: ParseResult };
 
+/** xAI latency occasionally spikes to ~50s; a second request after this long usually wins. */
+const HEDGE_AFTER_MS = 22_000;
+
+/** Runs fn; if it hasn't settled after `afterMs`, races a second copy. First success wins. */
+export async function hedged<T>(fn: () => Promise<T>, afterMs: number): Promise<T> {
+  return new Promise<T>((resolve, reject) => {
+    let failures = 0;
+    let started = 1;
+    let done = false;
+    const run = () =>
+      fn().then(
+        (v) => {
+          if (!done) {
+            done = true;
+            clearTimeout(timer);
+            resolve(v);
+          }
+        },
+        (err) => {
+          if (++failures === started && (started === 2 || done)) reject(err);
+          else if (started === 1) {
+            // First attempt failed before the hedge fired: start the backup now.
+            clearTimeout(timer);
+            started = 2;
+            run();
+          }
+        },
+      );
+    const timer = setTimeout(() => {
+      if (!done && started === 1) {
+        started = 2;
+        run();
+      }
+    }, afterMs);
+    run();
+  });
+}
+
 /** Full pipeline from a photo or PDF. */
 export async function auditImage(bytes: Uint8Array, mediaType: string, deps: AuditDeps = {}): Promise<ImageAudit> {
   const started = Date.now();
-  const parse = await parseBillImage(bytes, mediaType, { cache: deps.parseCache });
+  const parse = await hedged(() => parseBillImage(bytes, mediaType, { cache: deps.parseCache }), HEDGE_AFTER_MS);
   const parseMs = Date.now() - started;
   if (!parse.bill.isItemized || parse.bill.lines.length === 0) return { status: "not_itemized", parse };
   if (parse.confidence < MIN_PARSE_CONFIDENCE) return { status: "unreadable", parse };
