@@ -12,7 +12,8 @@
     "test": "vitest run",
     "audit": "tsx scripts/audit.ts",
     "render-bill": "tsx scripts/render-bill.ts",
-    "eval": "tsx evals/run.ts"
+    "eval": "tsx evals/run.ts",
+    "seed-prices": "tsx scripts/seed-prices.ts"
   },
   "dependencies": {
     "@ai-sdk/xai": "^5.0.24",

@@ -1,0 +1,40 @@
+{
+  "bill": {
+    "provider": "Mercy Ridge Regional Medical Center",
+    "providerState": "MA",
+    "accountNumber": "7741-20926",
+    "patientFirstName": "Maya",
+    "admitDate": "2026-09-14",
+    "dischargeDate": "2026-09-14",
+    "statementTotal": 4800.0,
+    "isItemized": true,
+    "diagnosisCodes": ["S63.501A", "W01.XXXA"],
+    "lines": [
+      { "code": "99283", "codeType": "CPT", "revenueCode": "0450", "modifiers": [], "description": "ER FACILITY FEE - LEVEL 3", "qty": 1, "unitCharge": 1566.0, "totalCharge": 1566.0, "dateOfService": "2026-09-14", "lowConfidence": false },
+      { "code": "99285", "codeType": "CPT", "revenueCode": "0981", "modifiers": ["25"], "description": "ER PHYSICIAN SVCS - HIGH COMPLEXITY", "qty": 1, "unitCharge": 1550.0, "totalCharge": 1550.0, "dateOfService": "2026-09-14", "lowConfidence": false },
+      { "code": "73110", "codeType": "CPT", "revenueCode": "0320", "modifiers": ["RT"], "description": "XR WRIST COMPLETE 3+ VIEWS", "qty": 1, "unitCharge": 268.0, "totalCharge": 268.0, "dateOfService": "2026-09-14", "lowConfidence": false },
+      { "code": "73110", "codeType": "CPT", "revenueCode": "0320", "modifiers": ["RT"], "description": "XR WRIST COMPLETE 3+ VIEWS", "qty": 1, "unitCharge": 268.0, "totalCharge": 268.0, "dateOfService": "2026-09-14", "lowConfidence": false },
+      { "code": "29125", "codeType": "CPT", "revenueCode": "0761", "modifiers": ["RT"], "description": "APPLY SHORT ARM SPLINT STATIC", "qty": 1, "unitCharge": 540.0, "totalCharge": 540.0, "dateOfService": "2026-09-14", "lowConfidence": false },
+      { "code": "96372", "codeType": "CPT", "revenueCode": "0260", "modifiers": [], "description": "THER/PROPH/DIAG INJ SC/IM", "qty": 1, "unitCharge": 165.0, "totalCharge": 165.0, "dateOfService": "2026-09-14", "lowConfidence": false },
+      { "code": "J1885", "codeType": "HCPCS", "revenueCode": "0636", "modifiers": [], "description": "KETOROLAC TROMETHAMINE INJ 15MG", "qty": 2, "unitCharge": 42.0, "totalCharge": 84.0, "dateOfService": "2026-09-14", "lowConfidence": false },
+      { "code": "81025", "codeType": "CPT", "revenueCode": "0300", "modifiers": [], "description": "URINE PREGNANCY TEST", "qty": 1, "unitCharge": 68.0, "totalCharge": 68.0, "dateOfService": "2026-09-14", "lowConfidence": false },
+      { "code": "L3908", "codeType": "HCPCS", "revenueCode": "0274", "modifiers": ["RT"], "description": "WHO WRIST EXT CONTROL COCK-UP PREFAB", "qty": 1, "unitCharge": 214.0, "totalCharge": 214.0, "dateOfService": "2026-09-14", "lowConfidence": false },
+      { "code": null, "codeType": "NONE", "revenueCode": "0250", "modifiers": [], "description": "IBUPROFEN 800MG TAB", "qty": 2, "unitCharge": 9.5, "totalCharge": 19.0, "dateOfService": "2026-09-14", "lowConfidence": false },
+      { "code": null, "codeType": "NONE", "revenueCode": "0270", "modifiers": [], "description": "EXAM GLOVES NONSTERILE (BOX)", "qty": 1, "unitCharge": 58.0, "totalCharge": 58.0, "dateOfService": "2026-09-14", "lowConfidence": false }
+    ]
+  },
+  "truth": {
+    "findings": [
+      { "line": "L2", "rule": "visit_level_mismatch", "estimatedOverchargeUsd": 913.99 },
+      { "line": "L4", "rule": "duplicate", "estimatedOverchargeUsd": 268.0 },
+      { "line": "L11", "rule": "routine_supply", "estimatedOverchargeUsd": 58.0 }
+    ],
+    "potentialSavingsUsd": 1239.99
+  },
+  "patient": {
+    "fullName": "Maya R. Okafor",
+    "dob": "2002-03-08",
+    "address": "41 Linden St Apt 3, Springfield, MA 01109",
+    "guarantor": "SELF-PAY"
+  }
+}
