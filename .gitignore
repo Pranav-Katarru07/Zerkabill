@@ -11,3 +11,5 @@ data/demo_bills/*.tmp.*
 .claude/
 .agents/
 skills-lock.json
+.vercel
+.env*
