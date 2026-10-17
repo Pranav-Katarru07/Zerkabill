@@ -1,7 +1,10 @@
 /** @jsxImportSource hono/jsx */
 import { Hono } from "hono";
 import { raw } from "hono/html";
+import { waitUntil } from "@vercel/functions";
 import { recordApproval } from "../agent/approval.js";
+import { startCallForApproval } from "../agent/call-flow.js";
+import { liveCall } from "../voice/live.js";
 import { BRAND, env } from "../config.js";
 import { logEvent } from "../db.js";
 import { AuditPage } from "./audit.js";
@@ -41,8 +44,16 @@ web.post("/audit/:token/approve", async (c) => {
     const message = res.reason === "no_call_target" ? "Calling isn't set up yet." : "There's nothing to dispute on this bill.";
     return c.json({ ok: false, message }, 409);
   }
-  // M4: the approval triggers the outbound call here.
+  // Approval recorded → place the call in the background; the page polls /call for progress.
+  waitUntil(startCallForApproval(audit.token));
   return c.json({ ok: true, status: "approved" });
+});
+
+web.get("/audit/:token/call", async (c) => {
+  const audit = await loadAudit(c.req.param("token"));
+  if (!audit) return c.json({ phase: "none" }, 404);
+  c.header("Cache-Control", "no-store");
+  return c.json(await liveCall(audit.billId));
 });
 
 function NotFound() {
