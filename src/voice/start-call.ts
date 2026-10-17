@@ -11,6 +11,11 @@ const RATE_LIMIT_MS = 5 * 60 * 1000;
 
 export class CallBlocked extends Error {}
 
+const isAmbiguous = (err: unknown) => {
+  const name = (err as { name?: string })?.name ?? "";
+  return name === "TimeoutError" || name === "AbortError" || (err instanceof TypeError && /fetch failed/i.test(err.message));
+};
+
 const spoken = (n: number) => `$${Math.round(n).toLocaleString("en-US")}`;
 
 /** Per-call dynamic variables for the ElevenLabs agent prompt. */
@@ -119,10 +124,12 @@ export async function startDisputeCall(audit: AuditView): Promise<string> {
         agent_id: e.ELEVENLABS_AGENT_ID,
         agent_phone_number_id: e.ELEVENLABS_PHONE_NUMBER_ID,
         to_number: approval.to_number,
-        conversation_initiation_client_data: { dynamic_variables: variables },
+        // zb_call_id lets the post-call webhook find this row even if we never got the conversation id back.
+        conversation_initiation_client_data: { dynamic_variables: { ...variables, zb_call_id: call.id } },
         telephony_call_config: { ringing_timeout_secs: 40 },
       }),
-      signal: AbortSignal.timeout(20_000),
+      // ElevenLabs answers only once the callee picks up (or ringing times out), so allow ring time + setup.
+      signal: AbortSignal.timeout(75_000),
     });
     const body = (await res.json().catch(() => ({}))) as { success?: boolean; message?: string; conversation_id?: string | null; sip_call_id?: string | null };
     await logEvent("call.start", { callId: call.id, status: res.status, body }, audit.conversationId);
@@ -130,6 +137,13 @@ export async function startDisputeCall(audit: AuditView): Promise<string> {
     await db().from("calls").update({ status: "ringing", provider_conversation_id: body.conversation_id }).eq("id", call.id);
     return call.id;
   } catch (err) {
+    // A timeout or dropped connection is ambiguous: the call may well be ringing. Leave it in flight
+    // and let the post-call webhook reconcile it (matched by zb_call_id). Only a definite rejection fails it.
+    if (isAmbiguous(err)) {
+      await db().from("calls").update({ summary: `start request: ${String(err)}` }).eq("id", call.id);
+      await logEvent("call.start_ambiguous", { callId: call.id, error: String(err) }, audit.conversationId);
+      return call.id;
+    }
     await db().from("calls").update({ status: "failed", summary: String(err), ended_at: new Date().toISOString() }).eq("id", call.id);
     throw err;
   }

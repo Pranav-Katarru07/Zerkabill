@@ -36,7 +36,11 @@ export async function liveCall(billId: string): Promise<LiveCall> {
 
   // In flight: ask ElevenLabs for the live picture.
   const key = env().ELEVENLABS_API_KEY;
-  if (!call.provider_conversation_id || !key) return { phase: call.status === "ringing" ? "ringing" : "dialing", startedAt: call.created_at, durationSecs: null, transcript: [], outcome: null };
+  if (!call.provider_conversation_id || !key) {
+    // No conversation id yet: ElevenLabs is still setting up the call (or we're waiting on the webhook).
+    const age = Date.now() - Date.parse(call.created_at);
+    return { phase: age > 8000 ? "ringing" : "dialing", startedAt: call.created_at, durationSecs: null, transcript: [], outcome: null };
+  }
 
   try {
     const res = await fetch(`https://api.elevenlabs.io/v1/convai/conversations/${call.provider_conversation_id}`, {

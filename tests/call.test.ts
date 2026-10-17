@@ -190,3 +190,22 @@ describe("post-call texts", async () => {
     expect(texts.join(" ")).toMatch(/3-way call/);
   });
 });
+
+describe("ambiguous start failures", () => {
+  it("keeps the call in flight on a timeout instead of failing it (the webhook reconciles)", async () => {
+    happyDb();
+    fetchMock.mockRejectedValue(Object.assign(new Error("The operation was aborted due to timeout"), { name: "TimeoutError" }));
+    const { startDisputeCall } = await import("../src/voice/start-call.js");
+    await expect(startDisputeCall(audit)).resolves.toBe("call-1");
+    const failed = writes.find((w) => w.table === "calls" && w.ops.some((o) => o.op === "update" && (o.args[0] as any)?.status === "failed"));
+    expect(failed).toBeUndefined();
+  });
+
+  it("passes our call id to ElevenLabs so the webhook can find the row", async () => {
+    happyDb();
+    const { startDisputeCall } = await import("../src/voice/start-call.js");
+    await startDisputeCall(audit);
+    const body = JSON.parse(fetchMock.mock.calls[0][1].body);
+    expect(body.conversation_initiation_client_data.dynamic_variables.zb_call_id).toBe("call-1");
+  });
+});

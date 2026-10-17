@@ -80,11 +80,19 @@ export function outcomeTexts(o: CallOutcome, hospital: string, patient: string |
 }
 
 export async function finishCall(providerConversationId: string, data: Record<string, any>): Promise<void> {
-  const { data: call } = await db()
+  let { data: call } = await db()
     .from("calls")
     .select("id, conversation_id, bill_id, status")
     .eq("provider_conversation_id", providerConversationId)
     .maybeSingle();
+  if (!call) {
+    // The start request may have timed out before we learned the conversation id; match on our own id.
+    const ourId = data.conversation_initiation_client_data?.dynamic_variables?.zb_call_id;
+    if (typeof ourId === "string") {
+      ({ data: call } = await db().from("calls").select("id, conversation_id, bill_id, status").eq("id", ourId).maybeSingle());
+      if (call) await db().from("calls").update({ provider_conversation_id: providerConversationId }).eq("id", call.id);
+    }
+  }
   if (!call) return void (await logEvent("call.finish_unknown", { providerConversationId }));
   if (call.status === "done") return; // webhook retry
 
