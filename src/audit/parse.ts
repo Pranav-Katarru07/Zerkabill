@@ -1,6 +1,7 @@
 import { createHash } from "node:crypto";
 import type { ModelMessage } from "ai";
 import { llmObject } from "../llm.js";
+import { pdfToPngs } from "./rasterize.js";
 import { VisionBillSchema, type ParsedBill } from "./types.js";
 
 // Privacy by construction: the schema has no fields for date of birth, address, or
@@ -48,13 +49,14 @@ export async function parseBillImage(
   const cached = await opts.cache?.get(imageHash);
   if (cached) return { bill: cached, imageHash, fromCache: true, confidence: parseConfidence(cached) };
 
-  const isPdf = mediaType === "application/pdf";
+  const pages = mediaType === "application/pdf" ? await pdfToPngs(bytes) : [bytes];
+  const pageType = mediaType === "application/pdf" ? "image/png" : mediaType;
   const ask = [
     {
       role: "user" as const,
       content: [
-        { type: "text" as const, text: "Transcribe this bill." },
-        { type: "file" as const, data: bytes, mediaType: isPdf ? "application/pdf" : mediaType },
+        { type: "text" as const, text: pages.length > 1 ? `Transcribe this ${pages.length}-page bill.` : "Transcribe this bill." },
+        ...pages.map((data) => ({ type: "file" as const, data, mediaType: pageType })),
       ],
     },
   ];
@@ -106,6 +108,9 @@ function totalGap(b: ParsedBill): number {
   return Math.abs(gap) <= 0.01 ? 0 : gap;
 }
 
+// CPT: 5 digits, or 4 digits + F/T/U (category II/III, PLA). HCPCS Level II: letter + 4 digits.
+const VALID_CODE = /^(\d{5}|\d{4}[FTU]|[A-V]\d{4})$/;
+
 /** Drops the rowsText scaffold and splits modifiers models glue onto codes ("99285-25"). */
 export function normalizeCodes({ rowsText: _rows, ...bill }: ParsedBill & { rowsText?: string[] }): ParsedBill {
   return {
@@ -113,8 +118,10 @@ export function normalizeCodes({ rowsText: _rows, ...bill }: ParsedBill & { rows
     lines: bill.lines.map((l) => {
       if (!l.code) return l;
       const [code, ...mods] = l.code.trim().toUpperCase().split(/[-\s]+/);
+      // Anything that isn't shaped like a code (e.g. "800" from "IBUPROFEN 800MG") isn't one.
+      if (!VALID_CODE.test(code)) return { ...l, code: null, codeType: "NONE" as const };
       const modifiers = [...new Set([...l.modifiers.map((m) => m.toUpperCase()), ...mods])];
-      return { ...l, code, modifiers };
+      return { ...l, code, codeType: /^\d/.test(code) ? ("CPT" as const) : ("HCPCS" as const), modifiers };
     }),
   };
 }
