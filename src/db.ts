@@ -7,6 +7,9 @@ let client: SupabaseClient | undefined;
 export function db(): SupabaseClient {
   if (!client) {
     const e = env();
+    if (!e.SUPABASE_URL || !e.SUPABASE_SERVICE_ROLE_KEY) {
+      throw new Error("SUPABASE_URL / SUPABASE_SERVICE_ROLE_KEY not set");
+    }
     client = createClient(e.SUPABASE_URL, e.SUPABASE_SERVICE_ROLE_KEY, {
       auth: { persistSession: false, autoRefreshToken: false },
     });
