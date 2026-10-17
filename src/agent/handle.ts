@@ -7,7 +7,7 @@ export async function handleMessage(msg: Inbound): Promise<void> {
 
   if (text === "ping") {
     await responding(msg.thread, async () => {
-      await sendText(msg.thread, "pong 🏓", { replyTo: msg.id, idempotencyKey: `pong:${msg.id}` });
+      await sendText(msg.thread, "pong 🏓", { idempotencyKey: `pong:${msg.id}` });
     });
   }
 }

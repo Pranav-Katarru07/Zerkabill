@@ -31,10 +31,12 @@ export interface Inbound {
     | { type: "other"; raw: unknown };
 }
 
+// No parentMessageId: shared iMessage lines reject threaded replies
+// ("Replies are not supported for this Space"), so every send is a plain message.
 export async function sendText(
   thread: Thread,
   text: string,
-  opts: { replyTo?: string; idempotencyKey?: string } = {},
+  opts: { idempotencyKey?: string } = {},
 ): Promise<void> {
   await photon().projects.sendMessage({
     path: { id: env().PHOTON_PROJECT_ID },
@@ -42,7 +44,6 @@ export async function sendText(
     body: {
       spaceId: thread.spaceId,
       senderId: thread.agentUserId,
-      parentMessageId: opts.replyTo,
       content: { type: "text", format: "plain", text },
     },
   });
