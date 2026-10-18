@@ -2,6 +2,9 @@
 export const FONTS_HREF =
   "https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700&family=Geist+Mono:wght@400;500;600&display=swap";
 
+/** <head> tags for the favicon + iOS home-screen icon. */
+export const ICON_LINKS = `<link rel="icon" type="image/png" sizes="32x32" href="/icon-32.png"><link rel="icon" type="image/png" sizes="64x64" href="/icon-64.png"><link rel="apple-touch-icon" href="/icon-180.png">`;
+
 export const baseCss = /* css */ `
 :root {
   --ground: oklch(0.975 0.004 165);
@@ -49,6 +52,8 @@ p { margin: 0; text-wrap: pretty; }
 a { color: inherit; }
 .num { font-family: var(--mono); font-variant-numeric: tabular-nums; letter-spacing: -0.01em; }
 .tnum { font-variant-numeric: tabular-nums; }
+.brand-mark { display: inline-flex; align-items: center; gap: 9px; }
+.brand-mark img { width: 26px; height: 26px; border-radius: 7px; display: block; }
 .visually-hidden {
   position: absolute !important; width: 1px; height: 1px; overflow: hidden;
   clip: rect(0 0 0 0); clip-path: inset(50%); white-space: nowrap;

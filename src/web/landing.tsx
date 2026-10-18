@@ -2,7 +2,7 @@
 import { raw } from "hono/html";
 import { formatPhone } from "../agent/approval.js";
 import { BRAND } from "../config.js";
-import { baseCss, FONTS_HREF } from "./theme.js";
+import { baseCss, FONTS_HREF, ICON_LINKS } from "./theme.js";
 
 // The shared iMessage line people text. (Photon shared-pool line for this project.)
 export const TEXT_NUMBER = "+16289988199";
@@ -55,12 +55,13 @@ export function LandingPage() {
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="anonymous" />
         <link rel="stylesheet" href={FONTS_HREF} />
+        {raw(ICON_LINKS)}
         <style>{raw(baseCss + css)}</style>
       </head>
       <body>
         <div class="wrap">
           <header class="top">
-            <span class="wordmark">{BRAND}</span>
+            <span class="wordmark brand-mark"><img src="/icon-64.png" alt="" width="26" height="26" />{BRAND}</span>
             <a href={sms}>Text {formatPhone(TEXT_NUMBER)}</a>
           </header>
 
