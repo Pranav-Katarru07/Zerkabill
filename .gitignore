@@ -1,0 +1,16 @@
+node_modules/
+.env
+.env.*
+!.env.example
+.vercel/
+dist/
+*.log
+.DS_Store
+evals/out/
+data/demo_bills/*.tmp.*
+.claude/
+.agents/
+skills-lock.json
+.vercel
+.env*
+public/
