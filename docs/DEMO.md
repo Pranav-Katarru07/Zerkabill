@@ -7,7 +7,7 @@ Everything here was learned from real test runs on Saturday. Read it once, rehea
 | Role | Who | Number |
 |---|---|---|
 | Presenter (Maya's phone) | | texts **+1 (628) 998-8199** from the registered iMessage account |
-| "Billing office" | teammate | **+1 (617) 763-1822** (the only number the demo can dial) |
+| "Billing office" | teammate | **+1 (413) 253-6440** (the only number the demo can dial) |
 | Caller ID they'll see | Zerkabill | **+1 (413) 341-5654** |
 | Projector | laptop | `https://zerkabill.vercel.app/audit/…` (from the summary link) + the eval slide |
 
