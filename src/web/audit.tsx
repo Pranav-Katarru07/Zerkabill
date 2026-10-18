@@ -6,7 +6,7 @@ import { isEmergencyBill, rightsNotes } from "../audit/rights.js";
 import type { AuditFinding, AuditLine, AuditView } from "./data.js";
 import { auditCss } from "./audit-css.js";
 import { auditScript } from "./audit-script.js";
-import { baseCss, FONTS_HREF } from "./theme.js";
+import { baseCss, FONTS_HREF, ICON_LINKS } from "./theme.js";
 
 const usd = (n: number, cents = true) =>
   n.toLocaleString("en-US", { style: "currency", currency: "USD", minimumFractionDigits: cents ? 2 : 0, maximumFractionDigits: cents ? 2 : 0 });
@@ -172,6 +172,7 @@ export function AuditPage({ audit, baseUrl }: { audit: AuditView; baseUrl: strin
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="anonymous" />
         <link rel="stylesheet" href={FONTS_HREF} />
+        {raw(ICON_LINKS)}
         <style>{raw(baseCss + auditCss)}</style>
         {/* Decide on the scan replay before first paint; never leaves content hidden (6s failsafe). */}
         <script>{raw(`(function(){try{var k="zb-seen-${audit.token}";var rm=matchMedia("(prefers-reduced-motion: reduce)").matches;if(!rm&&!sessionStorage.getItem(k)){document.documentElement.classList.add("js-scan");sessionStorage.setItem(k,"1");setTimeout(function(){document.documentElement.classList.remove("js-scan")},6000)}}catch(e){}})();`)}</script>
@@ -181,7 +182,7 @@ export function AuditPage({ audit, baseUrl }: { audit: AuditView; baseUrl: strin
         <div class="page">
           <aside class="rail">
             <header class="brand-row">
-              <span class="wordmark">{BRAND}</span>
+              <span class="wordmark brand-mark"><img src="/icon-64.png" alt="" width="26" height="26" />{BRAND}</span>
               <span class="brand-note">your bill, checked line by line</span>
             </header>
 

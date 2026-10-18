@@ -11,7 +11,7 @@ import { AuditPage } from "./audit.js";
 import { loadAudit } from "./data.js";
 import { LandingPage } from "./landing.js";
 import { ogImage } from "./og.js";
-import { baseCss, FONTS_HREF } from "./theme.js";
+import { baseCss, FONTS_HREF, ICON_LINKS } from "./theme.js";
 
 export const web = new Hono();
 
@@ -20,6 +20,15 @@ export function baseUrlFor(reqUrl: string): string {
 }
 
 web.get("/", (c) => c.html(<LandingPage />));
+
+// Brand icons (favicon, home-screen icon), served from data/brand.
+web.get("/:file{icon-(?:32|64|180|512|1024)\\.png}", async (c) => {
+  const { readFile } = await import("node:fs/promises");
+  const { join } = await import("node:path");
+  const png = await readFile(join(process.cwd(), "data/brand", c.req.param("file")));
+  return c.body(new Uint8Array(png), 200, { "Content-Type": "image/png", "Cache-Control": "public, max-age=86400" });
+});
+web.get("/favicon.ico", (c) => c.redirect("/icon-32.png", 301));
 
 web.get("/audit/:token", async (c) => {
   const audit = await loadAudit(c.req.param("token"));
@@ -65,6 +74,7 @@ function NotFound() {
         <meta name="robots" content="noindex" />
         <title>Audit not found · {BRAND}</title>
         <link rel="stylesheet" href={FONTS_HREF} />
+        {raw(ICON_LINKS)}
         <style>{raw(baseCss + `.nf{max-width:520px;margin:18vh auto 0;padding:0 20px}.nf h1{font-size:28px;font-weight:600}.nf p{margin-top:10px;color:var(--ink-2)}`)}</style>
       </head>
       <body>

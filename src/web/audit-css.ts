@@ -6,7 +6,7 @@ export const auditCss = /* css */ `
 body:not([data-phase="review"]) .page { padding-bottom: 40px; }
 
 /* brand */
-.brand-row { display: flex; align-items: baseline; justify-content: space-between; gap: 12px; margin: 2px 2px 14px; }
+.brand-row { display: flex; align-items: center; justify-content: space-between; gap: 12px; margin: 2px 2px 14px; }
 .wordmark { font-weight: 700; font-size: 18px; letter-spacing: -0.03em; color: var(--pine); }
 .brand-note { font-size: 13px; color: var(--ink-2); }
 
