@@ -16,6 +16,9 @@ const PINE_INK = "#eef6e6";
 const PINE_INK_2 = "#bccdb8";
 const GO = "#d5ee6a"; // ≈ oklch(0.89 0.17 125)
 
+let icon: Promise<string> | undefined;
+const loadIcon = () => (icon ??= readFile(join(process.cwd(), "data/brand/icon-180.png")).then((b) => `data:image/png;base64,${b.toString("base64")}`));
+
 let fonts: Promise<{ name: string; data: Buffer; weight: 500 | 600; style: "normal" }[]> | undefined;
 function loadFonts() {
   fonts ??= Promise.all(
@@ -44,7 +47,12 @@ export async function ogImage(audit: AuditView): Promise<Response> {
     h(
       "div",
       { justifyContent: "space-between", alignItems: "center" },
-      h("div", { fontSize: 34, fontWeight: 600, letterSpacing: -1 }, "Zerkabill"),
+      h(
+        "div",
+        { alignItems: "center", gap: 16 },
+        { type: "img", props: { src: await loadIcon(), width: 52, height: 52, style: { borderRadius: 13, border: "2px solid rgba(255,255,255,0.18)" } } },
+        h("div", { fontSize: 34, fontWeight: 600, letterSpacing: -1 }, "Zerkabill"),
+      ),
       h("div", { fontSize: 26, color: PINE_INK_2, fontWeight: 500 }, `${audit.lines.length} charges checked`),
     ),
     h(

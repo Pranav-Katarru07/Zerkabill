@@ -1,4 +1,6 @@
-# Zerkabill
+<p align="center"><img src="docs/images/icon.png" alt="Zerkabill logo: a hospital receipt folded into a Z" width="104"></p>
+
+<h1 align="center">Zerkabill</h1>
 
 **A patient advocate in iMessage.** Text it a photo of your hospital bill. It finds the charges that look wrong, shows you why with real Medicare price data, and — only with your OK — calls the billing office to get them taken off, then texts you what they said.
 
