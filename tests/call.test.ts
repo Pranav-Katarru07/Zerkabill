@@ -48,6 +48,7 @@ const audit = {
   potentialSavings: 1239.99,
   state: "MA",
   patientName: "Maya",
+  insured: false,
   lines: [{ id: "li-4", position: 4, code: "73110", description: "XR WRIST", qty: 1, unitCharge: 268, totalCharge: 268, dateOfService: "2026-09-14", plainEnglish: "Wrist X-ray, at least 3 views.", plainEnglishVerified: true }],
   findings: [{ lineItemId: "li-4", rule: "duplicate", severity: "likely_error" as const, explanation: "", estimatedOverchargeUsd: 268, evidence: { amount: 268, duplicateOf: "L3" } }],
   approval: null,

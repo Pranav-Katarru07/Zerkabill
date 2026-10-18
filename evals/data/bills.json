@@ -1,0 +1,5298 @@
+[
+ {
+  "id": "bill-01",
+  "scenario": "wrist sprain",
+  "bill": {
+   "provider": "Northshore Health System",
+   "providerState": "MA",
+   "accountNumber": "1758-38565",
+   "patientFirstName": "Ava",
+   "admitDate": "2026-07-05",
+   "dischargeDate": "2026-07-05",
+   "statementTotal": 3307,
+   "isItemized": true,
+   "diagnosisCodes": [
+    "S63.501A"
+   ],
+   "lines": [
+    {
+     "code": "99283",
+     "codeType": "CPT",
+     "revenueCode": "0450",
+     "modifiers": [],
+     "description": "ER FACILITY FEE - LEVEL 3",
+     "qty": 1,
+     "unitCharge": 919,
+     "totalCharge": 919,
+     "dateOfService": "2026-07-05",
+     "lowConfidence": false
+    },
+    {
+     "code": "99284",
+     "codeType": "CPT",
+     "revenueCode": "0981",
+     "modifiers": [
+      "25"
+     ],
+     "description": "ER PHYSICIAN SVCS - LEVEL 4",
+     "qty": 1,
+     "unitCharge": 1081,
+     "totalCharge": 1081,
+     "dateOfService": "2026-07-05",
+     "lowConfidence": false
+    },
+    {
+     "code": "J1885",
+     "codeType": "HCPCS",
+     "revenueCode": "0636",
+     "modifiers": [],
+     "description": "KETOROLAC TROMETHAMINE INJ 15MG",
+     "qty": 2,
+     "unitCharge": 16,
+     "totalCharge": 32,
+     "dateOfService": "2026-07-05",
+     "lowConfidence": false
+    },
+    {
+     "code": "96372",
+     "codeType": "CPT",
+     "revenueCode": "0260",
+     "modifiers": [],
+     "description": "THER/PROPH/DIAG INJ SC/IM",
+     "qty": 1,
+     "unitCharge": 164,
+     "totalCharge": 164,
+     "dateOfService": "2026-07-05",
+     "lowConfidence": false
+    },
+    {
+     "code": "L3908",
+     "codeType": "HCPCS",
+     "revenueCode": "0274",
+     "modifiers": [],
+     "description": "WHO WRIST EXT CONTROL COCK-UP PREFAB",
+     "qty": 1,
+     "unitCharge": 214,
+     "totalCharge": 214,
+     "dateOfService": "2026-07-05",
+     "lowConfidence": false
+    },
+    {
+     "code": "L3908",
+     "codeType": "HCPCS",
+     "revenueCode": "0274",
+     "modifiers": [],
+     "description": "WHO WRIST EXT CONTROL COCK-UP PREFAB",
+     "qty": 1,
+     "unitCharge": 214,
+     "totalCharge": 214,
+     "dateOfService": "2026-07-05",
+     "lowConfidence": false
+    },
+    {
+     "code": "73110",
+     "codeType": "CPT",
+     "revenueCode": "0320",
+     "modifiers": [],
+     "description": "XR WRIST COMPLETE 3+ VIEWS",
+     "qty": 1,
+     "unitCharge": 158,
+     "totalCharge": 158,
+     "dateOfService": "2026-07-05",
+     "lowConfidence": false
+    },
+    {
+     "code": null,
+     "codeType": "NONE",
+     "revenueCode": "0270",
+     "modifiers": [],
+     "description": "EXAM GLOVES NONSTERILE (BOX)",
+     "qty": 1,
+     "unitCharge": 30,
+     "totalCharge": 30,
+     "dateOfService": "2026-07-05",
+     "lowConfidence": false
+    },
+    {
+     "code": null,
+     "codeType": "NONE",
+     "revenueCode": "0250",
+     "modifiers": [],
+     "description": "IBUPROFEN 800MG TAB",
+     "qty": 2,
+     "unitCharge": 9.5,
+     "totalCharge": 19,
+     "dateOfService": "2026-07-05",
+     "lowConfidence": false
+    },
+    {
+     "code": "29125",
+     "codeType": "CPT",
+     "revenueCode": "0761",
+     "modifiers": [],
+     "description": "APPLY SHORT ARM SPLINT STATIC",
+     "qty": 1,
+     "unitCharge": 302,
+     "totalCharge": 302,
+     "dateOfService": "2026-07-05",
+     "lowConfidence": false
+    }
+   ]
+  },
+  "patient": {
+   "fullName": "Ava Silva",
+   "dob": "1978-05-15",
+   "address": "72 Elm St, Springfield, MA 01109",
+   "guarantor": "SELF-PAY"
+  },
+  "truth": {
+   "errors": [
+    {
+     "line": "L6",
+     "rule": "duplicate",
+     "overchargeUsd": 214,
+     "alsoOk": [
+      "L5"
+     ]
+    },
+    {
+     "line": null,
+     "rule": "math_check",
+     "overchargeUsd": 174
+    },
+    {
+     "line": "L2",
+     "rule": "visit_level_mismatch",
+     "overchargeUsd": 410.61
+    },
+    {
+     "line": "L8",
+     "rule": "routine_supply",
+     "overchargeUsd": 30
+    }
+   ]
+  }
+ },
+ {
+  "id": "bill-02",
+  "scenario": "ankle sprain",
+  "bill": {
+   "provider": "Pioneer Valley General",
+   "providerState": "MA",
+   "accountNumber": "1222-67309",
+   "patientFirstName": "Jordan",
+   "admitDate": "2026-08-03",
+   "dischargeDate": "2026-08-03",
+   "statementTotal": 4449,
+   "isItemized": true,
+   "diagnosisCodes": [
+    "S93.401A"
+   ],
+   "lines": [
+    {
+     "code": "99283",
+     "codeType": "CPT",
+     "revenueCode": "0450",
+     "modifiers": [],
+     "description": "ER FACILITY FEE - LEVEL 3",
+     "qty": 1,
+     "unitCharge": 2298,
+     "totalCharge": 2298,
+     "dateOfService": "2026-08-03",
+     "lowConfidence": false
+    },
+    {
+     "code": "99284",
+     "codeType": "CPT",
+     "revenueCode": "0981",
+     "modifiers": [
+      "25"
+     ],
+     "description": "ER PHYSICIAN SVCS - LEVEL 4",
+     "qty": 1,
+     "unitCharge": 913,
+     "totalCharge": 913,
+     "dateOfService": "2026-08-03",
+     "lowConfidence": false
+    },
+    {
+     "code": "29515",
+     "codeType": "CPT",
+     "revenueCode": "0761",
+     "modifiers": [],
+     "description": "APPLY SHORT LEG SPLINT",
+     "qty": 1,
+     "unitCharge": 518,
+     "totalCharge": 518,
+     "dateOfService": "2026-08-03",
+     "lowConfidence": false
+    },
+    {
+     "code": "E0114",
+     "codeType": "HCPCS",
+     "revenueCode": "0274",
+     "modifiers": [],
+     "description": "CRUTCHES UNDERARM ALUMINUM PAIR",
+     "qty": 1,
+     "unitCharge": 145,
+     "totalCharge": 145,
+     "dateOfService": "2026-08-03",
+     "lowConfidence": false
+    },
+    {
+     "code": "96372",
+     "codeType": "CPT",
+     "revenueCode": "0260",
+     "modifiers": [],
+     "description": "THER/PROPH/DIAG INJ SC/IM",
+     "qty": 1,
+     "unitCharge": 332,
+     "totalCharge": 332,
+     "dateOfService": "2026-08-03",
+     "lowConfidence": false
+    },
+    {
+     "code": "73610",
+     "codeType": "CPT",
+     "revenueCode": "0320",
+     "modifiers": [],
+     "description": "XR ANKLE COMPLETE 3+ VIEWS",
+     "qty": 1,
+     "unitCharge": 149,
+     "totalCharge": 149,
+     "dateOfService": "2026-08-03",
+     "lowConfidence": false
+    },
+    {
+     "code": null,
+     "codeType": "NONE",
+     "revenueCode": "0270",
+     "modifiers": [],
+     "description": "SPLINT MATERIAL FIBERGLASS 4IN",
+     "qty": 1,
+     "unitCharge": 64,
+     "totalCharge": 64,
+     "dateOfService": "2026-08-03",
+     "lowConfidence": false
+    },
+    {
+     "code": "J1885",
+     "codeType": "HCPCS",
+     "revenueCode": "0636",
+     "modifiers": [],
+     "description": "KETOROLAC TROMETHAMINE INJ 15MG",
+     "qty": 2,
+     "unitCharge": 15,
+     "totalCharge": 30,
+     "dateOfService": "2026-08-03",
+     "lowConfidence": false
+    }
+   ]
+  },
+  "patient": {
+   "fullName": "Jordan Kim",
+   "dob": "1979-09-16",
+   "address": "738 Elm St, Springfield, MA 01109",
+   "guarantor": "SELF-PAY"
+  },
+  "truth": {
+   "errors": [
+    {
+     "line": "L5",
+     "rule": "price_outlier",
+     "overchargeUsd": 260.35
+    },
+    {
+     "line": "L2",
+     "rule": "visit_level_mismatch",
+     "overchargeUsd": 346.8
+    }
+   ]
+  }
+ },
+ {
+  "id": "bill-03",
+  "scenario": "sore throat",
+  "bill": {
+   "provider": "Harborview Community Hospital",
+   "providerState": "MA",
+   "accountNumber": "2925-37603",
+   "patientFirstName": "Noah",
+   "admitDate": "2026-09-26",
+   "dischargeDate": "2026-09-26",
+   "statementTotal": 1552.5,
+   "isItemized": true,
+   "diagnosisCodes": [
+    "J02.9"
+   ],
+   "lines": [
+    {
+     "code": "99282",
+     "codeType": "CPT",
+     "revenueCode": "0450",
+     "modifiers": [],
+     "description": "ER FACILITY FEE - LEVEL 2",
+     "qty": 1,
+     "unitCharge": 1170,
+     "totalCharge": 1170,
+     "dateOfService": "2026-09-26",
+     "lowConfidence": false
+    },
+    {
+     "code": "99282",
+     "codeType": "CPT",
+     "revenueCode": "0981",
+     "modifiers": [
+      "25"
+     ],
+     "description": "ER PHYSICIAN SVCS - LEVEL 2",
+     "qty": 1,
+     "unitCharge": 292,
+     "totalCharge": 292,
+     "dateOfService": "2026-09-26",
+     "lowConfidence": false
+    },
+    {
+     "code": null,
+     "codeType": "NONE",
+     "revenueCode": "0250",
+     "modifiers": [],
+     "description": "AMOXICILLIN 500MG CAP",
+     "qty": 2,
+     "unitCharge": 6.25,
+     "totalCharge": 12.5,
+     "dateOfService": "2026-09-26",
+     "lowConfidence": false
+    },
+    {
+     "code": "87880",
+     "codeType": "CPT",
+     "revenueCode": "0300",
+     "modifiers": [],
+     "description": "STREP A ASSAY W/ OPTIC",
+     "qty": 1,
+     "unitCharge": 78,
+     "totalCharge": 78,
+     "dateOfService": "2026-09-26",
+     "lowConfidence": false
+    }
+   ]
+  },
+  "patient": {
+   "fullName": "Noah Haddad",
+   "dob": "1999-05-16",
+   "address": "153 Elm St, Springfield, MA 01109",
+   "guarantor": "COMMERCIAL"
+  },
+  "truth": {
+   "errors": []
+  }
+ },
+ {
+  "id": "bill-04",
+  "scenario": "back strain",
+  "bill": {
+   "provider": "Northshore Health System",
+   "providerState": "MA",
+   "accountNumber": "7020-74165",
+   "patientFirstName": "Jordan",
+   "admitDate": "2026-07-05",
+   "dischargeDate": "2026-07-05",
+   "statementTotal": 3146.8,
+   "isItemized": true,
+   "diagnosisCodes": [
+    "S39.012A"
+   ],
+   "lines": [
+    {
+     "code": "99283",
+     "codeType": "CPT",
+     "revenueCode": "0450",
+     "modifiers": [],
+     "description": "ER FACILITY FEE - LEVEL 3",
+     "qty": 1,
+     "unitCharge": 1939,
+     "totalCharge": 1939,
+     "dateOfService": "2026-07-05",
+     "lowConfidence": false
+    },
+    {
+     "code": "99283",
+     "codeType": "CPT",
+     "revenueCode": "0981",
+     "modifiers": [
+      "25"
+     ],
+     "description": "ER PHYSICIAN SVCS - LEVEL 3",
+     "qty": 1,
+     "unitCharge": 705,
+     "totalCharge": 705,
+     "dateOfService": "2026-07-05",
+     "lowConfidence": false
+    },
+    {
+     "code": "72100",
+     "codeType": "CPT",
+     "revenueCode": "0320",
+     "modifiers": [],
+     "description": "XR LUMBAR SPINE 2-3 VIEWS",
+     "qty": 1,
+     "unitCharge": 257,
+     "totalCharge": 257,
+     "dateOfService": "2026-07-05",
+     "lowConfidence": false
+    },
+    {
+     "code": null,
+     "codeType": "NONE",
+     "revenueCode": "0270",
+     "modifiers": [],
+     "description": "PATIENT GOWN DISPOSABLE",
+     "qty": 1,
+     "unitCharge": 36,
+     "totalCharge": 36,
+     "dateOfService": "2026-07-05",
+     "lowConfidence": false
+    },
+    {
+     "code": "96372",
+     "codeType": "CPT",
+     "revenueCode": "0260",
+     "modifiers": [],
+     "description": "THER/PROPH/DIAG INJ SC/IM",
+     "qty": 1,
+     "unitCharge": 107,
+     "totalCharge": 107,
+     "dateOfService": "2026-07-05",
+     "lowConfidence": false
+    },
+    {
+     "code": "J1885",
+     "codeType": "HCPCS",
+     "revenueCode": "0636",
+     "modifiers": [],
+     "description": "KETOROLAC TROMETHAMINE INJ 15MG",
+     "qty": 2,
+     "unitCharge": 12.5,
+     "totalCharge": 25,
+     "dateOfService": "2026-07-05",
+     "lowConfidence": false
+    },
+    {
+     "code": null,
+     "codeType": "NONE",
+     "revenueCode": "0250",
+     "modifiers": [],
+     "description": "CYCLOBENZAPRINE 10MG TAB",
+     "qty": 1,
+     "unitCharge": 7.8,
+     "totalCharge": 7.8,
+     "dateOfService": "2026-07-05",
+     "lowConfidence": false
+    }
+   ]
+  },
+  "patient": {
+   "fullName": "Jordan Haddad",
+   "dob": "1963-01-11",
+   "address": "628 Elm St, Springfield, MA 01109",
+   "guarantor": "COMMERCIAL"
+  },
+  "truth": {
+   "errors": [
+    {
+     "line": null,
+     "rule": "math_check",
+     "overchargeUsd": 70
+    },
+    {
+     "line": "L4",
+     "rule": "routine_supply",
+     "overchargeUsd": 36
+    }
+   ]
+  }
+ },
+ {
+  "id": "bill-05",
+  "scenario": "hand laceration",
+  "bill": {
+   "provider": "St. Brendan's Medical Center",
+   "providerState": "MA",
+   "accountNumber": "4066-37629",
+   "patientFirstName": "Ava",
+   "admitDate": "2026-08-27",
+   "dischargeDate": "2026-08-27",
+   "statementTotal": 3701,
+   "isItemized": true,
+   "diagnosisCodes": [
+    "S61.412A",
+    "W26.0XXA"
+   ],
+   "lines": [
+    {
+     "code": "99283",
+     "codeType": "CPT",
+     "revenueCode": "0450",
+     "modifiers": [],
+     "description": "ER FACILITY FEE - LEVEL 3",
+     "qty": 1,
+     "unitCharge": 1594,
+     "totalCharge": 1594,
+     "dateOfService": "2026-08-27",
+     "lowConfidence": false
+    },
+    {
+     "code": "99283",
+     "codeType": "CPT",
+     "revenueCode": "0981",
+     "modifiers": [
+      "25"
+     ],
+     "description": "ER PHYSICIAN SVCS - LEVEL 3",
+     "qty": 1,
+     "unitCharge": 626,
+     "totalCharge": 626,
+     "dateOfService": "2026-08-27",
+     "lowConfidence": false
+    },
+    {
+     "code": "90471",
+     "codeType": "CPT",
+     "revenueCode": "0771",
+     "modifiers": [],
+     "description": "IMMUNIZATION ADMIN",
+     "qty": 1,
+     "unitCharge": 188,
+     "totalCharge": 188,
+     "dateOfService": "2026-08-27",
+     "lowConfidence": false
+    },
+    {
+     "code": null,
+     "codeType": "NONE",
+     "revenueCode": "0270",
+     "modifiers": [],
+     "description": "SUTURE KIT NYLON 4-0",
+     "qty": 1,
+     "unitCharge": 52,
+     "totalCharge": 52,
+     "dateOfService": "2026-08-27",
+     "lowConfidence": false
+    },
+    {
+     "code": null,
+     "codeType": "NONE",
+     "revenueCode": "0270",
+     "modifiers": [],
+     "description": "DISPOSABLE BED PAD (CHUX)",
+     "qty": 1,
+     "unitCharge": 73,
+     "totalCharge": 73,
+     "dateOfService": "2026-08-27",
+     "lowConfidence": false
+    },
+    {
+     "code": "12002",
+     "codeType": "CPT",
+     "revenueCode": "0761",
+     "modifiers": [],
+     "description": "SIMPLE REPAIR 2.6-7.5CM",
+     "qty": 1,
+     "unitCharge": 987,
+     "totalCharge": 987,
+     "dateOfService": "2026-08-27",
+     "lowConfidence": false
+    },
+    {
+     "code": "90715",
+     "codeType": "CPT",
+     "revenueCode": "0636",
+     "modifiers": [],
+     "description": "TDAP VACCINE 7 YRS+ IM",
+     "qty": 1,
+     "unitCharge": 163,
+     "totalCharge": 163,
+     "dateOfService": "2026-08-27",
+     "lowConfidence": false
+    },
+    {
+     "code": null,
+     "codeType": "NONE",
+     "revenueCode": "0250",
+     "modifiers": [],
+     "description": "LIDOCAINE 1% 20ML VIAL",
+     "qty": 1,
+     "unitCharge": 18,
+     "totalCharge": 18,
+     "dateOfService": "2026-08-27",
+     "lowConfidence": false
+    }
+   ]
+  },
+  "patient": {
+   "fullName": "Ava Johnson",
+   "dob": "1991-07-16",
+   "address": "647 Elm St, Springfield, MA 01109",
+   "guarantor": "COMMERCIAL"
+  },
+  "truth": {
+   "errors": [
+    {
+     "line": "L5",
+     "rule": "routine_supply",
+     "overchargeUsd": 73
+    }
+   ]
+  }
+ },
+ {
+  "id": "bill-06",
+  "scenario": "chest pain",
+  "bill": {
+   "provider": "Harborview Community Hospital",
+   "providerState": "MA",
+   "accountNumber": "9350-63564",
+   "patientFirstName": "Liam",
+   "admitDate": "2026-09-15",
+   "dischargeDate": "2026-09-15",
+   "statementTotal": 3752.4,
+   "isItemized": true,
+   "diagnosisCodes": [
+    "R07.9",
+    "I20.9"
+   ],
+   "lines": [
+    {
+     "code": "99285",
+     "codeType": "CPT",
+     "revenueCode": "0450",
+     "modifiers": [],
+     "description": "ER FACILITY FEE - LEVEL 5",
+     "qty": 1,
+     "unitCharge": 967,
+     "totalCharge": 967,
+     "dateOfService": "2026-09-15",
+     "lowConfidence": false
+    },
+    {
+     "code": "99285",
+     "codeType": "CPT",
+     "revenueCode": "0981",
+     "modifiers": [
+      "25"
+     ],
+     "description": "ER PHYSICIAN SVCS - LEVEL 5",
+     "qty": 1,
+     "unitCharge": 1176,
+     "totalCharge": 1176,
+     "dateOfService": "2026-09-15",
+     "lowConfidence": false
+    },
+    {
+     "code": "96360",
+     "codeType": "CPT",
+     "revenueCode": "0260",
+     "modifiers": [],
+     "description": "IV INFUSION HYDRATION 1ST HR",
+     "qty": 1,
+     "unitCharge": 328,
+     "totalCharge": 328,
+     "dateOfService": "2026-09-15",
+     "lowConfidence": false
+    },
+    {
+     "code": null,
+     "codeType": "NONE",
+     "revenueCode": "0270",
+     "modifiers": [],
+     "description": "ALCOHOL PREP PADS (BOX)",
+     "qty": 1,
+     "unitCharge": 93,
+     "totalCharge": 93,
+     "dateOfService": "2026-09-15",
+     "lowConfidence": false
+    },
+    {
+     "code": "93010",
+     "codeType": "CPT",
+     "revenueCode": "0985",
+     "modifiers": [],
+     "description": "ECG INTERPRETATION & REPORT",
+     "qty": 1,
+     "unitCharge": 69,
+     "totalCharge": 69,
+     "dateOfService": "2026-09-15",
+     "lowConfidence": false
+    },
+    {
+     "code": null,
+     "codeType": "NONE",
+     "revenueCode": "0250",
+     "modifiers": [],
+     "description": "ASPIRIN 81MG CHEW TAB",
+     "qty": 4,
+     "unitCharge": 4.1,
+     "totalCharge": 16.4,
+     "dateOfService": "2026-09-15",
+     "lowConfidence": false
+    },
+    {
+     "code": "85025",
+     "codeType": "CPT",
+     "revenueCode": "0300",
+     "modifiers": [],
+     "description": "CBC W/ AUTO DIFF",
+     "qty": 1,
+     "unitCharge": 101,
+     "totalCharge": 101,
+     "dateOfService": "2026-09-15",
+     "lowConfidence": false
+    },
+    {
+     "code": "96360",
+     "codeType": "CPT",
+     "revenueCode": "0260",
+     "modifiers": [],
+     "description": "IV INFUSION HYDRATION 1ST HR",
+     "qty": 1,
+     "unitCharge": 328,
+     "totalCharge": 328,
+     "dateOfService": "2026-09-15",
+     "lowConfidence": false
+    },
+    {
+     "code": "71046",
+     "codeType": "CPT",
+     "revenueCode": "0320",
+     "modifiers": [],
+     "description": "XR CHEST 2 VIEWS",
+     "qty": 1,
+     "unitCharge": 259,
+     "totalCharge": 259,
+     "dateOfService": "2026-09-15",
+     "lowConfidence": false
+    },
+    {
+     "code": "80053",
+     "codeType": "CPT",
+     "revenueCode": "0300",
+     "modifiers": [],
+     "description": "COMPREHENSIVE METABOLIC PANEL",
+     "qty": 1,
+     "unitCharge": 229,
+     "totalCharge": 229,
+     "dateOfService": "2026-09-15",
+     "lowConfidence": false
+    },
+    {
+     "code": "36415",
+     "codeType": "CPT",
+     "revenueCode": "0300",
+     "modifiers": [],
+     "description": "ROUTINE VENIPUNCTURE",
+     "qty": 1,
+     "unitCharge": 68,
+     "totalCharge": 68,
+     "dateOfService": "2026-09-15",
+     "lowConfidence": false
+    }
+   ]
+  },
+  "patient": {
+   "fullName": "Liam Haddad",
+   "dob": "1974-08-16",
+   "address": "833 Elm St, Springfield, MA 01109",
+   "guarantor": "SELF-PAY"
+  },
+  "truth": {
+   "errors": [
+    {
+     "line": null,
+     "rule": "math_check",
+     "overchargeUsd": 118
+    },
+    {
+     "line": "L4",
+     "rule": "routine_supply",
+     "overchargeUsd": 93
+    },
+    {
+     "line": "L9",
+     "rule": "price_outlier",
+     "overchargeUsd": 183.3
+    },
+    {
+     "line": "L8",
+     "rule": "duplicate",
+     "overchargeUsd": 328,
+     "alsoOk": [
+      "L3"
+     ]
+    }
+   ]
+  }
+ },
+ {
+  "id": "bill-07",
+  "scenario": "abdominal pain",
+  "bill": {
+   "provider": "Mercy Ridge Regional Medical Center",
+   "providerState": "MA",
+   "accountNumber": "9760-29390",
+   "patientFirstName": "Ava",
+   "admitDate": "2026-07-02",
+   "dischargeDate": "2026-07-02",
+   "statementTotal": 4252,
+   "isItemized": true,
+   "diagnosisCodes": [
+    "R10.9"
+   ],
+   "lines": [
+    {
+     "code": "99284",
+     "codeType": "CPT",
+     "revenueCode": "0450",
+     "modifiers": [],
+     "description": "ER FACILITY FEE - LEVEL 4",
+     "qty": 1,
+     "unitCharge": 1037,
+     "totalCharge": 1037,
+     "dateOfService": "2026-07-02",
+     "lowConfidence": false
+    },
+    {
+     "code": "99284",
+     "codeType": "CPT",
+     "revenueCode": "0981",
+     "modifiers": [
+      "25"
+     ],
+     "description": "ER PHYSICIAN SVCS - LEVEL 4",
+     "qty": 1,
+     "unitCharge": 769,
+     "totalCharge": 769,
+     "dateOfService": "2026-07-02",
+     "lowConfidence": false
+    },
+    {
+     "code": "81001",
+     "codeType": "CPT",
+     "revenueCode": "0300",
+     "modifiers": [],
+     "description": "URINALYSIS AUTO W/ MICROSCOPY",
+     "qty": 1,
+     "unitCharge": 107,
+     "totalCharge": 107,
+     "dateOfService": "2026-07-02",
+     "lowConfidence": false
+    },
+    {
+     "code": "36415",
+     "codeType": "CPT",
+     "revenueCode": "0300",
+     "modifiers": [],
+     "description": "ROUTINE VENIPUNCTURE",
+     "qty": 1,
+     "unitCharge": 40,
+     "totalCharge": 40,
+     "dateOfService": "2026-07-02",
+     "lowConfidence": false
+    },
+    {
+     "code": null,
+     "codeType": "NONE",
+     "revenueCode": "0255",
+     "modifiers": [],
+     "description": "IOHEXOL 350 CONTRAST 100ML",
+     "qty": 1,
+     "unitCharge": 148,
+     "totalCharge": 148,
+     "dateOfService": "2026-07-02",
+     "lowConfidence": false
+    },
+    {
+     "code": "74177",
+     "codeType": "CPT",
+     "revenueCode": "0350",
+     "modifiers": [],
+     "description": "CT ABD & PELVIS W/ CONTRAST",
+     "qty": 1,
+     "unitCharge": 1316,
+     "totalCharge": 1316,
+     "dateOfService": "2026-07-02",
+     "lowConfidence": false
+    },
+    {
+     "code": "36415",
+     "codeType": "CPT",
+     "revenueCode": "0300",
+     "modifiers": [],
+     "description": "ROUTINE VENIPUNCTURE",
+     "qty": 1,
+     "unitCharge": 40,
+     "totalCharge": 40,
+     "dateOfService": "2026-07-02",
+     "lowConfidence": false
+    },
+    {
+     "code": "J2405",
+     "codeType": "HCPCS",
+     "revenueCode": "0636",
+     "modifiers": [],
+     "description": "ONDANSETRON HCL INJ 1MG",
+     "qty": 4,
+     "unitCharge": 20,
+     "totalCharge": 80,
+     "dateOfService": "2026-07-02",
+     "lowConfidence": false
+    },
+    {
+     "code": "85025",
+     "codeType": "CPT",
+     "revenueCode": "0300",
+     "modifiers": [],
+     "description": "CBC W/ AUTO DIFF",
+     "qty": 1,
+     "unitCharge": 114,
+     "totalCharge": 114,
+     "dateOfService": "2026-07-02",
+     "lowConfidence": false
+    },
+    {
+     "code": "80053",
+     "codeType": "CPT",
+     "revenueCode": "0300",
+     "modifiers": [],
+     "description": "COMPREHENSIVE METABOLIC PANEL",
+     "qty": 1,
+     "unitCharge": 178,
+     "totalCharge": 178,
+     "dateOfService": "2026-07-02",
+     "lowConfidence": false
+    },
+    {
+     "code": "96374",
+     "codeType": "CPT",
+     "revenueCode": "0260",
+     "modifiers": [],
+     "description": "THER/PROPH/DIAG INJ IV PUSH",
+     "qty": 1,
+     "unitCharge": 423,
+     "totalCharge": 423,
+     "dateOfService": "2026-07-02",
+     "lowConfidence": false
+    }
+   ]
+  },
+  "patient": {
+   "fullName": "Ava Nguyen",
+   "dob": "1996-04-11",
+   "address": "160 Elm St, Springfield, MA 01109",
+   "guarantor": "SELF-PAY"
+  },
+  "truth": {
+   "errors": [
+    {
+     "line": "L8",
+     "rule": "price_outlier",
+     "overchargeUsd": 62.92
+    },
+    {
+     "line": "L4",
+     "rule": "duplicate",
+     "overchargeUsd": 40,
+     "alsoOk": [
+      "L7"
+     ]
+    }
+   ]
+  }
+ },
+ {
+  "id": "bill-08",
+  "scenario": "headache with CT (observation stay)",
+  "bill": {
+   "provider": "Mercy Ridge Regional Medical Center",
+   "providerState": "MA",
+   "accountNumber": "6907-85577",
+   "patientFirstName": "Noah",
+   "admitDate": "2026-08-22",
+   "dischargeDate": "2026-08-24",
+   "statementTotal": 4597.4,
+   "isItemized": true,
+   "diagnosisCodes": [
+    "R51.9"
+   ],
+   "lines": [
+    {
+     "code": "99284",
+     "codeType": "CPT",
+     "revenueCode": "0450",
+     "modifiers": [],
+     "description": "ER FACILITY FEE - LEVEL 4",
+     "qty": 1,
+     "unitCharge": 2304,
+     "totalCharge": 2304,
+     "dateOfService": "2026-08-22",
+     "lowConfidence": false
+    },
+    {
+     "code": "99284",
+     "codeType": "CPT",
+     "revenueCode": "0981",
+     "modifiers": [
+      "25"
+     ],
+     "description": "ER PHYSICIAN SVCS - LEVEL 4",
+     "qty": 1,
+     "unitCharge": 819,
+     "totalCharge": 819,
+     "dateOfService": "2026-08-22",
+     "lowConfidence": false
+    },
+    {
+     "code": "J1100",
+     "codeType": "HCPCS",
+     "revenueCode": "0636",
+     "modifiers": [],
+     "description": "DEXAMETHASONE SODIUM PHOS 1MG",
+     "qty": 10,
+     "unitCharge": 0.7,
+     "totalCharge": 7,
+     "dateOfService": "2026-08-22",
+     "lowConfidence": false
+    },
+    {
+     "code": "70450",
+     "codeType": "CPT",
+     "revenueCode": "0350",
+     "modifiers": [],
+     "description": "CT HEAD W/O CONTRAST",
+     "qty": 1,
+     "unitCharge": 1108,
+     "totalCharge": 1108,
+     "dateOfService": "2026-08-22",
+     "lowConfidence": false
+    },
+    {
+     "code": "85025",
+     "codeType": "CPT",
+     "revenueCode": "0300",
+     "modifiers": [],
+     "description": "CBC W/ AUTO DIFF",
+     "qty": 1,
+     "unitCharge": 74,
+     "totalCharge": 74,
+     "dateOfService": "2026-08-23",
+     "lowConfidence": false
+    },
+    {
+     "code": null,
+     "codeType": "NONE",
+     "revenueCode": "0250",
+     "modifiers": [],
+     "description": "ACETAMINOPHEN 500MG TAB",
+     "qty": 2,
+     "unitCharge": 3.2,
+     "totalCharge": 6.4,
+     "dateOfService": "2026-08-22",
+     "lowConfidence": false
+    },
+    {
+     "code": "J1100",
+     "codeType": "HCPCS",
+     "revenueCode": "0636",
+     "modifiers": [],
+     "description": "DEXAMETHASONE SODIUM PHOS 1MG",
+     "qty": 10,
+     "unitCharge": 0.7,
+     "totalCharge": 7,
+     "dateOfService": "2026-08-22",
+     "lowConfidence": false
+    },
+    {
+     "code": null,
+     "codeType": "NONE",
+     "revenueCode": "0270",
+     "modifiers": [],
+     "description": "ALCOHOL PREP PADS (BOX)",
+     "qty": 1,
+     "unitCharge": 30,
+     "totalCharge": 30,
+     "dateOfService": "2026-08-22",
+     "lowConfidence": false
+    },
+    {
+     "code": "96374",
+     "codeType": "CPT",
+     "revenueCode": "0260",
+     "modifiers": [],
+     "description": "THER/PROPH/DIAG INJ IV PUSH",
+     "qty": 1,
+     "unitCharge": 242,
+     "totalCharge": 242,
+     "dateOfService": "2026-08-22",
+     "lowConfidence": false
+    }
+   ]
+  },
+  "patient": {
+   "fullName": "Noah Silva",
+   "dob": "1987-05-15",
+   "address": "791 Elm St, Springfield, MA 01109",
+   "guarantor": "COMMERCIAL"
+  },
+  "truth": {
+   "errors": [
+    {
+     "line": "L8",
+     "rule": "routine_supply",
+     "overchargeUsd": 30
+    },
+    {
+     "line": "L3",
+     "rule": "duplicate",
+     "overchargeUsd": 7,
+     "alsoOk": [
+      "L7"
+     ]
+    }
+   ]
+  }
+ },
+ {
+  "id": "bill-09",
+  "scenario": "knee effusion (office) (observation stay)",
+  "bill": {
+   "provider": "Northshore Health System",
+   "providerState": "MA",
+   "accountNumber": "6341-77061",
+   "patientFirstName": "Ava",
+   "admitDate": "2026-09-18",
+   "dischargeDate": "2026-09-19",
+   "statementTotal": 1576,
+   "isItemized": true,
+   "diagnosisCodes": [
+    "M25.461"
+   ],
+   "lines": [
+    {
+     "code": "J1100",
+     "codeType": "HCPCS",
+     "revenueCode": "0636",
+     "modifiers": [],
+     "description": "DEXAMETHASONE SODIUM PHOS 1MG",
+     "qty": 4,
+     "unitCharge": 1.75,
+     "totalCharge": 7,
+     "dateOfService": "2026-09-18",
+     "lowConfidence": false
+    },
+    {
+     "code": "99214",
+     "codeType": "CPT",
+     "revenueCode": "0510",
+     "modifiers": [],
+     "description": "OFFICE VISIT EST PT MOD",
+     "qty": 1,
+     "unitCharge": 704,
+     "totalCharge": 704,
+     "dateOfService": "2026-09-18",
+     "lowConfidence": false
+    },
+    {
+     "code": "85025",
+     "codeType": "CPT",
+     "revenueCode": "0300",
+     "modifiers": [],
+     "description": "CBC W/ AUTO DIFF",
+     "qty": 1,
+     "unitCharge": 59,
+     "totalCharge": 59,
+     "dateOfService": "2026-09-19",
+     "lowConfidence": false
+    },
+    {
+     "code": "20610",
+     "codeType": "CPT",
+     "revenueCode": "0761",
+     "modifiers": [],
+     "description": "ARTHROCENTESIS MAJOR JOINT",
+     "qty": 1,
+     "unitCharge": 718,
+     "totalCharge": 718,
+     "dateOfService": "2026-09-18",
+     "lowConfidence": false
+    }
+   ]
+  },
+  "patient": {
+   "fullName": "Ava Nguyen",
+   "dob": "1993-03-17",
+   "address": "380 Elm St, Springfield, MA 01109",
+   "guarantor": "COMMERCIAL"
+  },
+  "truth": {
+   "errors": [
+    {
+     "line": null,
+     "rule": "math_check",
+     "overchargeUsd": 88
+    }
+   ]
+  }
+ },
+ {
+  "id": "bill-10",
+  "scenario": "follow-up labs (office)",
+  "bill": {
+   "provider": "Northshore Health System",
+   "providerState": "MA",
+   "accountNumber": "2618-68702",
+   "patientFirstName": "Ava",
+   "admitDate": "2026-07-25",
+   "dischargeDate": "2026-07-25",
+   "statementTotal": 567,
+   "isItemized": true,
+   "diagnosisCodes": [
+    "E11.9"
+   ],
+   "lines": [
+    {
+     "code": "80048",
+     "codeType": "CPT",
+     "revenueCode": "0300",
+     "modifiers": [],
+     "description": "BASIC METABOLIC PANEL",
+     "qty": 1,
+     "unitCharge": 106,
+     "totalCharge": 106,
+     "dateOfService": "2026-07-25",
+     "lowConfidence": false
+    },
+    {
+     "code": "36415",
+     "codeType": "CPT",
+     "revenueCode": "0300",
+     "modifiers": [],
+     "description": "ROUTINE VENIPUNCTURE",
+     "qty": 1,
+     "unitCharge": 63,
+     "totalCharge": 63,
+     "dateOfService": "2026-07-25",
+     "lowConfidence": false
+    },
+    {
+     "code": "99213",
+     "codeType": "CPT",
+     "revenueCode": "0510",
+     "modifiers": [],
+     "description": "OFFICE VISIT EST PT LOW",
+     "qty": 1,
+     "unitCharge": 335,
+     "totalCharge": 335,
+     "dateOfService": "2026-07-25",
+     "lowConfidence": false
+    },
+    {
+     "code": "85025",
+     "codeType": "CPT",
+     "revenueCode": "0300",
+     "modifiers": [],
+     "description": "CBC W/ AUTO DIFF",
+     "qty": 1,
+     "unitCharge": 63,
+     "totalCharge": 63,
+     "dateOfService": "2026-07-25",
+     "lowConfidence": false
+    }
+   ]
+  },
+  "patient": {
+   "fullName": "Ava Patel",
+   "dob": "1991-01-18",
+   "address": "186 Elm St, Springfield, MA 01109",
+   "guarantor": "COMMERCIAL"
+  },
+  "truth": {
+   "errors": []
+  }
+ },
+ {
+  "id": "bill-11",
+  "scenario": "wrist sprain (observation stay)",
+  "bill": {
+   "provider": "Mercy Ridge Regional Medical Center",
+   "providerState": "MA",
+   "accountNumber": "5902-17914",
+   "patientFirstName": "Ava",
+   "admitDate": "2026-08-27",
+   "dischargeDate": "2026-08-29",
+   "statementTotal": 4367,
+   "isItemized": true,
+   "diagnosisCodes": [
+    "S63.501A"
+   ],
+   "lines": [
+    {
+     "code": "99283",
+     "codeType": "CPT",
+     "revenueCode": "0450",
+     "modifiers": [],
+     "description": "ER FACILITY FEE - LEVEL 3",
+     "qty": 1,
+     "unitCharge": 2352,
+     "totalCharge": 2352,
+     "dateOfService": "2026-08-27",
+     "lowConfidence": false
+    },
+    {
+     "code": "99283",
+     "codeType": "CPT",
+     "revenueCode": "0981",
+     "modifiers": [
+      "25"
+     ],
+     "description": "ER PHYSICIAN SVCS - LEVEL 3",
+     "qty": 1,
+     "unitCharge": 654,
+     "totalCharge": 654,
+     "dateOfService": "2026-08-27",
+     "lowConfidence": false
+    },
+    {
+     "code": "L3908",
+     "codeType": "HCPCS",
+     "revenueCode": "0274",
+     "modifiers": [],
+     "description": "WHO WRIST EXT CONTROL COCK-UP PREFAB",
+     "qty": 1,
+     "unitCharge": 214,
+     "totalCharge": 214,
+     "dateOfService": "2026-08-27",
+     "lowConfidence": false
+    },
+    {
+     "code": "85025",
+     "codeType": "CPT",
+     "revenueCode": "0300",
+     "modifiers": [],
+     "description": "CBC W/ AUTO DIFF",
+     "qty": 1,
+     "unitCharge": 98,
+     "totalCharge": 98,
+     "dateOfService": "2026-08-28",
+     "lowConfidence": false
+    },
+    {
+     "code": "J1885",
+     "codeType": "HCPCS",
+     "revenueCode": "0636",
+     "modifiers": [],
+     "description": "KETOROLAC TROMETHAMINE INJ 15MG",
+     "qty": 2,
+     "unitCharge": 13.5,
+     "totalCharge": 27,
+     "dateOfService": "2026-08-27",
+     "lowConfidence": false
+    },
+    {
+     "code": null,
+     "codeType": "NONE",
+     "revenueCode": "0250",
+     "modifiers": [],
+     "description": "IBUPROFEN 800MG TAB",
+     "qty": 2,
+     "unitCharge": 9.5,
+     "totalCharge": 19,
+     "dateOfService": "2026-08-27",
+     "lowConfidence": false
+    },
+    {
+     "code": "96372",
+     "codeType": "CPT",
+     "revenueCode": "0260",
+     "modifiers": [],
+     "description": "THER/PROPH/DIAG INJ SC/IM",
+     "qty": 1,
+     "unitCharge": 103,
+     "totalCharge": 103,
+     "dateOfService": "2026-08-27",
+     "lowConfidence": false
+    },
+    {
+     "code": "29125",
+     "codeType": "CPT",
+     "revenueCode": "0761",
+     "modifiers": [],
+     "description": "APPLY SHORT ARM SPLINT STATIC",
+     "qty": 1,
+     "unitCharge": 642,
+     "totalCharge": 642,
+     "dateOfService": "2026-08-27",
+     "lowConfidence": false
+    },
+    {
+     "code": "73110",
+     "codeType": "CPT",
+     "revenueCode": "0320",
+     "modifiers": [],
+     "description": "XR WRIST COMPLETE 3+ VIEWS",
+     "qty": 1,
+     "unitCharge": 258,
+     "totalCharge": 258,
+     "dateOfService": "2026-08-27",
+     "lowConfidence": false
+    }
+   ]
+  },
+  "patient": {
+   "fullName": "Ava Haddad",
+   "dob": "1995-08-17",
+   "address": "446 Elm St, Springfield, MA 01109",
+   "guarantor": "COMMERCIAL"
+  },
+  "truth": {
+   "errors": []
+  }
+ },
+ {
+  "id": "bill-12",
+  "scenario": "ankle sprain (observation stay)",
+  "bill": {
+   "provider": "Mercy Ridge Regional Medical Center",
+   "providerState": "MA",
+   "accountNumber": "8219-98758",
+   "patientFirstName": "Ethan",
+   "admitDate": "2026-09-01",
+   "dischargeDate": "2026-09-03",
+   "statementTotal": 4428,
+   "isItemized": true,
+   "diagnosisCodes": [
+    "S93.401A"
+   ],
+   "lines": [
+    {
+     "code": "99283",
+     "codeType": "CPT",
+     "revenueCode": "0450",
+     "modifiers": [],
+     "description": "ER FACILITY FEE - LEVEL 3",
+     "qty": 1,
+     "unitCharge": 1463,
+     "totalCharge": 1463,
+     "dateOfService": "2026-09-01",
+     "lowConfidence": false
+    },
+    {
+     "code": "99283",
+     "codeType": "CPT",
+     "revenueCode": "0981",
+     "modifiers": [
+      "25"
+     ],
+     "description": "ER PHYSICIAN SVCS - LEVEL 3",
+     "qty": 1,
+     "unitCharge": 613,
+     "totalCharge": 613,
+     "dateOfService": "2026-09-01",
+     "lowConfidence": false
+    },
+    {
+     "code": null,
+     "codeType": "NONE",
+     "revenueCode": "0270",
+     "modifiers": [],
+     "description": "SPLINT MATERIAL FIBERGLASS 4IN",
+     "qty": 1,
+     "unitCharge": 64,
+     "totalCharge": 64,
+     "dateOfService": "2026-09-01",
+     "lowConfidence": false
+    },
+    {
+     "code": "J1885",
+     "codeType": "HCPCS",
+     "revenueCode": "0636",
+     "modifiers": [],
+     "description": "KETOROLAC TROMETHAMINE INJ 15MG",
+     "qty": 2,
+     "unitCharge": 18.5,
+     "totalCharge": 37,
+     "dateOfService": "2026-09-01",
+     "lowConfidence": false
+    },
+    {
+     "code": "E0114",
+     "codeType": "HCPCS",
+     "revenueCode": "0274",
+     "modifiers": [],
+     "description": "CRUTCHES UNDERARM ALUMINUM PAIR",
+     "qty": 1,
+     "unitCharge": 145,
+     "totalCharge": 145,
+     "dateOfService": "2026-09-01",
+     "lowConfidence": false
+    },
+    {
+     "code": "73610",
+     "codeType": "CPT",
+     "revenueCode": "0320",
+     "modifiers": [],
+     "description": "XR ANKLE COMPLETE 3+ VIEWS",
+     "qty": 1,
+     "unitCharge": 192,
+     "totalCharge": 192,
+     "dateOfService": "2026-09-01",
+     "lowConfidence": false
+    },
+    {
+     "code": "85025",
+     "codeType": "CPT",
+     "revenueCode": "0300",
+     "modifiers": [],
+     "description": "CBC W/ AUTO DIFF",
+     "qty": 1,
+     "unitCharge": 207,
+     "totalCharge": 207,
+     "dateOfService": "2026-09-02",
+     "lowConfidence": false
+    },
+    {
+     "code": "29515",
+     "codeType": "CPT",
+     "revenueCode": "0761",
+     "modifiers": [],
+     "description": "APPLY SHORT LEG SPLINT",
+     "qty": 1,
+     "unitCharge": 660,
+     "totalCharge": 660,
+     "dateOfService": "2026-09-06",
+     "lowConfidence": false
+    },
+    {
+     "code": "29515",
+     "codeType": "CPT",
+     "revenueCode": "0761",
+     "modifiers": [],
+     "description": "APPLY SHORT LEG SPLINT",
+     "qty": 1,
+     "unitCharge": 660,
+     "totalCharge": 660,
+     "dateOfService": "2026-09-01",
+     "lowConfidence": false
+    },
+    {
+     "code": "96372",
+     "codeType": "CPT",
+     "revenueCode": "0260",
+     "modifiers": [],
+     "description": "THER/PROPH/DIAG INJ SC/IM",
+     "qty": 1,
+     "unitCharge": 94,
+     "totalCharge": 94,
+     "dateOfService": "2026-09-01",
+     "lowConfidence": false
+    },
+    {
+     "code": "73610",
+     "codeType": "CPT",
+     "revenueCode": "0320",
+     "modifiers": [
+      "76"
+     ],
+     "description": "XR ANKLE COMPLETE 3+ VIEWS",
+     "qty": 1,
+     "unitCharge": 192,
+     "totalCharge": 192,
+     "dateOfService": "2026-09-01",
+     "lowConfidence": false
+    },
+    {
+     "code": "J1885",
+     "codeType": "HCPCS",
+     "revenueCode": "0636",
+     "modifiers": [],
+     "description": "KETOROLAC TROMETHAMINE INJ 15MG",
+     "qty": 2,
+     "unitCharge": 18.5,
+     "totalCharge": 37,
+     "dateOfService": "2026-09-01",
+     "lowConfidence": false
+    }
+   ]
+  },
+  "patient": {
+   "fullName": "Ethan Haddad",
+   "dob": "2004-03-16",
+   "address": "387 Elm St, Springfield, MA 01109",
+   "guarantor": "COMMERCIAL"
+  },
+  "truth": {
+   "errors": [
+    {
+     "line": null,
+     "rule": "math_check",
+     "overchargeUsd": 64
+    },
+    {
+     "line": "L4",
+     "rule": "duplicate",
+     "overchargeUsd": 37,
+     "alsoOk": [
+      "L12"
+     ]
+    },
+    {
+     "line": "L7",
+     "rule": "price_outlier",
+     "overchargeUsd": 164.54
+    },
+    {
+     "line": "L8",
+     "rule": "date_outside_stay",
+     "overchargeUsd": 660
+    }
+   ]
+  }
+ },
+ {
+  "id": "bill-13",
+  "scenario": "sore throat",
+  "bill": {
+   "provider": "Harborview Community Hospital",
+   "providerState": "MA",
+   "accountNumber": "3448-63677",
+   "patientFirstName": "Jordan",
+   "admitDate": "2026-07-02",
+   "dischargeDate": "2026-07-02",
+   "statementTotal": 3207.5,
+   "isItemized": true,
+   "diagnosisCodes": [
+    "J02.9"
+   ],
+   "lines": [
+    {
+     "code": "99282",
+     "codeType": "CPT",
+     "revenueCode": "0450",
+     "modifiers": [],
+     "description": "ER FACILITY FEE - LEVEL 2",
+     "qty": 1,
+     "unitCharge": 1848,
+     "totalCharge": 1848,
+     "dateOfService": "2026-07-02",
+     "lowConfidence": false
+    },
+    {
+     "code": "99285",
+     "codeType": "CPT",
+     "revenueCode": "0981",
+     "modifiers": [
+      "25"
+     ],
+     "description": "ER PHYSICIAN SVCS - LEVEL 5",
+     "qty": 1,
+     "unitCharge": 1138,
+     "totalCharge": 1138,
+     "dateOfService": "2026-07-02",
+     "lowConfidence": false
+    },
+    {
+     "code": "87880",
+     "codeType": "CPT",
+     "revenueCode": "0300",
+     "modifiers": [],
+     "description": "STREP A ASSAY W/ OPTIC",
+     "qty": 1,
+     "unitCharge": 175,
+     "totalCharge": 175,
+     "dateOfService": "2026-07-02",
+     "lowConfidence": false
+    },
+    {
+     "code": null,
+     "codeType": "NONE",
+     "revenueCode": "0250",
+     "modifiers": [],
+     "description": "AMOXICILLIN 500MG CAP",
+     "qty": 2,
+     "unitCharge": 6.25,
+     "totalCharge": 12.5,
+     "dateOfService": "2026-07-02",
+     "lowConfidence": false
+    },
+    {
+     "code": null,
+     "codeType": "NONE",
+     "revenueCode": "0270",
+     "modifiers": [],
+     "description": "EXAM GLOVES NONSTERILE (BOX)",
+     "qty": 1,
+     "unitCharge": 34,
+     "totalCharge": 34,
+     "dateOfService": "2026-07-02",
+     "lowConfidence": false
+    }
+   ]
+  },
+  "patient": {
+   "fullName": "Jordan Kim",
+   "dob": "1977-01-11",
+   "address": "655 Elm St, Springfield, MA 01109",
+   "guarantor": "SELF-PAY"
+  },
+  "truth": {
+   "errors": [
+    {
+     "line": "L3",
+     "rule": "price_outlier",
+     "overchargeUsd": 125.81
+    },
+    {
+     "line": "L5",
+     "rule": "routine_supply",
+     "overchargeUsd": 34
+    },
+    {
+     "line": "L2",
+     "rule": "visit_level_mismatch",
+     "overchargeUsd": 817.35
+    }
+   ]
+  }
+ },
+ {
+  "id": "bill-14",
+  "scenario": "back strain (observation stay)",
+  "bill": {
+   "provider": "Pioneer Valley General",
+   "providerState": "MA",
+   "accountNumber": "8661-48456",
+   "patientFirstName": "Zoe",
+   "admitDate": "2026-08-26",
+   "dischargeDate": "2026-08-28",
+   "statementTotal": 2413.8,
+   "isItemized": true,
+   "diagnosisCodes": [
+    "S39.012A"
+   ],
+   "lines": [
+    {
+     "code": "99283",
+     "codeType": "CPT",
+     "revenueCode": "0450",
+     "modifiers": [],
+     "description": "ER FACILITY FEE - LEVEL 3",
+     "qty": 1,
+     "unitCharge": 988,
+     "totalCharge": 988,
+     "dateOfService": "2026-08-26",
+     "lowConfidence": false
+    },
+    {
+     "code": "99283",
+     "codeType": "CPT",
+     "revenueCode": "0981",
+     "modifiers": [
+      "25"
+     ],
+     "description": "ER PHYSICIAN SVCS - LEVEL 3",
+     "qty": 1,
+     "unitCharge": 841,
+     "totalCharge": 841,
+     "dateOfService": "2026-08-26",
+     "lowConfidence": false
+    },
+    {
+     "code": "72100",
+     "codeType": "CPT",
+     "revenueCode": "0320",
+     "modifiers": [
+      "76"
+     ],
+     "description": "XR LUMBAR SPINE 2-3 VIEWS",
+     "qty": 1,
+     "unitCharge": 169,
+     "totalCharge": 169,
+     "dateOfService": "2026-08-26",
+     "lowConfidence": false
+    },
+    {
+     "code": "96372",
+     "codeType": "CPT",
+     "revenueCode": "0260",
+     "modifiers": [],
+     "description": "THER/PROPH/DIAG INJ SC/IM",
+     "qty": 1,
+     "unitCharge": 112,
+     "totalCharge": 112,
+     "dateOfService": "2026-08-26",
+     "lowConfidence": false
+    },
+    {
+     "code": "85025",
+     "codeType": "CPT",
+     "revenueCode": "0300",
+     "modifiers": [],
+     "description": "CBC W/ AUTO DIFF",
+     "qty": 1,
+     "unitCharge": 87,
+     "totalCharge": 87,
+     "dateOfService": "2026-08-27",
+     "lowConfidence": false
+    },
+    {
+     "code": "J1885",
+     "codeType": "HCPCS",
+     "revenueCode": "0636",
+     "modifiers": [],
+     "description": "KETOROLAC TROMETHAMINE INJ 15MG",
+     "qty": 2,
+     "unitCharge": 20,
+     "totalCharge": 40,
+     "dateOfService": "2026-08-26",
+     "lowConfidence": false
+    },
+    {
+     "code": "72100",
+     "codeType": "CPT",
+     "revenueCode": "0320",
+     "modifiers": [],
+     "description": "XR LUMBAR SPINE 2-3 VIEWS",
+     "qty": 1,
+     "unitCharge": 169,
+     "totalCharge": 169,
+     "dateOfService": "2026-08-26",
+     "lowConfidence": false
+    },
+    {
+     "code": null,
+     "codeType": "NONE",
+     "revenueCode": "0250",
+     "modifiers": [],
+     "description": "CYCLOBENZAPRINE 10MG TAB",
+     "qty": 1,
+     "unitCharge": 7.8,
+     "totalCharge": 7.8,
+     "dateOfService": "2026-08-26",
+     "lowConfidence": false
+    }
+   ]
+  },
+  "patient": {
+   "fullName": "Zoe Kim",
+   "dob": "1964-01-13",
+   "address": "453 Elm St, Springfield, MA 01109",
+   "guarantor": "SELF-PAY"
+  },
+  "truth": {
+   "errors": []
+  }
+ },
+ {
+  "id": "bill-15",
+  "scenario": "hand laceration (observation stay)",
+  "bill": {
+   "provider": "Pioneer Valley General",
+   "providerState": "MA",
+   "accountNumber": "9553-23192",
+   "patientFirstName": "Maya",
+   "admitDate": "2026-09-11",
+   "dischargeDate": "2026-09-12",
+   "statementTotal": 3456,
+   "isItemized": true,
+   "diagnosisCodes": [
+    "S61.412A",
+    "W26.0XXA"
+   ],
+   "lines": [
+    {
+     "code": "99283",
+     "codeType": "CPT",
+     "revenueCode": "0450",
+     "modifiers": [],
+     "description": "ER FACILITY FEE - LEVEL 3",
+     "qty": 1,
+     "unitCharge": 1549,
+     "totalCharge": 1549,
+     "dateOfService": "2026-09-11",
+     "lowConfidence": false
+    },
+    {
+     "code": "99283",
+     "codeType": "CPT",
+     "revenueCode": "0981",
+     "modifiers": [
+      "25"
+     ],
+     "description": "ER PHYSICIAN SVCS - LEVEL 3",
+     "qty": 1,
+     "unitCharge": 782,
+     "totalCharge": 782,
+     "dateOfService": "2026-09-11",
+     "lowConfidence": false
+    },
+    {
+     "code": null,
+     "codeType": "NONE",
+     "revenueCode": "0250",
+     "modifiers": [],
+     "description": "LIDOCAINE 1% 20ML VIAL",
+     "qty": 1,
+     "unitCharge": 18,
+     "totalCharge": 18,
+     "dateOfService": "2026-09-11",
+     "lowConfidence": false
+    },
+    {
+     "code": "90471",
+     "codeType": "CPT",
+     "revenueCode": "0771",
+     "modifiers": [],
+     "description": "IMMUNIZATION ADMIN",
+     "qty": 1,
+     "unitCharge": 141,
+     "totalCharge": 141,
+     "dateOfService": "2026-09-11",
+     "lowConfidence": false
+    },
+    {
+     "code": "12002",
+     "codeType": "CPT",
+     "revenueCode": "0761",
+     "modifiers": [],
+     "description": "SIMPLE REPAIR 2.6-7.5CM",
+     "qty": 1,
+     "unitCharge": 680,
+     "totalCharge": 680,
+     "dateOfService": "2026-09-11",
+     "lowConfidence": false
+    },
+    {
+     "code": "85025",
+     "codeType": "CPT",
+     "revenueCode": "0300",
+     "modifiers": [],
+     "description": "CBC W/ AUTO DIFF",
+     "qty": 1,
+     "unitCharge": 86,
+     "totalCharge": 86,
+     "dateOfService": "2026-09-12",
+     "lowConfidence": false
+    },
+    {
+     "code": null,
+     "codeType": "NONE",
+     "revenueCode": "0270",
+     "modifiers": [],
+     "description": "SUTURE KIT NYLON 4-0",
+     "qty": 1,
+     "unitCharge": 52,
+     "totalCharge": 52,
+     "dateOfService": "2026-09-11",
+     "lowConfidence": false
+    },
+    {
+     "code": "90715",
+     "codeType": "CPT",
+     "revenueCode": "0636",
+     "modifiers": [],
+     "description": "TDAP VACCINE 7 YRS+ IM",
+     "qty": 1,
+     "unitCharge": 148,
+     "totalCharge": 148,
+     "dateOfService": "2026-09-11",
+     "lowConfidence": false
+    }
+   ]
+  },
+  "patient": {
+   "fullName": "Maya Silva",
+   "dob": "1966-06-13",
+   "address": "500 Elm St, Springfield, MA 01109",
+   "guarantor": "SELF-PAY"
+  },
+  "truth": {
+   "errors": []
+  }
+ },
+ {
+  "id": "bill-16",
+  "scenario": "chest pain",
+  "bill": {
+   "provider": "Northshore Health System",
+   "providerState": "MA",
+   "accountNumber": "5754-94375",
+   "patientFirstName": "Zoe",
+   "admitDate": "2026-07-23",
+   "dischargeDate": "2026-07-23",
+   "statementTotal": 4666.4,
+   "isItemized": true,
+   "diagnosisCodes": [
+    "R07.9",
+    "I20.9"
+   ],
+   "lines": [
+    {
+     "code": "99285",
+     "codeType": "CPT",
+     "revenueCode": "0450",
+     "modifiers": [],
+     "description": "ER FACILITY FEE - LEVEL 5",
+     "qty": 1,
+     "unitCharge": 2090,
+     "totalCharge": 2090,
+     "dateOfService": "2026-07-23",
+     "lowConfidence": false
+    },
+    {
+     "code": "99285",
+     "codeType": "CPT",
+     "revenueCode": "0981",
+     "modifiers": [
+      "25"
+     ],
+     "description": "ER PHYSICIAN SVCS - LEVEL 5",
+     "qty": 1,
+     "unitCharge": 1425,
+     "totalCharge": 1425,
+     "dateOfService": "2026-07-23",
+     "lowConfidence": false
+    },
+    {
+     "code": null,
+     "codeType": "NONE",
+     "revenueCode": "0250",
+     "modifiers": [],
+     "description": "ASPIRIN 81MG CHEW TAB",
+     "qty": 4,
+     "unitCharge": 4.1,
+     "totalCharge": 16.4,
+     "dateOfService": "2026-07-23",
+     "lowConfidence": false
+    },
+    {
+     "code": "96360",
+     "codeType": "CPT",
+     "revenueCode": "0260",
+     "modifiers": [],
+     "description": "IV INFUSION HYDRATION 1ST HR",
+     "qty": 1,
+     "unitCharge": 464,
+     "totalCharge": 464,
+     "dateOfService": "2026-07-23",
+     "lowConfidence": false
+    },
+    {
+     "code": "93010",
+     "codeType": "CPT",
+     "revenueCode": "0985",
+     "modifiers": [],
+     "description": "ECG INTERPRETATION & REPORT",
+     "qty": 1,
+     "unitCharge": 94,
+     "totalCharge": 94,
+     "dateOfService": "2026-07-23",
+     "lowConfidence": false
+    },
+    {
+     "code": "85025",
+     "codeType": "CPT",
+     "revenueCode": "0300",
+     "modifiers": [],
+     "description": "CBC W/ AUTO DIFF",
+     "qty": 1,
+     "unitCharge": 98,
+     "totalCharge": 98,
+     "dateOfService": "2026-07-23",
+     "lowConfidence": false
+    },
+    {
+     "code": null,
+     "codeType": "NONE",
+     "revenueCode": "0270",
+     "modifiers": [],
+     "description": "DISPOSABLE BED PAD (CHUX)",
+     "qty": 1,
+     "unitCharge": 90,
+     "totalCharge": 90,
+     "dateOfService": "2026-07-23",
+     "lowConfidence": false
+    },
+    {
+     "code": "80053",
+     "codeType": "CPT",
+     "revenueCode": "0300",
+     "modifiers": [],
+     "description": "COMPREHENSIVE METABOLIC PANEL",
+     "qty": 1,
+     "unitCharge": 203,
+     "totalCharge": 203,
+     "dateOfService": "2026-07-23",
+     "lowConfidence": false
+    },
+    {
+     "code": "71046",
+     "codeType": "CPT",
+     "revenueCode": "0320",
+     "modifiers": [],
+     "description": "XR CHEST 2 VIEWS",
+     "qty": 1,
+     "unitCharge": 131,
+     "totalCharge": 131,
+     "dateOfService": "2026-07-23",
+     "lowConfidence": false
+    },
+    {
+     "code": "36415",
+     "codeType": "CPT",
+     "revenueCode": "0300",
+     "modifiers": [],
+     "description": "ROUTINE VENIPUNCTURE",
+     "qty": 1,
+     "unitCharge": 55,
+     "totalCharge": 55,
+     "dateOfService": "2026-07-23",
+     "lowConfidence": false
+    }
+   ]
+  },
+  "patient": {
+   "fullName": "Zoe Brooks",
+   "dob": "1991-03-10",
+   "address": "847 Elm St, Springfield, MA 01109",
+   "guarantor": "COMMERCIAL"
+  },
+  "truth": {
+   "errors": [
+    {
+     "line": "L7",
+     "rule": "routine_supply",
+     "overchargeUsd": 90
+    }
+   ]
+  }
+ },
+ {
+  "id": "bill-17",
+  "scenario": "abdominal pain",
+  "bill": {
+   "provider": "St. Brendan's Medical Center",
+   "providerState": "MA",
+   "accountNumber": "1292-28396",
+   "patientFirstName": "Ava",
+   "admitDate": "2026-08-03",
+   "dischargeDate": "2026-08-03",
+   "statementTotal": 6058,
+   "isItemized": true,
+   "diagnosisCodes": [
+    "R10.9"
+   ],
+   "lines": [
+    {
+     "code": "99284",
+     "codeType": "CPT",
+     "revenueCode": "0450",
+     "modifiers": [],
+     "description": "ER FACILITY FEE - LEVEL 4",
+     "qty": 1,
+     "unitCharge": 2072,
+     "totalCharge": 2072,
+     "dateOfService": "2026-08-03",
+     "lowConfidence": false
+    },
+    {
+     "code": "99284",
+     "codeType": "CPT",
+     "revenueCode": "0981",
+     "modifiers": [
+      "25"
+     ],
+     "description": "ER PHYSICIAN SVCS - LEVEL 4",
+     "qty": 1,
+     "unitCharge": 1101,
+     "totalCharge": 1101,
+     "dateOfService": "2026-08-03",
+     "lowConfidence": false
+    },
+    {
+     "code": null,
+     "codeType": "NONE",
+     "revenueCode": "0255",
+     "modifiers": [],
+     "description": "IOHEXOL 350 CONTRAST 100ML",
+     "qty": 1,
+     "unitCharge": 148,
+     "totalCharge": 148,
+     "dateOfService": "2026-08-03",
+     "lowConfidence": false
+    },
+    {
+     "code": "J2405",
+     "codeType": "HCPCS",
+     "revenueCode": "0636",
+     "modifiers": [],
+     "description": "ONDANSETRON HCL INJ 1MG",
+     "qty": 4,
+     "unitCharge": 25,
+     "totalCharge": 100,
+     "dateOfService": "2026-08-03",
+     "lowConfidence": false
+    },
+    {
+     "code": "85025",
+     "codeType": "CPT",
+     "revenueCode": "0300",
+     "modifiers": [],
+     "description": "CBC W/ AUTO DIFF",
+     "qty": 1,
+     "unitCharge": 89,
+     "totalCharge": 89,
+     "dateOfService": "2026-08-03",
+     "lowConfidence": false
+    },
+    {
+     "code": "96374",
+     "codeType": "CPT",
+     "revenueCode": "0260",
+     "modifiers": [],
+     "description": "THER/PROPH/DIAG INJ IV PUSH",
+     "qty": 1,
+     "unitCharge": 401,
+     "totalCharge": 401,
+     "dateOfService": "2026-08-03",
+     "lowConfidence": false
+    },
+    {
+     "code": "74177",
+     "codeType": "CPT",
+     "revenueCode": "0350",
+     "modifiers": [],
+     "description": "CT ABD & PELVIS W/ CONTRAST",
+     "qty": 1,
+     "unitCharge": 1680,
+     "totalCharge": 1680,
+     "dateOfService": "2026-08-03",
+     "lowConfidence": false
+    },
+    {
+     "code": "36415",
+     "codeType": "CPT",
+     "revenueCode": "0300",
+     "modifiers": [],
+     "description": "ROUTINE VENIPUNCTURE",
+     "qty": 1,
+     "unitCharge": 76,
+     "totalCharge": 76,
+     "dateOfService": "2026-08-03",
+     "lowConfidence": false
+    },
+    {
+     "code": "80053",
+     "codeType": "CPT",
+     "revenueCode": "0300",
+     "modifiers": [],
+     "description": "COMPREHENSIVE METABOLIC PANEL",
+     "qty": 1,
+     "unitCharge": 178,
+     "totalCharge": 178,
+     "dateOfService": "2026-08-03",
+     "lowConfidence": false
+    },
+    {
+     "code": "81001",
+     "codeType": "CPT",
+     "revenueCode": "0300",
+     "modifiers": [],
+     "description": "URINALYSIS AUTO W/ MICROSCOPY",
+     "qty": 1,
+     "unitCharge": 68,
+     "totalCharge": 68,
+     "dateOfService": "2026-08-03",
+     "lowConfidence": false
+    }
+   ]
+  },
+  "patient": {
+   "fullName": "Ava Rossi",
+   "dob": "1998-08-12",
+   "address": "852 Elm St, Springfield, MA 01109",
+   "guarantor": "COMMERCIAL"
+  },
+  "truth": {
+   "errors": [
+    {
+     "line": null,
+     "rule": "math_check",
+     "overchargeUsd": 145
+    },
+    {
+     "line": "L4",
+     "rule": "price_outlier",
+     "overchargeUsd": 82.92
+    }
+   ]
+  }
+ },
+ {
+  "id": "bill-18",
+  "scenario": "headache with CT (observation stay)",
+  "bill": {
+   "provider": "Pioneer Valley General",
+   "providerState": "MA",
+   "accountNumber": "4862-21127",
+   "patientFirstName": "Maya",
+   "admitDate": "2026-09-06",
+   "dischargeDate": "2026-09-07",
+   "statementTotal": 4615.4,
+   "isItemized": true,
+   "diagnosisCodes": [
+    "R51.9"
+   ],
+   "lines": [
+    {
+     "code": "99284",
+     "codeType": "CPT",
+     "revenueCode": "0450",
+     "modifiers": [],
+     "description": "ER FACILITY FEE - LEVEL 4",
+     "qty": 1,
+     "unitCharge": 1134,
+     "totalCharge": 1134,
+     "dateOfService": "2026-09-06",
+     "lowConfidence": false
+    },
+    {
+     "code": "99284",
+     "codeType": "CPT",
+     "revenueCode": "0981",
+     "modifiers": [
+      "25"
+     ],
+     "description": "ER PHYSICIAN SVCS - LEVEL 4",
+     "qty": 1,
+     "unitCharge": 1218,
+     "totalCharge": 1218,
+     "dateOfService": "2026-09-06",
+     "lowConfidence": false
+    },
+    {
+     "code": "96374",
+     "codeType": "CPT",
+     "revenueCode": "0260",
+     "modifiers": [],
+     "description": "THER/PROPH/DIAG INJ IV PUSH",
+     "qty": 1,
+     "unitCharge": 448,
+     "totalCharge": 448,
+     "dateOfService": "2026-09-08",
+     "lowConfidence": false
+    },
+    {
+     "code": "J1100",
+     "codeType": "HCPCS",
+     "revenueCode": "0636",
+     "modifiers": [],
+     "description": "DEXAMETHASONE SODIUM PHOS 1MG",
+     "qty": 10,
+     "unitCharge": 0.5,
+     "totalCharge": 5,
+     "dateOfService": "2026-09-06",
+     "lowConfidence": false
+    },
+    {
+     "code": "96374",
+     "codeType": "CPT",
+     "revenueCode": "0260",
+     "modifiers": [],
+     "description": "THER/PROPH/DIAG INJ IV PUSH",
+     "qty": 1,
+     "unitCharge": 448,
+     "totalCharge": 448,
+     "dateOfService": "2026-09-06",
+     "lowConfidence": false
+    },
+    {
+     "code": "85025",
+     "codeType": "CPT",
+     "revenueCode": "0300",
+     "modifiers": [],
+     "description": "CBC W/ AUTO DIFF",
+     "qty": 1,
+     "unitCharge": 83,
+     "totalCharge": 83,
+     "dateOfService": "2026-09-07",
+     "lowConfidence": false
+    },
+    {
+     "code": null,
+     "codeType": "NONE",
+     "revenueCode": "0270",
+     "modifiers": [],
+     "description": "SALINE FLUSH SYRINGE 10ML",
+     "qty": 1,
+     "unitCharge": 37,
+     "totalCharge": 37,
+     "dateOfService": "2026-09-06",
+     "lowConfidence": false
+    },
+    {
+     "code": "70450",
+     "codeType": "CPT",
+     "revenueCode": "0350",
+     "modifiers": [],
+     "description": "CT HEAD W/O CONTRAST",
+     "qty": 1,
+     "unitCharge": 1182,
+     "totalCharge": 1182,
+     "dateOfService": "2026-09-06",
+     "lowConfidence": false
+    },
+    {
+     "code": null,
+     "codeType": "NONE",
+     "revenueCode": "0250",
+     "modifiers": [],
+     "description": "ACETAMINOPHEN 500MG TAB",
+     "qty": 2,
+     "unitCharge": 3.2,
+     "totalCharge": 6.4,
+     "dateOfService": "2026-09-06",
+     "lowConfidence": false
+    }
+   ]
+  },
+  "patient": {
+   "fullName": "Maya Silva",
+   "dob": "1975-07-10",
+   "address": "490 Elm St, Springfield, MA 01109",
+   "guarantor": "COMMERCIAL"
+  },
+  "truth": {
+   "errors": [
+    {
+     "line": "L7",
+     "rule": "routine_supply",
+     "overchargeUsd": 37
+    },
+    {
+     "line": "L3",
+     "rule": "date_outside_stay",
+     "overchargeUsd": 448
+    },
+    {
+     "line": null,
+     "rule": "math_check",
+     "overchargeUsd": 54
+    }
+   ]
+  }
+ },
+ {
+  "id": "bill-19",
+  "scenario": "knee effusion (office)",
+  "bill": {
+   "provider": "Pioneer Valley General",
+   "providerState": "MA",
+   "accountNumber": "4386-53866",
+   "patientFirstName": "Sofia",
+   "admitDate": "2026-07-04",
+   "dischargeDate": "2026-07-04",
+   "statementTotal": 2343,
+   "isItemized": true,
+   "diagnosisCodes": [
+    "M25.461"
+   ],
+   "lines": [
+    {
+     "code": "20610",
+     "codeType": "CPT",
+     "revenueCode": "0761",
+     "modifiers": [],
+     "description": "ARTHROCENTESIS MAJOR JOINT",
+     "qty": 1,
+     "unitCharge": 1266,
+     "totalCharge": 1266,
+     "dateOfService": "2026-07-04",
+     "lowConfidence": false
+    },
+    {
+     "code": null,
+     "codeType": "NONE",
+     "revenueCode": "0270",
+     "modifiers": [],
+     "description": "IV START KIT",
+     "qty": 1,
+     "unitCharge": 30,
+     "totalCharge": 30,
+     "dateOfService": "2026-07-04",
+     "lowConfidence": false
+    },
+    {
+     "code": "J1100",
+     "codeType": "HCPCS",
+     "revenueCode": "0636",
+     "modifiers": [],
+     "description": "DEXAMETHASONE SODIUM PHOS 1MG",
+     "qty": 4,
+     "unitCharge": 2,
+     "totalCharge": 8,
+     "dateOfService": "2026-07-04",
+     "lowConfidence": false
+    },
+    {
+     "code": "99214",
+     "codeType": "CPT",
+     "revenueCode": "0510",
+     "modifiers": [],
+     "description": "OFFICE VISIT EST PT MOD",
+     "qty": 1,
+     "unitCharge": 982,
+     "totalCharge": 982,
+     "dateOfService": "2026-07-04",
+     "lowConfidence": false
+    }
+   ]
+  },
+  "patient": {
+   "fullName": "Sofia Brooks",
+   "dob": "1986-04-15",
+   "address": "102 Elm St, Springfield, MA 01109",
+   "guarantor": "COMMERCIAL"
+  },
+  "truth": {
+   "errors": [
+    {
+     "line": null,
+     "rule": "math_check",
+     "overchargeUsd": 57
+    },
+    {
+     "line": "L2",
+     "rule": "routine_supply",
+     "overchargeUsd": 30
+    },
+    {
+     "line": "L1",
+     "rule": "price_outlier",
+     "overchargeUsd": 949.4
+    }
+   ]
+  }
+ },
+ {
+  "id": "bill-20",
+  "scenario": "follow-up labs (office)",
+  "bill": {
+   "provider": "Northshore Health System",
+   "providerState": "MA",
+   "accountNumber": "6150-14236",
+   "patientFirstName": "Zoe",
+   "admitDate": "2026-08-15",
+   "dischargeDate": "2026-08-15",
+   "statementTotal": 892,
+   "isItemized": true,
+   "diagnosisCodes": [
+    "E11.9"
+   ],
+   "lines": [
+    {
+     "code": "36415",
+     "codeType": "CPT",
+     "revenueCode": "0300",
+     "modifiers": [],
+     "description": "ROUTINE VENIPUNCTURE",
+     "qty": 1,
+     "unitCharge": 154,
+     "totalCharge": 154,
+     "dateOfService": "2026-08-15",
+     "lowConfidence": false
+    },
+    {
+     "code": "85025",
+     "codeType": "CPT",
+     "revenueCode": "0300",
+     "modifiers": [],
+     "description": "CBC W/ AUTO DIFF",
+     "qty": 1,
+     "unitCharge": 122,
+     "totalCharge": 122,
+     "dateOfService": "2026-08-15",
+     "lowConfidence": false
+    },
+    {
+     "code": "80048",
+     "codeType": "CPT",
+     "revenueCode": "0300",
+     "modifiers": [],
+     "description": "BASIC METABOLIC PANEL",
+     "qty": 1,
+     "unitCharge": 106,
+     "totalCharge": 106,
+     "dateOfService": "2026-08-15",
+     "lowConfidence": false
+    },
+    {
+     "code": "80048",
+     "codeType": "CPT",
+     "revenueCode": "0300",
+     "modifiers": [],
+     "description": "BASIC METABOLIC PANEL",
+     "qty": 1,
+     "unitCharge": 106,
+     "totalCharge": 106,
+     "dateOfService": "2026-08-15",
+     "lowConfidence": false
+    },
+    {
+     "code": "99213",
+     "codeType": "CPT",
+     "revenueCode": "0510",
+     "modifiers": [],
+     "description": "OFFICE VISIT EST PT LOW",
+     "qty": 1,
+     "unitCharge": 348,
+     "totalCharge": 348,
+     "dateOfService": "2026-08-15",
+     "lowConfidence": false
+    }
+   ]
+  },
+  "patient": {
+   "fullName": "Zoe Kim",
+   "dob": "1968-04-10",
+   "address": "25 Elm St, Springfield, MA 01109",
+   "guarantor": "SELF-PAY"
+  },
+  "truth": {
+   "errors": [
+    {
+     "line": "L1",
+     "rule": "price_outlier",
+     "overchargeUsd": 124.9
+    },
+    {
+     "line": null,
+     "rule": "math_check",
+     "overchargeUsd": 56
+    },
+    {
+     "line": "L4",
+     "rule": "duplicate",
+     "overchargeUsd": 106,
+     "alsoOk": [
+      "L3"
+     ]
+    }
+   ]
+  }
+ },
+ {
+  "id": "bill-21",
+  "scenario": "wrist sprain",
+  "bill": {
+   "provider": "Pioneer Valley General",
+   "providerState": "MA",
+   "accountNumber": "4784-53785",
+   "patientFirstName": "Zoe",
+   "admitDate": "2026-09-01",
+   "dischargeDate": "2026-09-01",
+   "statementTotal": 3620,
+   "isItemized": true,
+   "diagnosisCodes": [
+    "S63.501A"
+   ],
+   "lines": [
+    {
+     "code": "99283",
+     "codeType": "CPT",
+     "revenueCode": "0450",
+     "modifiers": [],
+     "description": "ER FACILITY FEE - LEVEL 3",
+     "qty": 1,
+     "unitCharge": 1570,
+     "totalCharge": 1570,
+     "dateOfService": "2026-09-01",
+     "lowConfidence": false
+    },
+    {
+     "code": "99283",
+     "codeType": "CPT",
+     "revenueCode": "0981",
+     "modifiers": [
+      "25"
+     ],
+     "description": "ER PHYSICIAN SVCS - LEVEL 3",
+     "qty": 1,
+     "unitCharge": 773,
+     "totalCharge": 773,
+     "dateOfService": "2026-09-01",
+     "lowConfidence": false
+    },
+    {
+     "code": "J1885",
+     "codeType": "HCPCS",
+     "revenueCode": "0636",
+     "modifiers": [],
+     "description": "KETOROLAC TROMETHAMINE INJ 15MG",
+     "qty": 2,
+     "unitCharge": 17.5,
+     "totalCharge": 35,
+     "dateOfService": "2026-09-01",
+     "lowConfidence": false
+    },
+    {
+     "code": "73110",
+     "codeType": "CPT",
+     "revenueCode": "0320",
+     "modifiers": [],
+     "description": "XR WRIST COMPLETE 3+ VIEWS",
+     "qty": 1,
+     "unitCharge": 235,
+     "totalCharge": 235,
+     "dateOfService": "2026-09-01",
+     "lowConfidence": false
+    },
+    {
+     "code": "96372",
+     "codeType": "CPT",
+     "revenueCode": "0260",
+     "modifiers": [],
+     "description": "THER/PROPH/DIAG INJ SC/IM",
+     "qty": 1,
+     "unitCharge": 146,
+     "totalCharge": 146,
+     "dateOfService": "2026-09-01",
+     "lowConfidence": false
+    },
+    {
+     "code": "29125",
+     "codeType": "CPT",
+     "revenueCode": "0761",
+     "modifiers": [],
+     "description": "APPLY SHORT ARM SPLINT STATIC",
+     "qty": 1,
+     "unitCharge": 628,
+     "totalCharge": 628,
+     "dateOfService": "2026-09-01",
+     "lowConfidence": false
+    },
+    {
+     "code": "L3908",
+     "codeType": "HCPCS",
+     "revenueCode": "0274",
+     "modifiers": [],
+     "description": "WHO WRIST EXT CONTROL COCK-UP PREFAB",
+     "qty": 1,
+     "unitCharge": 214,
+     "totalCharge": 214,
+     "dateOfService": "2026-09-01",
+     "lowConfidence": false
+    },
+    {
+     "code": null,
+     "codeType": "NONE",
+     "revenueCode": "0250",
+     "modifiers": [],
+     "description": "IBUPROFEN 800MG TAB",
+     "qty": 2,
+     "unitCharge": 9.5,
+     "totalCharge": 19,
+     "dateOfService": "2026-09-01",
+     "lowConfidence": false
+    }
+   ]
+  },
+  "patient": {
+   "fullName": "Zoe Garcia",
+   "dob": "2001-01-10",
+   "address": "644 Elm St, Springfield, MA 01109",
+   "guarantor": "COMMERCIAL"
+  },
+  "truth": {
+   "errors": []
+  }
+ },
+ {
+  "id": "bill-22",
+  "scenario": "ankle sprain",
+  "bill": {
+   "provider": "Northshore Health System",
+   "providerState": "MA",
+   "accountNumber": "6644-56876",
+   "patientFirstName": "Sofia",
+   "admitDate": "2026-07-12",
+   "dischargeDate": "2026-07-12",
+   "statementTotal": 3908,
+   "isItemized": true,
+   "diagnosisCodes": [
+    "S93.401A"
+   ],
+   "lines": [
+    {
+     "code": "99283",
+     "codeType": "CPT",
+     "revenueCode": "0450",
+     "modifiers": [],
+     "description": "ER FACILITY FEE - LEVEL 3",
+     "qty": 1,
+     "unitCharge": 1565,
+     "totalCharge": 1565,
+     "dateOfService": "2026-07-12",
+     "lowConfidence": false
+    },
+    {
+     "code": "99283",
+     "codeType": "CPT",
+     "revenueCode": "0981",
+     "modifiers": [
+      "25"
+     ],
+     "description": "ER PHYSICIAN SVCS - LEVEL 3",
+     "qty": 1,
+     "unitCharge": 840,
+     "totalCharge": 840,
+     "dateOfService": "2026-07-12",
+     "lowConfidence": false
+    },
+    {
+     "code": "96372",
+     "codeType": "CPT",
+     "revenueCode": "0260",
+     "modifiers": [],
+     "description": "THER/PROPH/DIAG INJ SC/IM",
+     "qty": 1,
+     "unitCharge": 140,
+     "totalCharge": 140,
+     "dateOfService": "2026-07-12",
+     "lowConfidence": false
+    },
+    {
+     "code": "29515",
+     "codeType": "CPT",
+     "revenueCode": "0761",
+     "modifiers": [],
+     "description": "APPLY SHORT LEG SPLINT",
+     "qty": 1,
+     "unitCharge": 596,
+     "totalCharge": 596,
+     "dateOfService": "2026-07-12",
+     "lowConfidence": false
+    },
+    {
+     "code": "73610",
+     "codeType": "CPT",
+     "revenueCode": "0320",
+     "modifiers": [],
+     "description": "XR ANKLE COMPLETE 3+ VIEWS",
+     "qty": 1,
+     "unitCharge": 191,
+     "totalCharge": 191,
+     "dateOfService": "2026-07-12",
+     "lowConfidence": false
+    },
+    {
+     "code": "96372",
+     "codeType": "CPT",
+     "revenueCode": "0260",
+     "modifiers": [],
+     "description": "THER/PROPH/DIAG INJ SC/IM",
+     "qty": 1,
+     "unitCharge": 140,
+     "totalCharge": 140,
+     "dateOfService": "2026-07-12",
+     "lowConfidence": false
+    },
+    {
+     "code": "E0114",
+     "codeType": "HCPCS",
+     "revenueCode": "0274",
+     "modifiers": [],
+     "description": "CRUTCHES UNDERARM ALUMINUM PAIR",
+     "qty": 1,
+     "unitCharge": 145,
+     "totalCharge": 145,
+     "dateOfService": "2026-07-12",
+     "lowConfidence": false
+    },
+    {
+     "code": null,
+     "codeType": "NONE",
+     "revenueCode": "0270",
+     "modifiers": [],
+     "description": "SPLINT MATERIAL FIBERGLASS 4IN",
+     "qty": 1,
+     "unitCharge": 64,
+     "totalCharge": 64,
+     "dateOfService": "2026-07-12",
+     "lowConfidence": false
+    },
+    {
+     "code": "J1885",
+     "codeType": "HCPCS",
+     "revenueCode": "0636",
+     "modifiers": [],
+     "description": "KETOROLAC TROMETHAMINE INJ 15MG",
+     "qty": 2,
+     "unitCharge": 62,
+     "totalCharge": 124,
+     "dateOfService": "2026-07-12",
+     "lowConfidence": false
+    },
+    {
+     "code": null,
+     "codeType": "NONE",
+     "revenueCode": "0270",
+     "modifiers": [],
+     "description": "DISPOSABLE BED PAD (CHUX)",
+     "qty": 1,
+     "unitCharge": 30,
+     "totalCharge": 30,
+     "dateOfService": "2026-07-12",
+     "lowConfidence": false
+    }
+   ]
+  },
+  "patient": {
+   "fullName": "Sofia Patel",
+   "dob": "1983-04-15",
+   "address": "40 Elm St, Springfield, MA 01109",
+   "guarantor": "COMMERCIAL"
+  },
+  "truth": {
+   "errors": [
+    {
+     "line": null,
+     "rule": "math_check",
+     "overchargeUsd": 73
+    },
+    {
+     "line": "L3",
+     "rule": "duplicate",
+     "overchargeUsd": 140,
+     "alsoOk": [
+      "L6"
+     ]
+    },
+    {
+     "line": "L10",
+     "rule": "routine_supply",
+     "overchargeUsd": 30
+    },
+    {
+     "line": "L9",
+     "rule": "price_outlier",
+     "overchargeUsd": 88.02
+    }
+   ]
+  }
+ },
+ {
+  "id": "bill-23",
+  "scenario": "sore throat (observation stay)",
+  "bill": {
+   "provider": "Harborview Community Hospital",
+   "providerState": "MA",
+   "accountNumber": "6585-40173",
+   "patientFirstName": "Mateo",
+   "admitDate": "2026-08-07",
+   "dischargeDate": "2026-08-09",
+   "statementTotal": 2523.5,
+   "isItemized": true,
+   "diagnosisCodes": [
+    "J02.9"
+   ],
+   "lines": [
+    {
+     "code": "99282",
+     "codeType": "CPT",
+     "revenueCode": "0450",
+     "modifiers": [],
+     "description": "ER FACILITY FEE - LEVEL 2",
+     "qty": 1,
+     "unitCharge": 1771,
+     "totalCharge": 1771,
+     "dateOfService": "2026-08-07",
+     "lowConfidence": false
+    },
+    {
+     "code": "99282",
+     "codeType": "CPT",
+     "revenueCode": "0981",
+     "modifiers": [
+      "25"
+     ],
+     "description": "ER PHYSICIAN SVCS - LEVEL 2",
+     "qty": 1,
+     "unitCharge": 523,
+     "totalCharge": 523,
+     "dateOfService": "2026-08-07",
+     "lowConfidence": false
+    },
+    {
+     "code": null,
+     "codeType": "NONE",
+     "revenueCode": "0250",
+     "modifiers": [],
+     "description": "AMOXICILLIN 500MG CAP",
+     "qty": 2,
+     "unitCharge": 6.25,
+     "totalCharge": 12.5,
+     "dateOfService": "2026-08-07",
+     "lowConfidence": false
+    },
+    {
+     "code": "85025",
+     "codeType": "CPT",
+     "revenueCode": "0300",
+     "modifiers": [],
+     "description": "CBC W/ AUTO DIFF",
+     "qty": 1,
+     "unitCharge": 113,
+     "totalCharge": 113,
+     "dateOfService": "2026-08-08",
+     "lowConfidence": false
+    },
+    {
+     "code": "87880",
+     "codeType": "CPT",
+     "revenueCode": "0300",
+     "modifiers": [],
+     "description": "STREP A ASSAY W/ OPTIC",
+     "qty": 1,
+     "unitCharge": 104,
+     "totalCharge": 104,
+     "dateOfService": "2026-08-07",
+     "lowConfidence": false
+    }
+   ]
+  },
+  "patient": {
+   "fullName": "Mateo Brooks",
+   "dob": "1971-07-12",
+   "address": "207 Elm St, Springfield, MA 01109",
+   "guarantor": "COMMERCIAL"
+  },
+  "truth": {
+   "errors": []
+  }
+ },
+ {
+  "id": "bill-24",
+  "scenario": "back strain",
+  "bill": {
+   "provider": "Northshore Health System",
+   "providerState": "MA",
+   "accountNumber": "3900-57813",
+   "patientFirstName": "Noah",
+   "admitDate": "2026-09-19",
+   "dischargeDate": "2026-09-19",
+   "statementTotal": 2227.8,
+   "isItemized": true,
+   "diagnosisCodes": [
+    "S39.012A"
+   ],
+   "lines": [
+    {
+     "code": "99283",
+     "codeType": "CPT",
+     "revenueCode": "0450",
+     "modifiers": [],
+     "description": "ER FACILITY FEE - LEVEL 3",
+     "qty": 1,
+     "unitCharge": 901,
+     "totalCharge": 901,
+     "dateOfService": "2026-09-19",
+     "lowConfidence": false
+    },
+    {
+     "code": "99283",
+     "codeType": "CPT",
+     "revenueCode": "0981",
+     "modifiers": [
+      "25"
+     ],
+     "description": "ER PHYSICIAN SVCS - LEVEL 3",
+     "qty": 1,
+     "unitCharge": 423,
+     "totalCharge": 423,
+     "dateOfService": "2026-09-19",
+     "lowConfidence": false
+    },
+    {
+     "code": null,
+     "codeType": "NONE",
+     "revenueCode": "0250",
+     "modifiers": [],
+     "description": "CYCLOBENZAPRINE 10MG TAB",
+     "qty": 1,
+     "unitCharge": 7.8,
+     "totalCharge": 7.8,
+     "dateOfService": "2026-09-19",
+     "lowConfidence": false
+    },
+    {
+     "code": "96372",
+     "codeType": "CPT",
+     "revenueCode": "0260",
+     "modifiers": [],
+     "description": "THER/PROPH/DIAG INJ SC/IM",
+     "qty": 1,
+     "unitCharge": 149,
+     "totalCharge": 149,
+     "dateOfService": "2026-09-19",
+     "lowConfidence": false
+    },
+    {
+     "code": "72100",
+     "codeType": "CPT",
+     "revenueCode": "0320",
+     "modifiers": [],
+     "description": "XR LUMBAR SPINE 2-3 VIEWS",
+     "qty": 1,
+     "unitCharge": 166,
+     "totalCharge": 166,
+     "dateOfService": "2026-09-19",
+     "lowConfidence": false
+    },
+    {
+     "code": "J1885",
+     "codeType": "HCPCS",
+     "revenueCode": "0636",
+     "modifiers": [],
+     "description": "KETOROLAC TROMETHAMINE INJ 15MG",
+     "qty": 2,
+     "unitCharge": 93,
+     "totalCharge": 186,
+     "dateOfService": "2026-09-19",
+     "lowConfidence": false
+    },
+    {
+     "code": null,
+     "codeType": "NONE",
+     "revenueCode": "0270",
+     "modifiers": [],
+     "description": "GAUZE SPONGE 4X4 STERILE",
+     "qty": 1,
+     "unitCharge": 50,
+     "totalCharge": 50,
+     "dateOfService": "2026-09-19",
+     "lowConfidence": false
+    },
+    {
+     "code": "72100",
+     "codeType": "CPT",
+     "revenueCode": "0320",
+     "modifiers": [],
+     "description": "XR LUMBAR SPINE 2-3 VIEWS",
+     "qty": 1,
+     "unitCharge": 166,
+     "totalCharge": 166,
+     "dateOfService": "2026-09-19",
+     "lowConfidence": false
+    }
+   ]
+  },
+  "patient": {
+   "fullName": "Noah Silva",
+   "dob": "1972-04-12",
+   "address": "84 Elm St, Springfield, MA 01109",
+   "guarantor": "SELF-PAY"
+  },
+  "truth": {
+   "errors": [
+    {
+     "line": "L6",
+     "rule": "price_outlier",
+     "overchargeUsd": 150.02
+    },
+    {
+     "line": "L5",
+     "rule": "duplicate",
+     "overchargeUsd": 166,
+     "alsoOk": [
+      "L8"
+     ]
+    },
+    {
+     "line": null,
+     "rule": "math_check",
+     "overchargeUsd": 179
+    },
+    {
+     "line": "L7",
+     "rule": "routine_supply",
+     "overchargeUsd": 50
+    }
+   ]
+  }
+ },
+ {
+  "id": "bill-25",
+  "scenario": "hand laceration",
+  "bill": {
+   "provider": "Mercy Ridge Regional Medical Center",
+   "providerState": "MA",
+   "accountNumber": "9180-78704",
+   "patientFirstName": "Noah",
+   "admitDate": "2026-07-24",
+   "dischargeDate": "2026-07-24",
+   "statementTotal": 3693,
+   "isItemized": true,
+   "diagnosisCodes": [
+    "S61.412A",
+    "W26.0XXA"
+   ],
+   "lines": [
+    {
+     "code": "99283",
+     "codeType": "CPT",
+     "revenueCode": "0450",
+     "modifiers": [],
+     "description": "ER FACILITY FEE - LEVEL 3",
+     "qty": 1,
+     "unitCharge": 1777,
+     "totalCharge": 1777,
+     "dateOfService": "2026-07-24",
+     "lowConfidence": false
+    },
+    {
+     "code": "99283",
+     "codeType": "CPT",
+     "revenueCode": "0981",
+     "modifiers": [
+      "25"
+     ],
+     "description": "ER PHYSICIAN SVCS - LEVEL 3",
+     "qty": 1,
+     "unitCharge": 596,
+     "totalCharge": 596,
+     "dateOfService": "2026-07-24",
+     "lowConfidence": false
+    },
+    {
+     "code": null,
+     "codeType": "NONE",
+     "revenueCode": "0250",
+     "modifiers": [],
+     "description": "LIDOCAINE 1% 20ML VIAL",
+     "qty": 1,
+     "unitCharge": 18,
+     "totalCharge": 18,
+     "dateOfService": "2026-07-24",
+     "lowConfidence": false
+    },
+    {
+     "code": "12002",
+     "codeType": "CPT",
+     "revenueCode": "0761",
+     "modifiers": [],
+     "description": "SIMPLE REPAIR 2.6-7.5CM",
+     "qty": 1,
+     "unitCharge": 567,
+     "totalCharge": 567,
+     "dateOfService": "2026-07-24",
+     "lowConfidence": false
+    },
+    {
+     "code": "90715",
+     "codeType": "CPT",
+     "revenueCode": "0636",
+     "modifiers": [],
+     "description": "TDAP VACCINE 7 YRS+ IM",
+     "qty": 1,
+     "unitCharge": 386,
+     "totalCharge": 386,
+     "dateOfService": "2026-07-24",
+     "lowConfidence": false
+    },
+    {
+     "code": "90471",
+     "codeType": "CPT",
+     "revenueCode": "0771",
+     "modifiers": [],
+     "description": "IMMUNIZATION ADMIN",
+     "qty": 1,
+     "unitCharge": 134,
+     "totalCharge": 134,
+     "dateOfService": "2026-07-24",
+     "lowConfidence": false
+    },
+    {
+     "code": null,
+     "codeType": "NONE",
+     "revenueCode": "0270",
+     "modifiers": [],
+     "description": "SUTURE KIT NYLON 4-0",
+     "qty": 1,
+     "unitCharge": 52,
+     "totalCharge": 52,
+     "dateOfService": "2026-07-24",
+     "lowConfidence": false
+    }
+   ]
+  },
+  "patient": {
+   "fullName": "Noah Johnson",
+   "dob": "1967-01-16",
+   "address": "127 Elm St, Springfield, MA 01109",
+   "guarantor": "SELF-PAY"
+  },
+  "truth": {
+   "errors": [
+    {
+     "line": null,
+     "rule": "math_check",
+     "overchargeUsd": 163
+    },
+    {
+     "line": "L5",
+     "rule": "price_outlier",
+     "overchargeUsd": 303.79
+    }
+   ]
+  }
+ },
+ {
+  "id": "bill-26",
+  "scenario": "chest pain",
+  "bill": {
+   "provider": "Harborview Community Hospital",
+   "providerState": "MA",
+   "accountNumber": "5454-98759",
+   "patientFirstName": "Jordan",
+   "admitDate": "2026-08-09",
+   "dischargeDate": "2026-08-09",
+   "statementTotal": 5075.4,
+   "isItemized": true,
+   "diagnosisCodes": [
+    "R07.9",
+    "I20.9"
+   ],
+   "lines": [
+    {
+     "code": "99285",
+     "codeType": "CPT",
+     "revenueCode": "0450",
+     "modifiers": [],
+     "description": "ER FACILITY FEE - LEVEL 5",
+     "qty": 1,
+     "unitCharge": 2093,
+     "totalCharge": 2093,
+     "dateOfService": "2026-08-09",
+     "lowConfidence": false
+    },
+    {
+     "code": "99285",
+     "codeType": "CPT",
+     "revenueCode": "0981",
+     "modifiers": [
+      "25"
+     ],
+     "description": "ER PHYSICIAN SVCS - LEVEL 5",
+     "qty": 1,
+     "unitCharge": 1965,
+     "totalCharge": 1965,
+     "dateOfService": "2026-08-09",
+     "lowConfidence": false
+    },
+    {
+     "code": "93010",
+     "codeType": "CPT",
+     "revenueCode": "0985",
+     "modifiers": [],
+     "description": "ECG INTERPRETATION & REPORT",
+     "qty": 1,
+     "unitCharge": 96,
+     "totalCharge": 96,
+     "dateOfService": "2026-08-09",
+     "lowConfidence": false
+    },
+    {
+     "code": null,
+     "codeType": "NONE",
+     "revenueCode": "0250",
+     "modifiers": [],
+     "description": "ASPIRIN 81MG CHEW TAB",
+     "qty": 4,
+     "unitCharge": 4.1,
+     "totalCharge": 16.4,
+     "dateOfService": "2026-08-09",
+     "lowConfidence": false
+    },
+    {
+     "code": "36415",
+     "codeType": "CPT",
+     "revenueCode": "0300",
+     "modifiers": [],
+     "description": "ROUTINE VENIPUNCTURE",
+     "qty": 1,
+     "unitCharge": 39,
+     "totalCharge": 39,
+     "dateOfService": "2026-08-09",
+     "lowConfidence": false
+    },
+    {
+     "code": "96360",
+     "codeType": "CPT",
+     "revenueCode": "0260",
+     "modifiers": [],
+     "description": "IV INFUSION HYDRATION 1ST HR",
+     "qty": 1,
+     "unitCharge": 358,
+     "totalCharge": 358,
+     "dateOfService": "2026-08-09",
+     "lowConfidence": false
+    },
+    {
+     "code": "71046",
+     "codeType": "CPT",
+     "revenueCode": "0320",
+     "modifiers": [],
+     "description": "XR CHEST 2 VIEWS",
+     "qty": 1,
+     "unitCharge": 159,
+     "totalCharge": 159,
+     "dateOfService": "2026-08-09",
+     "lowConfidence": false
+    },
+    {
+     "code": "85025",
+     "codeType": "CPT",
+     "revenueCode": "0300",
+     "modifiers": [],
+     "description": "CBC W/ AUTO DIFF",
+     "qty": 1,
+     "unitCharge": 90,
+     "totalCharge": 90,
+     "dateOfService": "2026-08-09",
+     "lowConfidence": false
+    },
+    {
+     "code": "80053",
+     "codeType": "CPT",
+     "revenueCode": "0300",
+     "modifiers": [],
+     "description": "COMPREHENSIVE METABOLIC PANEL",
+     "qty": 1,
+     "unitCharge": 165,
+     "totalCharge": 165,
+     "dateOfService": "2026-08-09",
+     "lowConfidence": false
+    }
+   ]
+  },
+  "patient": {
+   "fullName": "Jordan Garcia",
+   "dob": "1972-07-12",
+   "address": "551 Elm St, Springfield, MA 01109",
+   "guarantor": "SELF-PAY"
+  },
+  "truth": {
+   "errors": [
+    {
+     "line": null,
+     "rule": "math_check",
+     "overchargeUsd": 94
+    }
+   ]
+  }
+ },
+ {
+  "id": "bill-27",
+  "scenario": "abdominal pain",
+  "bill": {
+   "provider": "Harborview Community Hospital",
+   "providerState": "MA",
+   "accountNumber": "1638-58055",
+   "patientFirstName": "Jordan",
+   "admitDate": "2026-09-05",
+   "dischargeDate": "2026-09-05",
+   "statementTotal": 4959,
+   "isItemized": true,
+   "diagnosisCodes": [
+    "R10.9"
+   ],
+   "lines": [
+    {
+     "code": "99284",
+     "codeType": "CPT",
+     "revenueCode": "0450",
+     "modifiers": [],
+     "description": "ER FACILITY FEE - LEVEL 4",
+     "qty": 1,
+     "unitCharge": 1008,
+     "totalCharge": 1008,
+     "dateOfService": "2026-09-05",
+     "lowConfidence": false
+    },
+    {
+     "code": "99284",
+     "codeType": "CPT",
+     "revenueCode": "0981",
+     "modifiers": [
+      "25"
+     ],
+     "description": "ER PHYSICIAN SVCS - LEVEL 4",
+     "qty": 1,
+     "unitCharge": 1266,
+     "totalCharge": 1266,
+     "dateOfService": "2026-09-05",
+     "lowConfidence": false
+    },
+    {
+     "code": "80053",
+     "codeType": "CPT",
+     "revenueCode": "0300",
+     "modifiers": [],
+     "description": "COMPREHENSIVE METABOLIC PANEL",
+     "qty": 1,
+     "unitCharge": 205,
+     "totalCharge": 205,
+     "dateOfService": "2026-09-05",
+     "lowConfidence": false
+    },
+    {
+     "code": "85025",
+     "codeType": "CPT",
+     "revenueCode": "0300",
+     "modifiers": [],
+     "description": "CBC W/ AUTO DIFF",
+     "qty": 1,
+     "unitCharge": 81,
+     "totalCharge": 81,
+     "dateOfService": "2026-09-05",
+     "lowConfidence": false
+    },
+    {
+     "code": "36415",
+     "codeType": "CPT",
+     "revenueCode": "0300",
+     "modifiers": [],
+     "description": "ROUTINE VENIPUNCTURE",
+     "qty": 1,
+     "unitCharge": 76,
+     "totalCharge": 76,
+     "dateOfService": "2026-09-05",
+     "lowConfidence": false
+    },
+    {
+     "code": "74177",
+     "codeType": "CPT",
+     "revenueCode": "0350",
+     "modifiers": [],
+     "description": "CT ABD & PELVIS W/ CONTRAST",
+     "qty": 1,
+     "unitCharge": 1616,
+     "totalCharge": 1616,
+     "dateOfService": "2026-09-05",
+     "lowConfidence": false
+    },
+    {
+     "code": "96374",
+     "codeType": "CPT",
+     "revenueCode": "0260",
+     "modifiers": [],
+     "description": "THER/PROPH/DIAG INJ IV PUSH",
+     "qty": 1,
+     "unitCharge": 339,
+     "totalCharge": 339,
+     "dateOfService": "2026-09-05",
+     "lowConfidence": false
+    },
+    {
+     "code": null,
+     "codeType": "NONE",
+     "revenueCode": "0255",
+     "modifiers": [],
+     "description": "IOHEXOL 350 CONTRAST 100ML",
+     "qty": 1,
+     "unitCharge": 148,
+     "totalCharge": 148,
+     "dateOfService": "2026-09-05",
+     "lowConfidence": false
+    },
+    {
+     "code": "J2405",
+     "codeType": "HCPCS",
+     "revenueCode": "0636",
+     "modifiers": [],
+     "description": "ONDANSETRON HCL INJ 1MG",
+     "qty": 4,
+     "unitCharge": 3,
+     "totalCharge": 12,
+     "dateOfService": "2026-09-05",
+     "lowConfidence": false
+    },
+    {
+     "code": "81001",
+     "codeType": "CPT",
+     "revenueCode": "0300",
+     "modifiers": [],
+     "description": "URINALYSIS AUTO W/ MICROSCOPY",
+     "qty": 1,
+     "unitCharge": 88,
+     "totalCharge": 88,
+     "dateOfService": "2026-09-05",
+     "lowConfidence": false
+    }
+   ]
+  },
+  "patient": {
+   "fullName": "Jordan Johnson",
+   "dob": "1979-04-16",
+   "address": "782 Elm St, Springfield, MA 01109",
+   "guarantor": "SELF-PAY"
+  },
+  "truth": {
+   "errors": [
+    {
+     "line": null,
+     "rule": "math_check",
+     "overchargeUsd": 120
+    }
+   ]
+  }
+ },
+ {
+  "id": "bill-28",
+  "scenario": "headache with CT",
+  "bill": {
+   "provider": "Mercy Ridge Regional Medical Center",
+   "providerState": "MA",
+   "accountNumber": "6980-90139",
+   "patientFirstName": "Noah",
+   "admitDate": "2026-07-01",
+   "dischargeDate": "2026-07-01",
+   "statementTotal": 4716.4,
+   "isItemized": true,
+   "diagnosisCodes": [
+    "R51.9"
+   ],
+   "lines": [
+    {
+     "code": "99284",
+     "codeType": "CPT",
+     "revenueCode": "0450",
+     "modifiers": [],
+     "description": "ER FACILITY FEE - LEVEL 4",
+     "qty": 1,
+     "unitCharge": 1623,
+     "totalCharge": 1623,
+     "dateOfService": "2026-07-01",
+     "lowConfidence": false
+    },
+    {
+     "code": "99284",
+     "codeType": "CPT",
+     "revenueCode": "0981",
+     "modifiers": [
+      "25"
+     ],
+     "description": "ER PHYSICIAN SVCS - LEVEL 4",
+     "qty": 1,
+     "unitCharge": 747,
+     "totalCharge": 747,
+     "dateOfService": "2026-07-01",
+     "lowConfidence": false
+    },
+    {
+     "code": "70450",
+     "codeType": "CPT",
+     "revenueCode": "0350",
+     "modifiers": [],
+     "description": "CT HEAD W/O CONTRAST",
+     "qty": 1,
+     "unitCharge": 671,
+     "totalCharge": 671,
+     "dateOfService": "2026-07-01",
+     "lowConfidence": false
+    },
+    {
+     "code": "J1100",
+     "codeType": "HCPCS",
+     "revenueCode": "0636",
+     "modifiers": [],
+     "description": "DEXAMETHASONE SODIUM PHOS 1MG",
+     "qty": 10,
+     "unitCharge": 0.6,
+     "totalCharge": 6,
+     "dateOfService": "2026-07-01",
+     "lowConfidence": false
+    },
+    {
+     "code": null,
+     "codeType": "NONE",
+     "revenueCode": "0250",
+     "modifiers": [],
+     "description": "ACETAMINOPHEN 500MG TAB",
+     "qty": 2,
+     "unitCharge": 3.2,
+     "totalCharge": 6.4,
+     "dateOfService": "2026-07-01",
+     "lowConfidence": false
+    },
+    {
+     "code": "70450",
+     "codeType": "CPT",
+     "revenueCode": "0350",
+     "modifiers": [],
+     "description": "CT HEAD W/O CONTRAST",
+     "qty": 1,
+     "unitCharge": 671,
+     "totalCharge": 671,
+     "dateOfService": "2026-07-01",
+     "lowConfidence": false
+    },
+    {
+     "code": "96374",
+     "codeType": "CPT",
+     "revenueCode": "0260",
+     "modifiers": [],
+     "description": "THER/PROPH/DIAG INJ IV PUSH",
+     "qty": 1,
+     "unitCharge": 836,
+     "totalCharge": 836,
+     "dateOfService": "2026-07-01",
+     "lowConfidence": false
+    }
+   ]
+  },
+  "patient": {
+   "fullName": "Noah Garcia",
+   "dob": "1970-04-13",
+   "address": "36 Elm St, Springfield, MA 01109",
+   "guarantor": "COMMERCIAL"
+  },
+  "truth": {
+   "errors": [
+    {
+     "line": "L3",
+     "rule": "duplicate",
+     "overchargeUsd": 671,
+     "alsoOk": [
+      "L6"
+     ]
+    },
+    {
+     "line": "L7",
+     "rule": "price_outlier",
+     "overchargeUsd": 665.49
+    },
+    {
+     "line": null,
+     "rule": "math_check",
+     "overchargeUsd": 156
+    }
+   ]
+  }
+ },
+ {
+  "id": "bill-29",
+  "scenario": "knee effusion (office)",
+  "bill": {
+   "provider": "St. Brendan's Medical Center",
+   "providerState": "MA",
+   "accountNumber": "9697-22353",
+   "patientFirstName": "Jordan",
+   "admitDate": "2026-08-16",
+   "dischargeDate": "2026-08-16",
+   "statementTotal": 1407,
+   "isItemized": true,
+   "diagnosisCodes": [
+    "M25.461"
+   ],
+   "lines": [
+    {
+     "code": "20610",
+     "codeType": "CPT",
+     "revenueCode": "0761",
+     "modifiers": [],
+     "description": "ARTHROCENTESIS MAJOR JOINT",
+     "qty": 1,
+     "unitCharge": 680,
+     "totalCharge": 680,
+     "dateOfService": "2026-08-16",
+     "lowConfidence": false
+    },
+    {
+     "code": "J1100",
+     "codeType": "HCPCS",
+     "revenueCode": "0636",
+     "modifiers": [],
+     "description": "DEXAMETHASONE SODIUM PHOS 1MG",
+     "qty": 4,
+     "unitCharge": 1.75,
+     "totalCharge": 7,
+     "dateOfService": "2026-08-16",
+     "lowConfidence": false
+    },
+    {
+     "code": "99214",
+     "codeType": "CPT",
+     "revenueCode": "0510",
+     "modifiers": [],
+     "description": "OFFICE VISIT EST PT MOD",
+     "qty": 1,
+     "unitCharge": 551,
+     "totalCharge": 551,
+     "dateOfService": "2026-08-16",
+     "lowConfidence": false
+    }
+   ]
+  },
+  "patient": {
+   "fullName": "Jordan Brooks",
+   "dob": "1966-09-11",
+   "address": "763 Elm St, Springfield, MA 01109",
+   "guarantor": "COMMERCIAL"
+  },
+  "truth": {
+   "errors": [
+    {
+     "line": null,
+     "rule": "math_check",
+     "overchargeUsd": 169
+    }
+   ]
+  }
+ },
+ {
+  "id": "bill-30",
+  "scenario": "follow-up labs (office) (observation stay)",
+  "bill": {
+   "provider": "Northshore Health System",
+   "providerState": "MA",
+   "accountNumber": "7697-17102",
+   "patientFirstName": "Ethan",
+   "admitDate": "2026-09-14",
+   "dischargeDate": "2026-09-16",
+   "statementTotal": 1243,
+   "isItemized": true,
+   "diagnosisCodes": [
+    "E11.9"
+   ],
+   "lines": [
+    {
+     "code": "80048",
+     "codeType": "CPT",
+     "revenueCode": "0300",
+     "modifiers": [],
+     "description": "BASIC METABOLIC PANEL",
+     "qty": 1,
+     "unitCharge": 152,
+     "totalCharge": 152,
+     "dateOfService": "2026-09-14",
+     "lowConfidence": false
+    },
+    {
+     "code": "99213",
+     "codeType": "CPT",
+     "revenueCode": "0510",
+     "modifiers": [],
+     "description": "OFFICE VISIT EST PT LOW",
+     "qty": 1,
+     "unitCharge": 576,
+     "totalCharge": 576,
+     "dateOfService": "2026-09-14",
+     "lowConfidence": false
+    },
+    {
+     "code": "80048",
+     "codeType": "CPT",
+     "revenueCode": "0300",
+     "modifiers": [],
+     "description": "BASIC METABOLIC PANEL",
+     "qty": 1,
+     "unitCharge": 152,
+     "totalCharge": 152,
+     "dateOfService": "2026-09-15",
+     "lowConfidence": false
+    },
+    {
+     "code": "36415",
+     "codeType": "CPT",
+     "revenueCode": "0300",
+     "modifiers": [],
+     "description": "ROUTINE VENIPUNCTURE",
+     "qty": 1,
+     "unitCharge": 48,
+     "totalCharge": 48,
+     "dateOfService": "2026-09-14",
+     "lowConfidence": false
+    },
+    {
+     "code": "85025",
+     "codeType": "CPT",
+     "revenueCode": "0300",
+     "modifiers": [],
+     "description": "CBC W/ AUTO DIFF",
+     "qty": 1,
+     "unitCharge": 96,
+     "totalCharge": 96,
+     "dateOfService": "2026-09-14",
+     "lowConfidence": false
+    },
+    {
+     "code": "80048",
+     "codeType": "CPT",
+     "revenueCode": "0300",
+     "modifiers": [],
+     "description": "BASIC METABOLIC PANEL",
+     "qty": 1,
+     "unitCharge": 152,
+     "totalCharge": 152,
+     "dateOfService": "2026-09-15",
+     "lowConfidence": false
+    }
+   ]
+  },
+  "patient": {
+   "fullName": "Ethan Patel",
+   "dob": "1980-03-15",
+   "address": "844 Elm St, Springfield, MA 01109",
+   "guarantor": "SELF-PAY"
+  },
+  "truth": {
+   "errors": [
+    {
+     "line": null,
+     "rule": "math_check",
+     "overchargeUsd": 67
+    },
+    {
+     "line": "L3",
+     "rule": "duplicate",
+     "overchargeUsd": 152,
+     "alsoOk": [
+      "L6"
+     ]
+    }
+   ]
+  }
+ },
+ {
+  "id": "bill-31",
+  "scenario": "wrist sprain",
+  "bill": {
+   "provider": "Northshore Health System",
+   "providerState": "MA",
+   "accountNumber": "4043-37356",
+   "patientFirstName": "Noah",
+   "admitDate": "2026-07-18",
+   "dischargeDate": "2026-07-18",
+   "statementTotal": 3361,
+   "isItemized": true,
+   "diagnosisCodes": [
+    "S63.501A"
+   ],
+   "lines": [
+    {
+     "code": "99283",
+     "codeType": "CPT",
+     "revenueCode": "0450",
+     "modifiers": [],
+     "description": "ER FACILITY FEE - LEVEL 3",
+     "qty": 1,
+     "unitCharge": 1051,
+     "totalCharge": 1051,
+     "dateOfService": "2026-07-18",
+     "lowConfidence": false
+    },
+    {
+     "code": "99283",
+     "codeType": "CPT",
+     "revenueCode": "0981",
+     "modifiers": [
+      "25"
+     ],
+     "description": "ER PHYSICIAN SVCS - LEVEL 3",
+     "qty": 1,
+     "unitCharge": 818,
+     "totalCharge": 818,
+     "dateOfService": "2026-07-18",
+     "lowConfidence": false
+    },
+    {
+     "code": "73110",
+     "codeType": "CPT",
+     "revenueCode": "0320",
+     "modifiers": [
+      "76"
+     ],
+     "description": "XR WRIST COMPLETE 3+ VIEWS",
+     "qty": 1,
+     "unitCharge": 290,
+     "totalCharge": 290,
+     "dateOfService": "2026-07-18",
+     "lowConfidence": false
+    },
+    {
+     "code": null,
+     "codeType": "NONE",
+     "revenueCode": "0250",
+     "modifiers": [],
+     "description": "IBUPROFEN 800MG TAB",
+     "qty": 2,
+     "unitCharge": 9.5,
+     "totalCharge": 19,
+     "dateOfService": "2026-07-18",
+     "lowConfidence": false
+    },
+    {
+     "code": "96372",
+     "codeType": "CPT",
+     "revenueCode": "0260",
+     "modifiers": [],
+     "description": "THER/PROPH/DIAG INJ SC/IM",
+     "qty": 1,
+     "unitCharge": 193,
+     "totalCharge": 193,
+     "dateOfService": "2026-07-18",
+     "lowConfidence": false
+    },
+    {
+     "code": "29125",
+     "codeType": "CPT",
+     "revenueCode": "0761",
+     "modifiers": [],
+     "description": "APPLY SHORT ARM SPLINT STATIC",
+     "qty": 1,
+     "unitCharge": 459,
+     "totalCharge": 459,
+     "dateOfService": "2026-07-18",
+     "lowConfidence": false
+    },
+    {
+     "code": "73110",
+     "codeType": "CPT",
+     "revenueCode": "0320",
+     "modifiers": [],
+     "description": "XR WRIST COMPLETE 3+ VIEWS",
+     "qty": 1,
+     "unitCharge": 290,
+     "totalCharge": 290,
+     "dateOfService": "2026-07-18",
+     "lowConfidence": false
+    },
+    {
+     "code": "J1885",
+     "codeType": "HCPCS",
+     "revenueCode": "0636",
+     "modifiers": [],
+     "description": "KETOROLAC TROMETHAMINE INJ 15MG",
+     "qty": 2,
+     "unitCharge": 13.5,
+     "totalCharge": 27,
+     "dateOfService": "2026-07-18",
+     "lowConfidence": false
+    },
+    {
+     "code": "L3908",
+     "codeType": "HCPCS",
+     "revenueCode": "0274",
+     "modifiers": [],
+     "description": "WHO WRIST EXT CONTROL COCK-UP PREFAB",
+     "qty": 1,
+     "unitCharge": 214,
+     "totalCharge": 214,
+     "dateOfService": "2026-07-18",
+     "lowConfidence": false
+    }
+   ]
+  },
+  "patient": {
+   "fullName": "Noah Brooks",
+   "dob": "1976-03-15",
+   "address": "890 Elm St, Springfield, MA 01109",
+   "guarantor": "SELF-PAY"
+  },
+  "truth": {
+   "errors": []
+  }
+ },
+ {
+  "id": "bill-32",
+  "scenario": "ankle sprain",
+  "bill": {
+   "provider": "Mercy Ridge Regional Medical Center",
+   "providerState": "MA",
+   "accountNumber": "4932-38212",
+   "patientFirstName": "Jordan",
+   "admitDate": "2026-08-06",
+   "dischargeDate": "2026-08-06",
+   "statementTotal": 3846,
+   "isItemized": true,
+   "diagnosisCodes": [
+    "S93.401A"
+   ],
+   "lines": [
+    {
+     "code": "99283",
+     "codeType": "CPT",
+     "revenueCode": "0450",
+     "modifiers": [],
+     "description": "ER FACILITY FEE - LEVEL 3",
+     "qty": 1,
+     "unitCharge": 1227,
+     "totalCharge": 1227,
+     "dateOfService": "2026-08-06",
+     "lowConfidence": false
+    },
+    {
+     "code": "99284",
+     "codeType": "CPT",
+     "revenueCode": "0981",
+     "modifiers": [
+      "25"
+     ],
+     "description": "ER PHYSICIAN SVCS - LEVEL 4",
+     "qty": 1,
+     "unitCharge": 1081,
+     "totalCharge": 1081,
+     "dateOfService": "2026-08-06",
+     "lowConfidence": false
+    },
+    {
+     "code": null,
+     "codeType": "NONE",
+     "revenueCode": "0270",
+     "modifiers": [],
+     "description": "IV START KIT",
+     "qty": 1,
+     "unitCharge": 46,
+     "totalCharge": 46,
+     "dateOfService": "2026-08-06",
+     "lowConfidence": false
+    },
+    {
+     "code": "96372",
+     "codeType": "CPT",
+     "revenueCode": "0260",
+     "modifiers": [],
+     "description": "THER/PROPH/DIAG INJ SC/IM",
+     "qty": 1,
+     "unitCharge": 95,
+     "totalCharge": 95,
+     "dateOfService": "2026-08-06",
+     "lowConfidence": false
+    },
+    {
+     "code": "E0114",
+     "codeType": "HCPCS",
+     "revenueCode": "0274",
+     "modifiers": [],
+     "description": "CRUTCHES UNDERARM ALUMINUM PAIR",
+     "qty": 1,
+     "unitCharge": 145,
+     "totalCharge": 145,
+     "dateOfService": "2026-08-06",
+     "lowConfidence": false
+    },
+    {
+     "code": "29515",
+     "codeType": "CPT",
+     "revenueCode": "0761",
+     "modifiers": [],
+     "description": "APPLY SHORT LEG SPLINT",
+     "qty": 1,
+     "unitCharge": 881,
+     "totalCharge": 881,
+     "dateOfService": "2026-08-06",
+     "lowConfidence": false
+    },
+    {
+     "code": "J1885",
+     "codeType": "HCPCS",
+     "revenueCode": "0636",
+     "modifiers": [],
+     "description": "KETOROLAC TROMETHAMINE INJ 15MG",
+     "qty": 2,
+     "unitCharge": 21.5,
+     "totalCharge": 43,
+     "dateOfService": "2026-08-06",
+     "lowConfidence": false
+    },
+    {
+     "code": "73610",
+     "codeType": "CPT",
+     "revenueCode": "0320",
+     "modifiers": [],
+     "description": "XR ANKLE COMPLETE 3+ VIEWS",
+     "qty": 1,
+     "unitCharge": 264,
+     "totalCharge": 264,
+     "dateOfService": "2026-08-06",
+     "lowConfidence": false
+    },
+    {
+     "code": null,
+     "codeType": "NONE",
+     "revenueCode": "0270",
+     "modifiers": [],
+     "description": "SPLINT MATERIAL FIBERGLASS 4IN",
+     "qty": 1,
+     "unitCharge": 64,
+     "totalCharge": 64,
+     "dateOfService": "2026-08-06",
+     "lowConfidence": false
+    }
+   ]
+  },
+  "patient": {
+   "fullName": "Jordan Silva",
+   "dob": "1989-04-12",
+   "address": "610 Elm St, Springfield, MA 01109",
+   "guarantor": "COMMERCIAL"
+  },
+  "truth": {
+   "errors": [
+    {
+     "line": "L6",
+     "rule": "price_outlier",
+     "overchargeUsd": 624.11
+    },
+    {
+     "line": "L3",
+     "rule": "routine_supply",
+     "overchargeUsd": 46
+    },
+    {
+     "line": "L2",
+     "rule": "visit_level_mismatch",
+     "overchargeUsd": 410.61
+    }
+   ]
+  }
+ },
+ {
+  "id": "bill-33",
+  "scenario": "sore throat",
+  "bill": {
+   "provider": "St. Brendan's Medical Center",
+   "providerState": "MA",
+   "accountNumber": "6805-79858",
+   "patientFirstName": "Mateo",
+   "admitDate": "2026-09-26",
+   "dischargeDate": "2026-09-26",
+   "statementTotal": 2947.5,
+   "isItemized": true,
+   "diagnosisCodes": [
+    "J02.9"
+   ],
+   "lines": [
+    {
+     "code": "99282",
+     "codeType": "CPT",
+     "revenueCode": "0450",
+     "modifiers": [],
+     "description": "ER FACILITY FEE - LEVEL 2",
+     "qty": 1,
+     "unitCharge": 981,
+     "totalCharge": 981,
+     "dateOfService": "2026-09-26",
+     "lowConfidence": false
+    },
+    {
+     "code": "99285",
+     "codeType": "CPT",
+     "revenueCode": "0981",
+     "modifiers": [
+      "25"
+     ],
+     "description": "ER PHYSICIAN SVCS - LEVEL 5",
+     "qty": 1,
+     "unitCharge": 1752,
+     "totalCharge": 1752,
+     "dateOfService": "2026-09-26",
+     "lowConfidence": false
+    },
+    {
+     "code": "87880",
+     "codeType": "CPT",
+     "revenueCode": "0300",
+     "modifiers": [],
+     "description": "STREP A ASSAY W/ OPTIC",
+     "qty": 1,
+     "unitCharge": 101,
+     "totalCharge": 101,
+     "dateOfService": "2026-09-26",
+     "lowConfidence": false
+    },
+    {
+     "code": null,
+     "codeType": "NONE",
+     "revenueCode": "0250",
+     "modifiers": [],
+     "description": "AMOXICILLIN 500MG CAP",
+     "qty": 2,
+     "unitCharge": 6.25,
+     "totalCharge": 12.5,
+     "dateOfService": "2026-09-26",
+     "lowConfidence": false
+    },
+    {
+     "code": "87880",
+     "codeType": "CPT",
+     "revenueCode": "0300",
+     "modifiers": [],
+     "description": "STREP A ASSAY W/ OPTIC",
+     "qty": 1,
+     "unitCharge": 101,
+     "totalCharge": 101,
+     "dateOfService": "2026-09-26",
+     "lowConfidence": false
+    }
+   ]
+  },
+  "patient": {
+   "fullName": "Mateo Silva",
+   "dob": "1969-07-12",
+   "address": "557 Elm St, Springfield, MA 01109",
+   "guarantor": "COMMERCIAL"
+  },
+  "truth": {
+   "errors": [
+    {
+     "line": "L5",
+     "rule": "duplicate",
+     "overchargeUsd": 101,
+     "alsoOk": [
+      "L3"
+     ]
+    },
+    {
+     "line": "L2",
+     "rule": "visit_level_mismatch",
+     "overchargeUsd": 1258.35
+    }
+   ]
+  }
+ },
+ {
+  "id": "bill-34",
+  "scenario": "back strain (observation stay)",
+  "bill": {
+   "provider": "Mercy Ridge Regional Medical Center",
+   "providerState": "MA",
+   "accountNumber": "4873-87627",
+   "patientFirstName": "Zoe",
+   "admitDate": "2026-07-07",
+   "dischargeDate": "2026-07-08",
+   "statementTotal": 2672.8,
+   "isItemized": true,
+   "diagnosisCodes": [
+    "S39.012A"
+   ],
+   "lines": [
+    {
+     "code": "99283",
+     "codeType": "CPT",
+     "revenueCode": "0450",
+     "modifiers": [],
+     "description": "ER FACILITY FEE - LEVEL 3",
+     "qty": 1,
+     "unitCharge": 1001,
+     "totalCharge": 1001,
+     "dateOfService": "2026-07-07",
+     "lowConfidence": false
+    },
+    {
+     "code": "99283",
+     "codeType": "CPT",
+     "revenueCode": "0981",
+     "modifiers": [
+      "25"
+     ],
+     "description": "ER PHYSICIAN SVCS - LEVEL 3",
+     "qty": 1,
+     "unitCharge": 769,
+     "totalCharge": 769,
+     "dateOfService": "2026-07-07",
+     "lowConfidence": false
+    },
+    {
+     "code": "85025",
+     "codeType": "CPT",
+     "revenueCode": "0300",
+     "modifiers": [],
+     "description": "CBC W/ AUTO DIFF",
+     "qty": 1,
+     "unitCharge": 76,
+     "totalCharge": 76,
+     "dateOfService": "2026-07-08",
+     "lowConfidence": false
+    },
+    {
+     "code": null,
+     "codeType": "NONE",
+     "revenueCode": "0250",
+     "modifiers": [],
+     "description": "CYCLOBENZAPRINE 10MG TAB",
+     "qty": 1,
+     "unitCharge": 7.8,
+     "totalCharge": 7.8,
+     "dateOfService": "2026-07-07",
+     "lowConfidence": false
+    },
+    {
+     "code": null,
+     "codeType": "NONE",
+     "revenueCode": "0270",
+     "modifiers": [],
+     "description": "PATIENT GOWN DISPOSABLE",
+     "qty": 1,
+     "unitCharge": 66,
+     "totalCharge": 66,
+     "dateOfService": "2026-07-07",
+     "lowConfidence": false
+    },
+    {
+     "code": "72100",
+     "codeType": "CPT",
+     "revenueCode": "0320",
+     "modifiers": [
+      "76"
+     ],
+     "description": "XR LUMBAR SPINE 2-3 VIEWS",
+     "qty": 1,
+     "unitCharge": 183,
+     "totalCharge": 183,
+     "dateOfService": "2026-07-07",
+     "lowConfidence": false
+    },
+    {
+     "code": "72100",
+     "codeType": "CPT",
+     "revenueCode": "0320",
+     "modifiers": [],
+     "description": "XR LUMBAR SPINE 2-3 VIEWS",
+     "qty": 1,
+     "unitCharge": 183,
+     "totalCharge": 183,
+     "dateOfService": "2026-07-07",
+     "lowConfidence": false
+    },
+    {
+     "code": "96372",
+     "codeType": "CPT",
+     "revenueCode": "0260",
+     "modifiers": [],
+     "description": "THER/PROPH/DIAG INJ SC/IM",
+     "qty": 1,
+     "unitCharge": 160,
+     "totalCharge": 160,
+     "dateOfService": "2026-07-07",
+     "lowConfidence": false
+    },
+    {
+     "code": "96372",
+     "codeType": "CPT",
+     "revenueCode": "0260",
+     "modifiers": [],
+     "description": "THER/PROPH/DIAG INJ SC/IM",
+     "qty": 1,
+     "unitCharge": 160,
+     "totalCharge": 160,
+     "dateOfService": "2026-07-10",
+     "lowConfidence": false
+    },
+    {
+     "code": "J1885",
+     "codeType": "HCPCS",
+     "revenueCode": "0636",
+     "modifiers": [],
+     "description": "KETOROLAC TROMETHAMINE INJ 15MG",
+     "qty": 2,
+     "unitCharge": 15,
+     "totalCharge": 30,
+     "dateOfService": "2026-07-07",
+     "lowConfidence": false
+    }
+   ]
+  },
+  "patient": {
+   "fullName": "Zoe Rossi",
+   "dob": "1986-03-15",
+   "address": "533 Elm St, Springfield, MA 01109",
+   "guarantor": "SELF-PAY"
+  },
+  "truth": {
+   "errors": [
+    {
+     "line": null,
+     "rule": "math_check",
+     "overchargeUsd": 37
+    },
+    {
+     "line": "L9",
+     "rule": "date_outside_stay",
+     "overchargeUsd": 160
+    },
+    {
+     "line": "L5",
+     "rule": "routine_supply",
+     "overchargeUsd": 66
+    }
+   ]
+  }
+ },
+ {
+  "id": "bill-35",
+  "scenario": "hand laceration",
+  "bill": {
+   "provider": "Pioneer Valley General",
+   "providerState": "MA",
+   "accountNumber": "7036-93699",
+   "patientFirstName": "Noah",
+   "admitDate": "2026-08-01",
+   "dischargeDate": "2026-08-01",
+   "statementTotal": 2763,
+   "isItemized": true,
+   "diagnosisCodes": [
+    "S61.412A",
+    "W26.0XXA"
+   ],
+   "lines": [
+    {
+     "code": "99283",
+     "codeType": "CPT",
+     "revenueCode": "0450",
+     "modifiers": [],
+     "description": "ER FACILITY FEE - LEVEL 3",
+     "qty": 1,
+     "unitCharge": 1198,
+     "totalCharge": 1198,
+     "dateOfService": "2026-08-01",
+     "lowConfidence": false
+    },
+    {
+     "code": "99283",
+     "codeType": "CPT",
+     "revenueCode": "0981",
+     "modifiers": [
+      "25"
+     ],
+     "description": "ER PHYSICIAN SVCS - LEVEL 3",
+     "qty": 1,
+     "unitCharge": 431,
+     "totalCharge": 431,
+     "dateOfService": "2026-08-01",
+     "lowConfidence": false
+    },
+    {
+     "code": "90715",
+     "codeType": "CPT",
+     "revenueCode": "0636",
+     "modifiers": [],
+     "description": "TDAP VACCINE 7 YRS+ IM",
+     "qty": 1,
+     "unitCharge": 159,
+     "totalCharge": 159,
+     "dateOfService": "2026-08-01",
+     "lowConfidence": false
+    },
+    {
+     "code": null,
+     "codeType": "NONE",
+     "revenueCode": "0270",
+     "modifiers": [],
+     "description": "SUTURE KIT NYLON 4-0",
+     "qty": 1,
+     "unitCharge": 52,
+     "totalCharge": 52,
+     "dateOfService": "2026-08-01",
+     "lowConfidence": false
+    },
+    {
+     "code": "90471",
+     "codeType": "CPT",
+     "revenueCode": "0771",
+     "modifiers": [],
+     "description": "IMMUNIZATION ADMIN",
+     "qty": 1,
+     "unitCharge": 113,
+     "totalCharge": 113,
+     "dateOfService": "2026-08-01",
+     "lowConfidence": false
+    },
+    {
+     "code": "12002",
+     "codeType": "CPT",
+     "revenueCode": "0761",
+     "modifiers": [],
+     "description": "SIMPLE REPAIR 2.6-7.5CM",
+     "qty": 1,
+     "unitCharge": 633,
+     "totalCharge": 633,
+     "dateOfService": "2026-08-01",
+     "lowConfidence": false
+    },
+    {
+     "code": "90715",
+     "codeType": "CPT",
+     "revenueCode": "0636",
+     "modifiers": [],
+     "description": "TDAP VACCINE 7 YRS+ IM",
+     "qty": 1,
+     "unitCharge": 159,
+     "totalCharge": 159,
+     "dateOfService": "2026-08-01",
+     "lowConfidence": false
+    },
+    {
+     "code": null,
+     "codeType": "NONE",
+     "revenueCode": "0250",
+     "modifiers": [],
+     "description": "LIDOCAINE 1% 20ML VIAL",
+     "qty": 1,
+     "unitCharge": 18,
+     "totalCharge": 18,
+     "dateOfService": "2026-08-01",
+     "lowConfidence": false
+    }
+   ]
+  },
+  "patient": {
+   "fullName": "Noah Okafor",
+   "dob": "1968-04-17",
+   "address": "718 Elm St, Springfield, MA 01109",
+   "guarantor": "SELF-PAY"
+  },
+  "truth": {
+   "errors": [
+    {
+     "line": "L3",
+     "rule": "duplicate",
+     "overchargeUsd": 159,
+     "alsoOk": [
+      "L7"
+     ]
+    }
+   ]
+  }
+ },
+ {
+  "id": "bill-36",
+  "scenario": "chest pain",
+  "bill": {
+   "provider": "Pioneer Valley General",
+   "providerState": "MA",
+   "accountNumber": "4317-64215",
+   "patientFirstName": "Mateo",
+   "admitDate": "2026-09-19",
+   "dischargeDate": "2026-09-19",
+   "statementTotal": 3316.4,
+   "isItemized": true,
+   "diagnosisCodes": [
+    "R07.9",
+    "I20.9"
+   ],
+   "lines": [
+    {
+     "code": "99285",
+     "codeType": "CPT",
+     "revenueCode": "0450",
+     "modifiers": [],
+     "description": "ER FACILITY FEE - LEVEL 5",
+     "qty": 1,
+     "unitCharge": 1159,
+     "totalCharge": 1159,
+     "dateOfService": "2026-09-19",
+     "lowConfidence": false
+    },
+    {
+     "code": "99285",
+     "codeType": "CPT",
+     "revenueCode": "0981",
+     "modifiers": [
+      "25"
+     ],
+     "description": "ER PHYSICIAN SVCS - LEVEL 5",
+     "qty": 1,
+     "unitCharge": 1273,
+     "totalCharge": 1273,
+     "dateOfService": "2026-09-19",
+     "lowConfidence": false
+    },
+    {
+     "code": "93010",
+     "codeType": "CPT",
+     "revenueCode": "0985",
+     "modifiers": [],
+     "description": "ECG INTERPRETATION & REPORT",
+     "qty": 1,
+     "unitCharge": 58,
+     "totalCharge": 58,
+     "dateOfService": "2026-09-19",
+     "lowConfidence": false
+    },
+    {
+     "code": "96360",
+     "codeType": "CPT",
+     "revenueCode": "0260",
+     "modifiers": [],
+     "description": "IV INFUSION HYDRATION 1ST HR",
+     "qty": 1,
+     "unitCharge": 391,
+     "totalCharge": 391,
+     "dateOfService": "2026-09-19",
+     "lowConfidence": false
+    },
+    {
+     "code": null,
+     "codeType": "NONE",
+     "revenueCode": "0250",
+     "modifiers": [],
+     "description": "ASPIRIN 81MG CHEW TAB",
+     "qty": 4,
+     "unitCharge": 4.1,
+     "totalCharge": 16.4,
+     "dateOfService": "2026-09-19",
+     "lowConfidence": false
+    },
+    {
+     "code": "85025",
+     "codeType": "CPT",
+     "revenueCode": "0300",
+     "modifiers": [],
+     "description": "CBC W/ AUTO DIFF",
+     "qty": 1,
+     "unitCharge": 97,
+     "totalCharge": 97,
+     "dateOfService": "2026-09-19",
+     "lowConfidence": false
+    },
+    {
+     "code": "71046",
+     "codeType": "CPT",
+     "revenueCode": "0320",
+     "modifiers": [],
+     "description": "XR CHEST 2 VIEWS",
+     "qty": 1,
+     "unitCharge": 102,
+     "totalCharge": 102,
+     "dateOfService": "2026-09-19",
+     "lowConfidence": false
+    },
+    {
+     "code": "80053",
+     "codeType": "CPT",
+     "revenueCode": "0300",
+     "modifiers": [],
+     "description": "COMPREHENSIVE METABOLIC PANEL",
+     "qty": 1,
+     "unitCharge": 135,
+     "totalCharge": 135,
+     "dateOfService": "2026-09-19",
+     "lowConfidence": false
+    },
+    {
+     "code": "36415",
+     "codeType": "CPT",
+     "revenueCode": "0300",
+     "modifiers": [],
+     "description": "ROUTINE VENIPUNCTURE",
+     "qty": 1,
+     "unitCharge": 85,
+     "totalCharge": 85,
+     "dateOfService": "2026-09-19",
+     "lowConfidence": false
+    }
+   ]
+  },
+  "patient": {
+   "fullName": "Mateo Johnson",
+   "dob": "1991-07-14",
+   "address": "854 Elm St, Springfield, MA 01109",
+   "guarantor": "SELF-PAY"
+  },
+  "truth": {
+   "errors": []
+  }
+ },
+ {
+  "id": "bill-37",
+  "scenario": "abdominal pain",
+  "bill": {
+   "provider": "St. Brendan's Medical Center",
+   "providerState": "MA",
+   "accountNumber": "2845-82451",
+   "patientFirstName": "Noah",
+   "admitDate": "2026-07-21",
+   "dischargeDate": "2026-07-21",
+   "statementTotal": 8770,
+   "isItemized": true,
+   "diagnosisCodes": [
+    "R10.9"
+   ],
+   "lines": [
+    {
+     "code": "99284",
+     "codeType": "CPT",
+     "revenueCode": "0450",
+     "modifiers": [],
+     "description": "ER FACILITY FEE - LEVEL 4",
+     "qty": 1,
+     "unitCharge": 2398,
+     "totalCharge": 2398,
+     "dateOfService": "2026-07-21",
+     "lowConfidence": false
+    },
+    {
+     "code": "99284",
+     "codeType": "CPT",
+     "revenueCode": "0981",
+     "modifiers": [
+      "25"
+     ],
+     "description": "ER PHYSICIAN SVCS - LEVEL 4",
+     "qty": 1,
+     "unitCharge": 904,
+     "totalCharge": 904,
+     "dateOfService": "2026-07-21",
+     "lowConfidence": false
+    },
+    {
+     "code": "80053",
+     "codeType": "CPT",
+     "revenueCode": "0300",
+     "modifiers": [],
+     "description": "COMPREHENSIVE METABOLIC PANEL",
+     "qty": 1,
+     "unitCharge": 184,
+     "totalCharge": 184,
+     "dateOfService": "2026-07-21",
+     "lowConfidence": false
+    },
+    {
+     "code": "85025",
+     "codeType": "CPT",
+     "revenueCode": "0300",
+     "modifiers": [],
+     "description": "CBC W/ AUTO DIFF",
+     "qty": 1,
+     "unitCharge": 123,
+     "totalCharge": 123,
+     "dateOfService": "2026-07-21",
+     "lowConfidence": false
+    },
+    {
+     "code": "74177",
+     "codeType": "CPT",
+     "revenueCode": "0350",
+     "modifiers": [],
+     "description": "CT ABD & PELVIS W/ CONTRAST",
+     "qty": 1,
+     "unitCharge": 2206,
+     "totalCharge": 2206,
+     "dateOfService": "2026-07-21",
+     "lowConfidence": false
+    },
+    {
+     "code": "81001",
+     "codeType": "CPT",
+     "revenueCode": "0300",
+     "modifiers": [],
+     "description": "URINALYSIS AUTO W/ MICROSCOPY",
+     "qty": 1,
+     "unitCharge": 149,
+     "totalCharge": 149,
+     "dateOfService": "2026-07-21",
+     "lowConfidence": false
+    },
+    {
+     "code": "74177",
+     "codeType": "CPT",
+     "revenueCode": "0350",
+     "modifiers": [],
+     "description": "CT ABD & PELVIS W/ CONTRAST",
+     "qty": 1,
+     "unitCharge": 2206,
+     "totalCharge": 2206,
+     "dateOfService": "2026-07-21",
+     "lowConfidence": false
+    },
+    {
+     "code": null,
+     "codeType": "NONE",
+     "revenueCode": "0270",
+     "modifiers": [],
+     "description": "IV START KIT",
+     "qty": 1,
+     "unitCharge": 59,
+     "totalCharge": 59,
+     "dateOfService": "2026-07-21",
+     "lowConfidence": false
+    },
+    {
+     "code": "96374",
+     "codeType": "CPT",
+     "revenueCode": "0260",
+     "modifiers": [],
+     "description": "THER/PROPH/DIAG INJ IV PUSH",
+     "qty": 1,
+     "unitCharge": 268,
+     "totalCharge": 268,
+     "dateOfService": "2026-07-21",
+     "lowConfidence": false
+    },
+    {
+     "code": "J2405",
+     "codeType": "HCPCS",
+     "revenueCode": "0636",
+     "modifiers": [],
+     "description": "ONDANSETRON HCL INJ 1MG",
+     "qty": 4,
+     "unitCharge": 3,
+     "totalCharge": 12,
+     "dateOfService": "2026-07-21",
+     "lowConfidence": false
+    },
+    {
+     "code": "36415",
+     "codeType": "CPT",
+     "revenueCode": "0300",
+     "modifiers": [],
+     "description": "ROUTINE VENIPUNCTURE",
+     "qty": 1,
+     "unitCharge": 52,
+     "totalCharge": 52,
+     "dateOfService": "2026-07-21",
+     "lowConfidence": false
+    },
+    {
+     "code": null,
+     "codeType": "NONE",
+     "revenueCode": "0255",
+     "modifiers": [],
+     "description": "IOHEXOL 350 CONTRAST 100ML",
+     "qty": 1,
+     "unitCharge": 148,
+     "totalCharge": 148,
+     "dateOfService": "2026-07-21",
+     "lowConfidence": false
+    }
+   ]
+  },
+  "patient": {
+   "fullName": "Noah Rossi",
+   "dob": "1989-02-14",
+   "address": "299 Elm St, Springfield, MA 01109",
+   "guarantor": "SELF-PAY"
+  },
+  "truth": {
+   "errors": [
+    {
+     "line": "L6",
+     "rule": "price_outlier",
+     "overchargeUsd": 107.23
+    },
+    {
+     "line": "L8",
+     "rule": "routine_supply",
+     "overchargeUsd": 59
+    },
+    {
+     "line": null,
+     "rule": "math_check",
+     "overchargeUsd": 61
+    },
+    {
+     "line": "L7",
+     "rule": "duplicate",
+     "overchargeUsd": 2206,
+     "alsoOk": [
+      "L5"
+     ]
+    }
+   ]
+  }
+ },
+ {
+  "id": "bill-38",
+  "scenario": "headache with CT",
+  "bill": {
+   "provider": "Pioneer Valley General",
+   "providerState": "MA",
+   "accountNumber": "8524-34003",
+   "patientFirstName": "Ethan",
+   "admitDate": "2026-08-13",
+   "dischargeDate": "2026-08-13",
+   "statementTotal": 5038.4,
+   "isItemized": true,
+   "diagnosisCodes": [
+    "R51.9"
+   ],
+   "lines": [
+    {
+     "code": "99284",
+     "codeType": "CPT",
+     "revenueCode": "0450",
+     "modifiers": [],
+     "description": "ER FACILITY FEE - LEVEL 4",
+     "qty": 1,
+     "unitCharge": 2213,
+     "totalCharge": 2213,
+     "dateOfService": "2026-08-13",
+     "lowConfidence": false
+    },
+    {
+     "code": "99284",
+     "codeType": "CPT",
+     "revenueCode": "0981",
+     "modifiers": [
+      "25"
+     ],
+     "description": "ER PHYSICIAN SVCS - LEVEL 4",
+     "qty": 1,
+     "unitCharge": 820,
+     "totalCharge": 820,
+     "dateOfService": "2026-08-13",
+     "lowConfidence": false
+    },
+    {
+     "code": "96374",
+     "codeType": "CPT",
+     "revenueCode": "0260",
+     "modifiers": [],
+     "description": "THER/PROPH/DIAG INJ IV PUSH",
+     "qty": 1,
+     "unitCharge": 870,
+     "totalCharge": 870,
+     "dateOfService": "2026-08-13",
+     "lowConfidence": false
+    },
+    {
+     "code": null,
+     "codeType": "NONE",
+     "revenueCode": "0250",
+     "modifiers": [],
+     "description": "ACETAMINOPHEN 500MG TAB",
+     "qty": 2,
+     "unitCharge": 3.2,
+     "totalCharge": 6.4,
+     "dateOfService": "2026-08-13",
+     "lowConfidence": false
+    },
+    {
+     "code": "70450",
+     "codeType": "CPT",
+     "revenueCode": "0350",
+     "modifiers": [],
+     "description": "CT HEAD W/O CONTRAST",
+     "qty": 1,
+     "unitCharge": 1122,
+     "totalCharge": 1122,
+     "dateOfService": "2026-08-13",
+     "lowConfidence": false
+    },
+    {
+     "code": "J1100",
+     "codeType": "HCPCS",
+     "revenueCode": "0636",
+     "modifiers": [],
+     "description": "DEXAMETHASONE SODIUM PHOS 1MG",
+     "qty": 10,
+     "unitCharge": 0.7,
+     "totalCharge": 7,
+     "dateOfService": "2026-08-13",
+     "lowConfidence": false
+    }
+   ]
+  },
+  "patient": {
+   "fullName": "Ethan Nguyen",
+   "dob": "1979-05-12",
+   "address": "572 Elm St, Springfield, MA 01109",
+   "guarantor": "SELF-PAY"
+  },
+  "truth": {
+   "errors": [
+    {
+     "line": "L3",
+     "rule": "price_outlier",
+     "overchargeUsd": 699.49
+    }
+   ]
+  }
+ },
+ {
+  "id": "bill-39",
+  "scenario": "knee effusion (office)",
+  "bill": {
+   "provider": "St. Brendan's Medical Center",
+   "providerState": "MA",
+   "accountNumber": "9019-18725",
+   "patientFirstName": "Mateo",
+   "admitDate": "2026-09-13",
+   "dischargeDate": "2026-09-13",
+   "statementTotal": 1683,
+   "isItemized": true,
+   "diagnosisCodes": [
+    "M25.461"
+   ],
+   "lines": [
+    {
+     "code": "20610",
+     "codeType": "CPT",
+     "revenueCode": "0761",
+     "modifiers": [],
+     "description": "ARTHROCENTESIS MAJOR JOINT",
+     "qty": 1,
+     "unitCharge": 928,
+     "totalCharge": 928,
+     "dateOfService": "2026-09-13",
+     "lowConfidence": false
+    },
+    {
+     "code": "99214",
+     "codeType": "CPT",
+     "revenueCode": "0510",
+     "modifiers": [],
+     "description": "OFFICE VISIT EST PT MOD",
+     "qty": 1,
+     "unitCharge": 748,
+     "totalCharge": 748,
+     "dateOfService": "2026-09-13",
+     "lowConfidence": false
+    },
+    {
+     "code": "J1100",
+     "codeType": "HCPCS",
+     "revenueCode": "0636",
+     "modifiers": [],
+     "description": "DEXAMETHASONE SODIUM PHOS 1MG",
+     "qty": 4,
+     "unitCharge": 1.75,
+     "totalCharge": 7,
+     "dateOfService": "2026-09-13",
+     "lowConfidence": false
+    }
+   ]
+  },
+  "patient": {
+   "fullName": "Mateo Silva",
+   "dob": "2001-07-16",
+   "address": "664 Elm St, Springfield, MA 01109",
+   "guarantor": "COMMERCIAL"
+  },
+  "truth": {
+   "errors": []
+  }
+ },
+ {
+  "id": "bill-40",
+  "scenario": "follow-up labs (office) (observation stay)",
+  "bill": {
+   "provider": "Harborview Community Hospital",
+   "providerState": "MA",
+   "accountNumber": "5703-94165",
+   "patientFirstName": "Ethan",
+   "admitDate": "2026-07-08",
+   "dischargeDate": "2026-07-09",
+   "statementTotal": 1071,
+   "isItemized": true,
+   "diagnosisCodes": [
+    "E11.9"
+   ],
+   "lines": [
+    {
+     "code": "36415",
+     "codeType": "CPT",
+     "revenueCode": "0300",
+     "modifiers": [],
+     "description": "ROUTINE VENIPUNCTURE",
+     "qty": 1,
+     "unitCharge": 84,
+     "totalCharge": 84,
+     "dateOfService": "2026-07-08",
+     "lowConfidence": false
+    },
+    {
+     "code": "80048",
+     "codeType": "CPT",
+     "revenueCode": "0300",
+     "modifiers": [],
+     "description": "BASIC METABOLIC PANEL",
+     "qty": 1,
+     "unitCharge": 74,
+     "totalCharge": 74,
+     "dateOfService": "2026-07-10",
+     "lowConfidence": false
+    },
+    {
+     "code": "99213",
+     "codeType": "CPT",
+     "revenueCode": "0510",
+     "modifiers": [],
+     "description": "OFFICE VISIT EST PT LOW",
+     "qty": 1,
+     "unitCharge": 667,
+     "totalCharge": 667,
+     "dateOfService": "2026-07-08",
+     "lowConfidence": false
+    },
+    {
+     "code": "85025",
+     "codeType": "CPT",
+     "revenueCode": "0300",
+     "modifiers": [],
+     "description": "CBC W/ AUTO DIFF",
+     "qty": 1,
+     "unitCharge": 59,
+     "totalCharge": 59,
+     "dateOfService": "2026-07-08",
+     "lowConfidence": false
+    },
+    {
+     "code": "80048",
+     "codeType": "CPT",
+     "revenueCode": "0300",
+     "modifiers": [],
+     "description": "BASIC METABOLIC PANEL",
+     "qty": 1,
+     "unitCharge": 74,
+     "totalCharge": 74,
+     "dateOfService": "2026-07-09",
+     "lowConfidence": false
+    },
+    {
+     "code": "80048",
+     "codeType": "CPT",
+     "revenueCode": "0300",
+     "modifiers": [],
+     "description": "BASIC METABOLIC PANEL",
+     "qty": 1,
+     "unitCharge": 74,
+     "totalCharge": 74,
+     "dateOfService": "2026-07-08",
+     "lowConfidence": false
+    }
+   ]
+  },
+  "patient": {
+   "fullName": "Ethan Nguyen",
+   "dob": "1969-04-17",
+   "address": "547 Elm St, Springfield, MA 01109",
+   "guarantor": "SELF-PAY"
+  },
+  "truth": {
+   "errors": [
+    {
+     "line": null,
+     "rule": "math_check",
+     "overchargeUsd": 39
+    },
+    {
+     "line": "L2",
+     "rule": "date_outside_stay",
+     "overchargeUsd": 74
+    }
+   ]
+  }
+ }
+]

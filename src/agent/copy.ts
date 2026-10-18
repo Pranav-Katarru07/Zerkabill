@@ -31,7 +31,7 @@ export const copy = {
   notItemized(hospital: string | null): string[] {
     return [
       "this looks like a summary bill — it shows what you owe, but not what each charge is for.",
-      `you have a right to ask for the itemized version, and that's where errors usually hide. want me to call ${hospital ?? "the billing office"} and request it for you?`,
+      `you can ask for the itemized version, and that's where errors usually hide. want me to call ${hospital ?? "the billing office"} and request it for you?`,
     ];
   },
   failed: "ugh, something broke on my end reading that 😓 can you send it again?",

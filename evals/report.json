@@ -1,0 +1,160 @@
+{
+  "generatedAt": "2026-10-17T22:04:52.976Z",
+  "dataset": {
+    "bills": 40,
+    "clean": 10,
+    "plantedErrors": 71,
+    "note": "Synthetic bills with planted errors; prices from CMS 2024 Medicare data (MA). Rule metrics are a consistency check; the image subset tests the vision parser end to end."
+  },
+  "targets": {
+    "recall": 0.85,
+    "precision": 0.9,
+    "falseFlagRateOnCleanBills": 0.1,
+    "parseAccuracy": 0.95
+  },
+  "rules": {
+    "bills": 40,
+    "plantedErrors": 71,
+    "recall": 1,
+    "precision": 1,
+    "cleanBills": 10,
+    "cleanBillsFlagged": 0,
+    "falseFlagRateOnCleanBills": 0,
+    "savingsMaeUsd": 0,
+    "falseFlags": [],
+    "missed": [],
+    "perRule": {
+      "duplicate": {
+        "planted": 13,
+        "caught": 13
+      },
+      "math_check": {
+        "planted": 20,
+        "caught": 20
+      },
+      "visit_level_mismatch": {
+        "planted": 5,
+        "caught": 5
+      },
+      "routine_supply": {
+        "planted": 14,
+        "caught": 14
+      },
+      "price_outlier": {
+        "planted": 15,
+        "caught": 15
+      },
+      "date_outside_stay": {
+        "planted": 4,
+        "caught": 4
+      }
+    },
+    "meetsTargets": {
+      "recall": true,
+      "precision": true,
+      "falseFlags": true
+    }
+  },
+  "images": {
+    "bills": 10,
+    "plantedErrors": 17,
+    "recall": 1,
+    "precision": 1,
+    "cleanBills": 3,
+    "cleanBillsFlagged": 0,
+    "falseFlagRateOnCleanBills": 0,
+    "savingsMaeUsd": 0,
+    "falseFlags": [],
+    "missed": [],
+    "parseAccuracy": 1,
+    "lines": 81,
+    "parsedOk": 81,
+    "parseMsAvg": 13204,
+    "perBill": [
+      {
+        "id": "bill-03",
+        "ms": 7005,
+        "lineAccuracy": 1,
+        "lineErrors": [],
+        "unstable": false,
+        "error": null
+      },
+      {
+        "id": "bill-10",
+        "ms": 6318,
+        "lineAccuracy": 1,
+        "lineErrors": [],
+        "unstable": false,
+        "error": null
+      },
+      {
+        "id": "bill-11",
+        "ms": 10559,
+        "lineAccuracy": 1,
+        "lineErrors": [],
+        "unstable": false,
+        "error": null
+      },
+      {
+        "id": "bill-01",
+        "ms": 23451,
+        "lineAccuracy": 1,
+        "lineErrors": [],
+        "unstable": false,
+        "error": null
+      },
+      {
+        "id": "bill-02",
+        "ms": 11401,
+        "lineAccuracy": 1,
+        "lineErrors": [],
+        "unstable": false,
+        "error": null
+      },
+      {
+        "id": "bill-04",
+        "ms": 17521,
+        "lineAccuracy": 1,
+        "lineErrors": [],
+        "unstable": false,
+        "error": null
+      },
+      {
+        "id": "bill-05",
+        "ms": 10548,
+        "lineAccuracy": 1,
+        "lineErrors": [],
+        "unstable": false,
+        "error": null
+      },
+      {
+        "id": "bill-06",
+        "ms": 22951,
+        "lineAccuracy": 1,
+        "lineErrors": [],
+        "unstable": false,
+        "error": null
+      },
+      {
+        "id": "bill-07",
+        "ms": 10492,
+        "lineAccuracy": 1,
+        "lineErrors": [],
+        "unstable": false,
+        "error": null
+      },
+      {
+        "id": "bill-08",
+        "ms": 11795,
+        "lineAccuracy": 1,
+        "lineErrors": [],
+        "unstable": false,
+        "error": null
+      }
+    ],
+    "mode": "phone photo (mild tilt, JPEG)",
+    "meetsTargets": {
+      "parseAccuracy": true
+    }
+  }
+}

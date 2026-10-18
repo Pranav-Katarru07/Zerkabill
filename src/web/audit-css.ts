@@ -85,6 +85,12 @@ body:not([data-phase="review"]) .page { padding-bottom: 40px; }
 .badge-fair .badge-final { background: var(--fair-bg); color: var(--fair); }
 .badge-checking { display: none; background: var(--ground); color: var(--ink-2); box-shadow: inset 0 0 0 1px var(--rule); }
 
+.rights-list { list-style: none; margin: 0; padding: 0; display: grid; gap: 12px; }
+.right { padding: 16px; border-radius: var(--r-md); background: var(--fair-bg); }
+.right h3 { font-size: 16.5px; font-weight: 600; }
+.right p { margin-top: 6px; font-size: 15px; line-height: 1.5; max-width: 62ch; }
+.right a { display: inline-block; margin-top: 10px; font-size: 14px; font-weight: 600; color: var(--pine-2); text-underline-offset: 3px; }
+
 .fineprint { margin: 34px 2px 0; display: grid; gap: 8px; font-size: 13px; color: var(--ink-2); max-width: 68ch; }
 
 /* ── signature move: the bill audited like a receipt under a scanner ── */
