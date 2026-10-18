@@ -9,6 +9,30 @@ Built at HackHarvard 2026 on **Photon** (iMessage + voice line), **ElevenLabs Ag
 
 ---
 
+<!-- FLOWCHART: save the Gemini image as docs/images/flow.png, then uncomment:
+<p align="center"><img src="docs/images/flow.png" alt="How Zerkabill works: photo in iMessage → audit → approval → call from a Photon number → outcome texted back" width="100%"></p>
+-->
+
+## See it
+
+<table>
+  <tr>
+    <!-- IMESSAGE: save the screenshot as docs/images/imessage.png, then uncomment:
+    <td width="25%" valign="top"><img src="docs/images/imessage.png" alt="The iMessage conversation: intro, two questions, bill photo, and the audit summary with its preview card"><br><sub><b>1. Text a photo.</b> The summary and a preview card come back in iMessage.</sub></td>
+    -->
+    <td width="25%" valign="top"><img src="docs/images/audit-phone.png" alt="Audit page: $1,240 of a $4,800 bill looks wrong; the ER visit flagged as worth asking"><br><sub><b>2. The audit.</b> Every line checked against 2024 Medicare data, with the reason for each flag.</sub></td>
+    <td width="25%" valign="top"><img src="docs/images/approve-sheet.png" alt="Approval sheet restating who will be called and what will be asked"><br><sub><b>3. Approve.</b> It says exactly who it will call and what it will ask — and that it won't agree to any payment.</sub></td>
+    <td width="25%" valign="top"><img src="docs/images/call-transcript-phone.png" alt="Live call transcript opening with the AI disclosure"><br><sub><b>4. The call.</b> A real call from our Photon number; the agent says it's an AI in its first sentence.</sub></td>
+  </tr>
+  <tr>
+    <td width="25%" valign="top"><img src="docs/images/call-result-phone.png" alt="Statement card showing the bill could drop to $3,560 and the call panel"><br><sub><b>5. The outcome.</b> Reference number, rep, next step — and what the bill drops to if corrected.</sub></td>
+    <td width="25%" valign="top"><img src="docs/images/charges-struck-phone.png" alt="Flagged charges struck through and tagged under review"><br><sub><b>6. Charges under review,</b> struck through on the bill.</sub></td>
+    <td width="50%" colspan="2" valign="top"><img src="docs/images/preview-card.png" alt="iMessage link preview card: $1,240 of your $4,800 bill looks wrong"><br><sub><b>The iMessage preview card</b> — generated per audit, since Photon v2 has no mini-apps yet.</sub></td>
+  </tr>
+</table>
+
+<p align="center"><img src="docs/images/audit-desktop.png" alt="Projector layout: statement card and live call on the left, flagged charges on the right" width="100%"><br><sub>Projector layout after a real dispute call.</sub></p>
+
 ## The problem
 
 Hospital bills are written in billing codes most people can't read. Uninsured patients are often charged full list price, and duplicate charges, inflated ER visit levels, and supplies billed one by one are common. Most people pay rather than spend hours on hold disputing them.
