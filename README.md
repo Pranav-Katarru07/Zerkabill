@@ -21,21 +21,11 @@ Built at HackHarvard 2026 on **Photon** (iMessage + voice line), **ElevenLabs Ag
 
 <table>
   <tr>
-    <!-- IMESSAGE: save the screenshot as docs/images/imessage.png, then uncomment:
-    <td width="25%" valign="top"><img src="docs/images/imessage.png" alt="The iMessage conversation: intro, two questions, bill photo, and the audit summary with its preview card"><br><sub><b>1. Text a photo.</b> The summary and a preview card come back in iMessage.</sub></td>
-    -->
-    <td width="25%" valign="top"><img src="docs/images/audit-phone.png" alt="Audit page: $1,240 of a $4,800 bill looks wrong; the ER visit flagged as worth asking"><br><sub><b>2. The audit.</b> Every line checked against 2024 Medicare data, with the reason for each flag.</sub></td>
-    <td width="25%" valign="top"><img src="docs/images/approve-sheet.png" alt="Approval sheet restating who will be called and what will be asked"><br><sub><b>3. Approve.</b> It says exactly who it will call and what it will ask — and that it won't agree to any payment.</sub></td>
-    <td width="25%" valign="top"><img src="docs/images/call-transcript-phone.png" alt="Live call transcript opening with the AI disclosure"><br><sub><b>4. The call.</b> A real call from our Photon number; the agent says it's an AI in its first sentence.</sub></td>
-  </tr>
-  <tr>
-    <td width="25%" valign="top"><img src="docs/images/call-result-phone.png" alt="Statement card showing the bill could drop to $3,560 and the call panel"><br><sub><b>5. The outcome.</b> Reference number, rep, next step — and what the bill drops to if corrected.</sub></td>
-    <td width="25%" valign="top"><img src="docs/images/charges-struck-phone.png" alt="Flagged charges struck through and tagged under review"><br><sub><b>6. Charges under review,</b> struck through on the bill.</sub></td>
-    <td width="50%" colspan="2" valign="top"><img src="docs/images/preview-card.png" alt="iMessage link preview card: $1,240 of your $4,800 bill looks wrong"><br><sub><b>The iMessage preview card</b> — generated per audit, since Photon v2 has no mini-apps yet.</sub></td>
+    <td width="33%" valign="top"><img src="docs/images/imessage.png" alt="iMessage: the bill photo, 'reading every line now', the summary '3 look off — about $1,240' with three items, and the green preview card"><br><sub><b>Text a photo.</b> A summary and a preview card come back in about 20 seconds.</sub></td>
+    <td width="33%" valign="top"><img src="docs/images/audit-phone.png" alt="Audit page: $1,240 of a $4,800 bill looks wrong; the ER visit flagged as worth asking"><br><sub><b>The audit.</b> Every line checked against 2024 Medicare data, with the reason for each flag.</sub></td>
+    <td width="33%" valign="top"><img src="docs/images/call-transcript-phone.png" alt="Live call transcript opening with the AI disclosure, and the result: they agreed to review, reference number C123456"><br><sub><b>The call.</b> A real call from our Photon number — it says it's an AI first, and comes back with a reference number.</sub></td>
   </tr>
 </table>
-
-<p align="center"><img src="docs/images/audit-desktop.png" alt="Projector layout: statement card and live call on the left, flagged charges on the right" width="100%"><br><sub>Projector layout after a real dispute call.</sub></p>
 
 ## The problem
 
@@ -45,23 +35,7 @@ Hospital bills are written in billing codes most people can't read. Uninsured pa
 
 ## How it works
 
-```
- iPhone (iMessage)                                                   billing office phone
-      │  photo of bill                                                        ▲
-      ▼                                                                       │ SIP (TLS)
- ┌─────────────┐  signed webhook   ┌──────────────────────────────────┐     ┌┴──────────────┐
- │   Photon    │ ────────────────▶ │  Zerkabill (Hono on Vercel)      │     │    Photon     │
- │ iMessage    │ ◀──────────────── │                                  │     │  voice line   │
- │ shared line │  send / typing /  │  1. parse   Grok vision + Zod    │     └┬──────────────┘
- └─────────────┘  download photo   │  2. price   CMS 2024 benchmarks  │      ▲ outbound trunk
-                                   │  3. rules   6 deterministic      │      │
-                                   │  4. audit page + preview card    │  ┌───┴────────────┐
-                                   │  5. approval gate ───────────────┼─▶│ ElevenLabs     │
-                                   │  6. post-call webhook → texts ◀──┼──│ voice agent    │
-                                   └───────────────┬──────────────────┘  └────────────────┘
-                                                   ▼
-                                         Supabase Postgres (RLS)
-```
+<p align="center"><img src="docs/images/stack.png" alt="Tech stack: iPhone iMessage → Photon iMessage (v2 webhooks) ⇄ Hono app on Vercel (signed webhooks, state machine, audit pipeline, audit page, preview card, approval gate) ⇄ xAI Grok (reads the bill), Supabase Postgres, CMS 2024 Medicare prices; the app starts calls on ElevenLabs Agents, which dial over SIP/TLS through the Photon voice line to the billing office — call audio never touches our server; ElevenLabs posts the outcome back via webhook" width="100%"><br><sub>Drawn from the code (<code>scripts/stack-diagram.ts</code>), so every arrow is a real call path.</sub></p>
 
 1. **Text a photo.** The agent asks at most two quick questions (hospital, insurance), skipping anything you already said, and shows a typing indicator while it reads.
 2. **Audit.** The bill is transcribed line by line (code, quantity, amount, date). Every coded service is compared with what providers in that state typically submit to Medicare for the same code (**CMS 2024 data**, cited on every figure). Six deterministic rules flag problems; **the LLM never decides whether a charge is wrong.**
