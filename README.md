@@ -9,9 +9,13 @@ Built at HackHarvard 2026 on **Photon** (iMessage + voice line), **ElevenLabs Ag
 
 ---
 
-<!-- FLOWCHART: save the Gemini image as docs/images/flow.png, then uncomment:
-<p align="center"><img src="docs/images/flow.png" alt="How Zerkabill works: photo in iMessage → audit → approval → call from a Photon number → outcome texted back" width="100%"></p>
--->
+<p align="center"><img src="docs/images/flow.png" alt="How Zerkabill works: text a photo of the bill over Photon iMessage → AI reads it and checks every charge against 2024 Medicare prices and 6 billing rules → '3 charges look wrong, about $1,240' → approve the call → an AI voice agent calls the billing office from the Photon voice line → the outcome is texted back" width="100%"></p>
+
+> **Judges — 60-second tour**
+> - **Where Photon is used:** iMessage in and out, a Photon voice line that places the real call, call events → [Where Photon is used](#where-photon-is-used)
+> - **Does it work?** 100% of planted errors caught, 0 false flags, 81/81 lines read correctly from phone photos → [Evals](#evals)
+> - **Is it safe?** Nothing is dialed without approval; demo mode can only call one number; the agent says it's an AI and never agrees to payments → [Safety and trust](#safety-and-trust)
+> - **The demo:** [docs/DEMO.md](docs/DEMO.md)
 
 ## See it
 
